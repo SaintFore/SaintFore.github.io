@@ -16,14 +16,17 @@
   <meta name="author" content="Soleil">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="override controller 无法直接加入脚本, 无法自动生成controller的脚本(空) 这应该是unity的一个bug, 我习惯了把controller一加就自动有个脚本挂在object上, 但override controller却无法实现这个功能, 不过如果在object里面先添加一个controller的脚本, 然后把内部的controller给替换为override co">
+<meta property="og:type" content="article">
 <meta property="og:title" content="关于unity的二三事">
 <meta property="og:url" content="https://saintfore.github.io/2024/03/19/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/index.html">
 <meta property="og:site_name" content="Forest">
+<meta property="og:description" content="override controller 无法直接加入脚本, 无法自动生成controller的脚本(空) 这应该是unity的一个bug, 我习惯了把controller一加就自动有个脚本挂在object上, 但override controller却无法实现这个功能, 不过如果在object里面先添加一个controller的脚本, 然后把内部的controller给替换为override co">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-18T16:58:14.000Z">
-<meta property="article:modified_time" content="2024-03-18T16:58:14.225Z">
+<meta property="article:modified_time" content="2024-03-19T10:55:17.273Z">
 <meta property="article:author" content="Soleil">
+<meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          103 字
         
       </span>
     
@@ -272,7 +275,10 @@
             
               <div class="markdown-body">
                 
-                
+                <p>override controller 无法直接加入脚本, 无法自动生成controller的脚本(空)</p>
+<p>这应该是unity的一个bug, 我习惯了把controller一加就自动有个脚本挂在object上, 但override controller却无法实现这个功能, 不过如果在object里面先添加一个controller的脚本, 然后把内部的controller给替换为override controller是不会有什么问题的.</p>
+<p>嗯, 大概就是unity的一个小bug.</p>
+
                 
               </div>
             
@@ -280,6 +286,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF/" class="print-no-link">#技术</a>
+      
+    </div>
   
 </div>
 
