@@ -4,30 +4,73 @@
   
   
   <entry>
-    <title>just do it</title>
-    <link href="/2024/05/09/just-do-it/"/>
-    <url>/2024/05/09/just-do-it/</url>
+    <title>Obsidian图片存储问题</title>
+    <link href="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改md名字也没法起效果了。</em></p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p>]]></content>
     
     
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
     
   </entry>
   
   
   
   <entry>
-    <title>obsidian图片存储问题</title>
-    <link href="/2024/05/09/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/"/>
-    <url>/2024/05/09/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
+    <title>Parsec远程连接6023问题的解决方法</title>
+    <link href="/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <url>/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/09/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/09/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/09/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p>]]></content>
+    <content type="html"><![CDATA[<p>parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。<br>其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。<br>经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IPv6基本都有公网IP，于是我就把寝室内的路由器的IPv6给开启了，于此同时平板要连接手机的热点，也使用IPv6，然后就可以用了，但是好戏不长，使用了几天之后就又一次出现6023问题。<br>我真是百思不得其解，但有一次看路由器太久没有重启了，就给重启了下，然后再连接就可以了，但是一天后就又不行了，不过再重启下就又可以了。<br>我至今不知道为什么，有些猜测，可能是天翼网关在检查到使用parsec后就在缓冲中写入一些阻拦的文件，当我重启之后缓存就被清除了，所以就由可以用了。间隔是一天以内。有些麻烦，因为这样我就得开启两个远程控制软件，parsec还是快的，我不愿意舍弃，就用todesk作为辅助。</p>]]></content>
     
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
     
     
     <tags>
       
-      <tag>技术问题与解决方法</tag>
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>suno-AI</title>
+    <link href="/2024/05/10/suno-AI/"/>
+    <url>/2024/05/10/suno-AI/</url>
+    
+    <content type="html"><![CDATA[<p>今天刷知乎, 突然发现一个新的ai工具, 能够创作歌曲, 我之后肯定要做游戏, 而我又不会作曲, 再学习作曲实在是太费时间了, 过去我是想过一个人什么都做的, 但后来我发现我的精力是十分有限的, 不过ai时代确实是已经到来了, 只要学习ai使用就足够了, 如果做2d的话, 素材都可以ai生成, 接下来要ALL IN AI了.</p><hr><p>好久没写博客了, 这些天真的是太忙碌了, 但忙忙碌碌又不知道在做些什么.</p><hr><p>一天写一点博客吧.</p><p>suno的使用十分简单</p><ol><li>点击make a song</li></ol><p><img src="/2024/05/10/suno-AI/Snipaste_2024-03-26_22-41-25.png" alt="Snipaste_2024-03-26_22-41-25"></p><ol start="2"><li><p>点击create开始制作你的音乐</p><p><img src="/2024/05/10/suno-AI/Snipaste_2024-03-26_22-44-56.png" alt="Snipaste_2024-03-26_22-44-56">custom mode是可以自定义歌词, 如果不点击的话是会给你随机生成一段歌词.</p><p>如果点击的话, 然后在lyrics中不输入任何单词就有可能可以打造一段纯音乐, 更有可能还是给你随机生成一段歌词.</p><p>点击Instrumental是可以生成一段纯音乐</p></li></ol><p>​<img src="/2024/05/10/suno-AI/Snipaste_2024-03-26_22-51-38.png" alt="Snipaste_2024-03-26_22-51-38"></p><p>style of music设置音乐的种类, 可以使用中文, 但是有些时候认不准. 最好用英语, 不知道用什么就点击下方的随机.</p><ol start="4"><li>普通免费用户一天可以生成五首歌, 每首的长度是两分钟, 生成一次是有两首歌, 有些差异.</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>人工智能</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
       
     </tags>
     
@@ -37,12 +80,199 @@
   
   <entry>
     <title>uniapp学习</title>
-    <link href="/2024/04/23/uniapp%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/04/23/uniapp%E5%AD%A6%E4%B9%A0/</url>
+    <link href="/2024/05/10/uniapp%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/10/uniapp%E5%AD%A6%E4%B9%A0/</url>
     
     <content type="html"><![CDATA[<p>又是很久没有写博客了，深感惭愧。</p>]]></content>
     
     
+    <categories>
+      
+      <category>Uniapp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何申请github学生认证</title>
+    <link href="/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
+    <url>/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>小狼毫的使用方法</title>
+    <link href="/2024/05/10/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <url>/2024/05/10/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>今天太忙,明天再写.</p><p><img src="/2024/05/10/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/dream.jpg" alt="dream"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>实用工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据库ER图</title>
+    <link href="/2024/05/10/%E6%95%B0%E6%8D%AE%E5%BA%93ER%E5%9B%BE/"/>
+    <url>/2024/05/10/%E6%95%B0%E6%8D%AE%E5%BA%93ER%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<p><strong>需要软件:</strong> Visio</p><h3 id="E-R模型"><a href="#E-R模型" class="headerlink" title="E-R模型"></a>E-R模型</h3><p>E-R模型是用E-R图来描述现实世界的概念模型.</p><p>包括</p><ol><li>实体                         # 矩形</li><li>属性                         # 椭圆形</li><li>实体之间的联系       # 菱形</li></ol><p>两个实体型的联系分为三种:</p><ol><li>一对一</li><li>一对多</li><li>多对多</li></ol><p>属性也可以添加到联系上, 对于E-R图, 我其实也是不甚了解. 以后或许就能了解到了, 不过通过E-R图, 我学到了Visio, 挺好用的.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>新世界影评</title>
+    <link href="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/"/>
+    <url>/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/</url>
+    
+    <content type="html"><![CDATA[<p>新世界讲的是一个黑帮故事，3月20日早上一点开始看，看了一个小时吧，本来是打算行测课上看的，结果在睡觉前看了一个小时，所以导致我睡眠不好，同时又导致电影的观看不太流畅，毕竟分成了两段。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-191333.png"></p><p>这里我觉得蛮扯淡的，这么重要的警员，不多派点人来守着，而且武器也太差了吧，就一把左轮，不配点好的装备？</p><p>黑帮就是狠，杀人灌水泥，然后沉江，太暴力了，而且没文化。其实即便从事暴力活动，暴力也都是最后的准备，没到生死攸关时刻，暴力是万万不可实行的，因为暴力得到的除了短暂的恐惧以外，剩下的就是永恒的仇恨，与反抗。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-193858.png"></p><p>说实在话，对下属真没必要就单单只是指令，只是说你是一个警察，这是你的职责，更应该伟大光明正确，外加上人情味，外加上利益。虽然说伟光正听起来很假，但人类是需要大义的，是需要道德上的位置的。加上人情与利益的绑定，才可以。所以最后被李杀死，很正常。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-191509.png"></p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-192543.png"></p><p>真是电梯战神，一个人把电梯里的人都杀了。不过丁真的是懈怠了，这种夺嫡的关键时刻，还不严加防备，反倒是认为自己胜券在握了。死了属于正常。</p><p>这就是傲慢的代价。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-195645.png"></p><p>傲慢真的是原罪，所有失败者都曾经认为自己胜券在握</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-195834.png"></p><p>算是给了这个疯狗，一个体面的结束了，至少没在死前嗷嗷乱叫，冷静的死亡，沉默的死亡，是不错的结局了。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-195943.png"></p><p>这时候倒是给了不少保护了，之前应该是没反应过来，不过也是因为平时不是那么重视，百里之堤，溃于蚁穴。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-192803.png"></p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200437.png"></p><p>其实算是个好警察了，哎，正义最后总是失败。</p><p>局部的正义是这样的。</p><p>当然最终的胜利总是正义。</p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200544.png"></p><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200800.png"></p><p>最终登上了这个位置。但哥们死了，老婆流产了，自己之后肯定还是要跟警察斗的，最后的结局估计也是被设计被卡车撞死，或者是什么东西杀死。</p><p>黑社会是社会的背面，占领的是社会难以触及或者不愿触及的阴影，利用的是社会的规则，至于说真到了跟社会斗一斗的时候，不过就是螳臂当车，取死之道。黑社会跟警察斗，是不可能赢的。</p><hr><p><img src="/2024/05/10/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200925.png"></p><p>确实是好兄弟，这俩战力是真的强。来人杀穿一房子人，还没受太重的伤。</p><hr><p>总得来说是黑社会和无间道的结合。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电影</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>娱乐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>算法</title>
+    <link href="/2024/05/10/%E7%AE%97%E6%B3%95/"/>
+    <url>/2024/05/10/%E7%AE%97%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="重学算法"><a href="#重学算法" class="headerlink" title="重学算法"></a>重学算法</h1><p>因为蓝桥杯的临近, 我又一次捡起来久久不曾触碰的算法, 因为蓝桥杯报的是java组, 就开始看起来我之前买的算法笔记, 因为是盗版, 有些地方印的不清楚, 多亏这本书主要是刷题用的, 题解都在网站上, 所以还算没太多的影响.</p><p>因为室友不间断的打呼噜, 声音的嘈杂, 同时也因为我今天又一次晚睡了, 又不好意思将他们叫醒, 索性趁着睡不着的时候, 开始看书, 学一学算法.</p><p>不得不说, 就我看书两个小时的感受来讲, 这本书是真的很不错.</p><h2 id="核心框架"><a href="#核心框架" class="headerlink" title="核心框架"></a>核心框架</h2><p>对于任何数据结构, 其基本操作就是<strong>增删改查</strong></p><p>对于任何计算机的算法, 其解决的方法就一个, 就是穷举</p><p>进一步细分, 所有的问题, 不过就是如何穷举, 以及该怎么聪明的去穷举</p><p><em>首先要刷熟练的就是二叉树问题</em>这可以培养框架思维</p><p>大部分算法的技巧就是<em>树的遍历问题</em></p><p><strong>穷举的关键:</strong></p><ol><li>无遗漏</li><li>无冗余</li></ol><p><strong>动态规划:</strong></p><ol><li>状态转移方程</li><li>最优子结构</li><li>重叠子问题</li></ol><p>状态转移方程就是问题的数学归纳</p><p>重叠子问题就是有些子问题是重复的, 需要对树进行剪枝, 有两种方法:</p><ol><li><p>弄个备忘录</p><p>自顶向下, 使用的是函数的递归</p></li><li><p>DP table</p><p>自底向上, 使用的是数组的递推, 向下逐渐分解规模</p></li></ol><p><strong>如何正确列出状态转移方程:</strong></p><ol><li><p>确定base case</p></li><li><p>确定状态</p></li><li><p>确定选择</p></li><li><p>确定dp 函数&#x2F;数组 的定义</p><p>最终是能画出一个多叉树</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Obsidian加坚果云实现同步</title>
+    <link href="/2024/05/09/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/"/>
+    <url>/2024/05/09/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/</url>
+    
+    <content type="html"><![CDATA[<p>平板电脑回来之后，一直想着用平板电脑来远程电脑实现轻便的生产力办公，但最后发现因为缩放的关系，使用远程还是不太舒服，所以就一直使用notion来记笔记，但notion不是本地的，我到处md文件，也会显得相当之奇怪，所以一直想要写的博客就停了很长一段时间，大约有一个月。<br>在某次刷知乎的评论时，讨论的事vsc，突然看到obsidian是全平台的，就想通过obsidian来写md文件，然后用hexo上传到我的网站上去。不过这个还是要有线连接，于是就又想要看看能不能通过同步来实现，发现坚果云可以。不费吹灰之力就完成了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>just-do-it</title>
+    <link href="/2024/05/09/just-do-it/"/>
+    <url>/2024/05/09/just-do-it/</url>
+    
+    <content type="html"><![CDATA[<p>人生最怕的就是等待，长久的等待。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>言语</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>八月箴言</tag>
+      
+    </tags>
     
   </entry>
   
@@ -58,14 +288,14 @@
     
     <categories>
       
-      <category>python</category>
+      <category>Python</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>学习</tag>
+      <tag>学习笔记</tag>
       
     </tags>
     
@@ -83,71 +313,14 @@
     
     <categories>
       
-      <category>python</category>
+      <category>Python</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>学习</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>suno AI</title>
-    <link href="/2024/03/26/suno-AI/"/>
-    <url>/2024/03/26/suno-AI/</url>
-    
-    <content type="html"><![CDATA[<p>今天刷知乎, 突然发现一个新的ai工具, 能够创作歌曲, 我之后肯定要做游戏, 而我又不会作曲, 再学习作曲实在是太费时间了, 过去我是想过一个人什么都做的, 但后来我发现我的精力是十分有限的, 不过ai时代确实是已经到来了, 只要学习ai使用就足够了, 如果做2d的话, 素材都可以ai生成, 接下来要ALL IN AI了.</p><hr><p>好久没写博客了, 这些天真的是太忙碌了, 但忙忙碌碌又不知道在做些什么.</p><hr><p>一天写一点博客吧.</p><p>suno的使用十分简单</p><ol><li>点击make a song</li></ol><p><img src="/2024/03/26/suno-AI/Snipaste_2024-03-26_22-41-25.png" alt="Snipaste_2024-03-26_22-41-25"></p><ol start="2"><li><p>点击create开始制作你的音乐</p><p><img src="/2024/03/26/suno-AI/Snipaste_2024-03-26_22-44-56.png" alt="Snipaste_2024-03-26_22-44-56">custom mode是可以自定义歌词, 如果不点击的话是会给你随机生成一段歌词.</p><p>如果点击的话, 然后在lyrics中不输入任何单词就有可能可以打造一段纯音乐, 更有可能还是给你随机生成一段歌词.</p><p>点击Instrumental是可以生成一段纯音乐</p></li></ol><p>​<img src="/2024/03/26/suno-AI/Snipaste_2024-03-26_22-51-38.png" alt="Snipaste_2024-03-26_22-51-38"></p><p>style of music设置音乐的种类, 可以使用中文, 但是有些时候认不准. 最好用英语, 不知道用什么就点击下方的随机.</p><ol start="4"><li>普通免费用户一天可以生成五首歌, 每首的长度是两分钟, 生成一次是有两首歌, 有些差异.</li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>前沿</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>新世界影评</title>
-    <link href="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/"/>
-    <url>/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/</url>
-    
-    <content type="html"><![CDATA[<p>新世界讲的是一个黑帮故事，3月20日早上一点开始看，看了一个小时吧，本来是打算行测课上看的，结果在睡觉前看了一个小时，所以导致我睡眠不好，同时又导致电影的观看不太流畅，毕竟分成了两段。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-191333.png"></p><p>这里我觉得蛮扯淡的，这么重要的警员，不多派点人来守着，而且武器也太差了吧，就一把左轮，不配点好的装备？</p><p>黑帮就是狠，杀人灌水泥，然后沉江，太暴力了，而且没文化。其实即便从事暴力活动，暴力也都是最后的准备，没到生死攸关时刻，暴力是万万不可实行的，因为暴力得到的除了短暂的恐惧以外，剩下的就是永恒的仇恨，与反抗。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-193858.png"></p><p>说实在话，对下属真没必要就单单只是指令，只是说你是一个警察，这是你的职责，更应该伟大光明正确，外加上人情味，外加上利益。虽然说伟光正听起来很假，但人类是需要大义的，是需要道德上的位置的。加上人情与利益的绑定，才可以。所以最后被李杀死，很正常。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-191509.png"></p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-192543.png"></p><p>真是电梯战神，一个人把电梯里的人都杀了。不过丁真的是懈怠了，这种夺嫡的关键时刻，还不严加防备，反倒是认为自己胜券在握了。死了属于正常。</p><p>这就是傲慢的代价。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-195645.png"></p><p>傲慢真的是原罪，所有失败者都曾经认为自己胜券在握</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-195834.png"></p><p>算是给了这个疯狗，一个体面的结束了，至少没在死前嗷嗷乱叫，冷静的死亡，沉默的死亡，是不错的结局了。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-195943.png"></p><p>这时候倒是给了不少保护了，之前应该是没反应过来，不过也是因为平时不是那么重视，百里之堤，溃于蚁穴。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-192803.png"></p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200437.png"></p><p>其实算是个好警察了，哎，正义最后总是失败。</p><p>局部的正义是这样的。</p><p>当然最终的胜利总是正义。</p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200544.png"></p><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200800.png"></p><p>最终登上了这个位置。但哥们死了，老婆流产了，自己之后肯定还是要跟警察斗的，最后的结局估计也是被设计被卡车撞死，或者是什么东西杀死。</p><p>黑社会是社会的背面，占领的是社会难以触及或者不愿触及的阴影，利用的是社会的规则，至于说真到了跟社会斗一斗的时候，不过就是螳臂当车，取死之道。黑社会跟警察斗，是不可能赢的。</p><hr><p><img src="/2024/03/20/%E6%96%B0%E4%B8%96%E7%95%8C%E5%BD%B1%E8%AF%84/Screenshot_20240320-200925.png"></p><p>确实是好兄弟，这俩战力是真的强。来人杀穿一房子人，还没受太重的伤。</p><hr><p>总得来说是黑社会和无间道的结合。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>娱乐</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>内网串流与外网串流</title>
-    <link href="/2024/03/19/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/"/>
-    <url>/2024/03/19/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/</url>
-    
-    <content type="html"><![CDATA[<p>今天本想要用新买的pad串流电脑, 结果折腾了两三节课, 三四个小时都没有成功, 内网串流是没什么问题的, 但是外网串流就一直连不上, 不知道是什么问题. 之后解决了再继续写. 暂且如此.</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>学习</tag>
+      <tag>学习笔记</tag>
       
     </tags>
     
@@ -163,29 +336,16 @@
     <content type="html"><![CDATA[<p>在搭建的仓库的根目录下面, 找到_config.yml文件, 打开, Ctrl + F 找到post_asset_folder, 注意最后面不要加空格, 不然找不到, 这是Ctrl F的特性, 准确搜索, 即便是最后面有空格. 然后把post_asset_folder 的值设定为true, 这样你建立一个新的md文件, 就会自动给你创建一个文件夹, 这配合上Typora的复制图片到该文件夹, 简直是图片的完美.</p><p><em>其实这个东西蛮简单的, 但我今天晚上突然就忘了, 是怎么实现建立md文件就生成文件夹的, 现在再次记录, 加深印象, 也便于以后即使是忘了, 也可以看看之前写的博客, 来回忆.</em></p><p><img src="/2024/03/19/Typora%E4%B8%8Ehexo/forever.jpg" alt="forever"></p><p><strong>突然发现, 其实只要在仓库内部git, 写hexo的指令不管在哪里, 都是可以的, 没必要非得在仓库的根目录下, 在根目录的子目录下都是可以的</strong></p><p><em>而且Typora好像是即时保存的, 非常不错, 这两者的配合简直完美, 我不应该再用到黑曜石后就冷落了typora</em></p><hr><p>我去, 又一次在我认为完美的时候出现了<em>bug</em>, typora的图片默认文件夹是有.assets后缀的, 但是hexo选择true后生成的文件夹是没有这个后缀的, 导致一个md文件, 有两个文件夹, 而且图片还显示不出来. 要在typora选择复制到指定路径, .&#x2F;${filename}, 才可以.</p><p><img src="/2024/03/19/Typora%E4%B8%8Ehexo/26(1).jpg" alt="26(1)"></p><hr><p>好吧, 跟我想的不太一样, 还是出不了图片, 查了下网络才知道是什么原因, <a href="https://blog.csdn.net/m0_43401436/article/details/107191688">hexo博客中插入图片失败——解决思路及个人最终解决办法_hexo无法插入图片-CSDN博客</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g <span class="hljs-comment"># 这条指令是把md文件转成html文件, 图片不显示的根源就出自这里</span><br></code></pre></td></tr></table></figure><p>因为我们设置typora是相对位置, 而转成的html文件需要的是绝对位置, 所以就显示不出来图片, 因此我们需要安装一个插件, 它会帮我们把相对位置转为绝对位置, 安装指令如下:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install https://github.com/CodeFalling/hexo-asset-image --save<br></code></pre></td></tr></table></figure><p>之前我的图片能显示就是因为我用的是绝对位置, 这次一改typora的设置就不行了.(*就是小狼毫那篇里面的banner, 之类的图片, 一直都是显示的)</p>]]></content>
     
     
-    
-    <tags>
+    <categories>
       
-      <tag>技术</tag>
+      <category>解决方法</category>
       
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>关于unity的二三事</title>
-    <link href="/2024/03/19/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
-    <url>/2024/03/19/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</url>
-    
-    <content type="html"><![CDATA[<p>override controller 无法直接加入脚本, 无法自动生成controller的脚本(空)</p><p>这应该是unity的一个bug, 我习惯了把controller一加就自动有个脚本挂在object上, 但override controller却无法实现这个功能, 不过如果在object里面先添加一个controller的脚本, 然后把内部的controller给替换为override controller是不会有什么问题的.</p><p>嗯, 大概就是unity的一个小bug.</p>]]></content>
-    
+    </categories>
     
     
     <tags>
       
-      <tag>技术</tag>
+      <tag>工具使用</tag>
       
     </tags>
     
@@ -201,35 +361,16 @@
     <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
     
     
-    
-    <tags>
-      
-      <tag>学习</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>E-R图</title>
-    <link href="/2024/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93ER%E5%9B%BE/"/>
-    <url>/2024/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93ER%E5%9B%BE/</url>
-    
-    <content type="html"><![CDATA[<p><strong>需要软件:</strong> Visio</p><h3 id="E-R模型"><a href="#E-R模型" class="headerlink" title="E-R模型"></a>E-R模型</h3><p>E-R模型是用E-R图来描述现实世界的概念模型.</p><p>包括</p><ol><li>实体                         # 矩形</li><li>属性                         # 椭圆形</li><li>实体之间的联系       # 菱形</li></ol><p>两个实体型的联系分为三种:</p><ol><li>一对一</li><li>一对多</li><li>多对多</li></ol><p>属性也可以添加到联系上, 对于E-R图, 我其实也是不甚了解. 以后或许就能了解到了, 不过通过E-R图, 我学到了Visio, 挺好用的.</p>]]></content>
-    
-    
     <categories>
       
-      <category>数据库</category>
+      <category>Android</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>学习</tag>
+      <tag>学习笔记</tag>
       
     </tags>
     
@@ -238,86 +379,23 @@
   
   
   <entry>
-    <title>Java算法</title>
-    <link href="/2024/03/12/%E7%AE%97%E6%B3%95/"/>
-    <url>/2024/03/12/%E7%AE%97%E6%B3%95/</url>
+    <title>内网串流与外网串流</title>
+    <link href="/2024/03/19/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/"/>
+    <url>/2024/03/19/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/</url>
     
-    <content type="html"><![CDATA[<h1 id="重学算法"><a href="#重学算法" class="headerlink" title="重学算法"></a>重学算法</h1><p>因为蓝桥杯的临近, 我又一次捡起来久久不曾触碰的算法, 因为蓝桥杯报的是java组, 就开始看起来我之前买的算法笔记, 因为是盗版, 有些地方印的不清楚, 多亏这本书主要是刷题用的, 题解都在网站上, 所以还算没太多的影响.</p><p>因为室友不间断的打呼噜, 声音的嘈杂, 同时也因为我今天又一次晚睡了, 又不好意思将他们叫醒, 索性趁着睡不着的时候, 开始看书, 学一学算法.</p><p>不得不说, 就我看书两个小时的感受来讲, 这本书是真的很不错.</p><h2 id="核心框架"><a href="#核心框架" class="headerlink" title="核心框架"></a>核心框架</h2><p>对于任何数据结构, 其基本操作就是<strong>增删改查</strong></p><p>对于任何计算机的算法, 其解决的方法就一个, 就是穷举</p><p>进一步细分, 所有的问题, 不过就是如何穷举, 以及该怎么聪明的去穷举</p><p><em>首先要刷熟练的就是二叉树问题</em>这可以培养框架思维</p><p>大部分算法的技巧就是<em>树的遍历问题</em></p><p><strong>穷举的关键:</strong></p><ol><li>无遗漏</li><li>无冗余</li></ol><p><strong>动态规划:</strong></p><ol><li>状态转移方程</li><li>最优子结构</li><li>重叠子问题</li></ol><p>状态转移方程就是问题的数学归纳</p><p>重叠子问题就是有些子问题是重复的, 需要对树进行剪枝, 有两种方法:</p><ol><li><p>弄个备忘录</p><p>自顶向下, 使用的是函数的递归</p></li><li><p>DP table</p><p>自底向上, 使用的是数组的递推, 向下逐渐分解规模</p></li></ol><p><strong>如何正确列出状态转移方程:</strong></p><ol><li><p>确定base case</p></li><li><p>确定状态</p></li><li><p>确定选择</p></li><li><p>确定dp 函数&#x2F;数组 的定义</p><p>最终是能画出一个多叉树</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>今天本想要用新买的pad串流电脑, 结果折腾了两三节课, 三四个小时都没有成功, 内网串流是没什么问题的, 但是外网串流就一直连不上, 不知道是什么问题. 之后解决了再继续写. 暂且如此.</p>]]></content>
     
     
     <categories>
       
-      <category>学习</category>
+      <category>解决方法</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>学习</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>如何申请github学生认证</title>
-    <link href="/2024/03/12/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
-    <url>/2024/03/12/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>技巧</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>小狼毫的使用方法</title>
-    <link href="/2024/03/11/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <url>/2024/03/11/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
-    
-    <content type="html"><![CDATA[<p>今天太忙,明天再写.</p><p><img src="/2024/03/11/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/dream.jpg" alt="dream"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>实用工具</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>技术</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>如何利用hexo和github page来创建个人博客</title>
-    <link href="/2024/03/11/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8hexo%E5%92%8Cgithub-page%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <url>/2024/03/11/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8hexo%E5%92%8Cgithub-page%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    
-    <content type="html"><![CDATA[<p><strong>需要环境</strong>：</p><ol><li><p>git</p></li><li><p>node</p><p>请提前下载</p></li></ol><h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><h2 id="github邮箱创建"><a href="#github邮箱创建" class="headerlink" title="github邮箱创建"></a>github邮箱创建</h2><p>这里就不加多言了，没什么好说的。</p><h2 id="创建github-Pages"><a href="#创建github-Pages" class="headerlink" title="创建github Pages"></a>创建github Pages</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>点击右上角的加号，点击<strong>New Repository</strong>，在Repository的name里面填入，username.github.io，username就是你的github的用户名，注意不是邮箱名，是你的用户名，这个以github.io结尾的地址就是你之后的域名。</p><h3 id="设置SSH"><a href="#设置SSH" class="headerlink" title="设置SSH"></a>设置SSH</h3><p>SSH的目的就是更加安全的免密登录。</p><h4 id="生成ssh秘钥"><a href="#生成ssh秘钥" class="headerlink" title="生成ssh秘钥"></a>生成ssh秘钥</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;你的邮箱&quot;</span><br></code></pre></td></tr></table></figure><p>然后就是一路Enter，这时打开你的C盘，在用户&#x2F;你的用户名文件夹下，有个.ssh文件夹，<strong>注意</strong>前面带.的文件夹都需要把文件的隐藏给先打开。</p><p>然后有个.hub后缀的文件，这是公钥可以给别人看的，还有一个没有后缀的文件，这个是私钥，不能给比人看。</p><p>我们要用的就是这个.hub文件，选择用记事本打开，全选，复制。</p><h4 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h4><p>打开你的github，现在点击你的头像，然后点击Settings，在access中找到<strong>SSH And GPG keys</strong>，点击<strong>New SSH key</strong>，title随便命个名字，<strong>Key</strong>这一栏，粘贴之前复制的.hub文件里面的内容，最后点击<strong>Add SSH key</strong></p><h4 id="打开GitHub-Pages"><a href="#打开GitHub-Pages" class="headerlink" title="打开GitHub Pages"></a>打开GitHub Pages</h4><p>这一部分我也忘了，不过挺简单的，我之所以忘记就是因为这一部分不难，没卡到我，直接看github的官方文档就行：<a href="https://docs.github.com/en/pages/quickstart">Pages文档</a>。</p><p>这时候点击上方的<strong>Visit Site</strong>，你就可以看看是否成功了，可以点进去没有404就说明成功了。</p><h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>找一个空的文件夹来存放Hexo的程序文件，打开文件夹，右键，选择Git Bash here（<em>前提是你得先安装过git，并对git进行配置</em>），使用npm一键安装Hexo程序</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>因为网络问题，会很慢，如果能够科学上网，那会快非常多。</p><p>安装完成后，初始化hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init      <span class="hljs-comment"># 初始化</span><br>npm install    <span class="hljs-comment"># 安装组件</span><br></code></pre></td></tr></table></figure><p>完成后依然在git控制台中输入以下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g   <span class="hljs-comment"># 生成页面</span><br>hexo s   <span class="hljs-comment"># 启动预览</span><br></code></pre></td></tr></table></figure><p><strong>访问</strong> <code>http://localhost:4000</code><strong>，出现 Hexo 默认页面，本地博客安装成功！</strong></p><p>如果页面加载不出来，可能是<code>端口</code>被占用了，<strong>Ctrl+C</strong>关闭服务器，输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server -p port <span class="hljs-comment"># port是你电脑中空闲的端口号 </span><br></code></pre></td></tr></table></figure><p>Hexo文件夹的目录如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">_config.yml  <span class="hljs-comment"># 网站的配置信息</span><br>package.json <span class="hljs-comment"># 应用程序的信息</span><br>scaffolds    <span class="hljs-comment"># 模板文件夹</span><br><span class="hljs-built_in">source</span>       <span class="hljs-comment"># 存放用户资源，Md文件</span><br>_posts   <span class="hljs-comment"># 放md文件的地方，算是最常打开的文件夹了</span><br>themes     <span class="hljs-comment"># 主题文件夹</span><br>public      <span class="hljs-comment"># 网站文件</span><br></code></pre></td></tr></table></figure><h2 id="部署Hexo到GitHub-Pages上"><a href="#部署Hexo到GitHub-Pages上" class="headerlink" title="部署Hexo到GitHub Pages上"></a>部署Hexo到GitHub Pages上</h2><p>刚刚的是部署到了本地，如果要让别人也能看到，就要部署到服务器上，Github Pages免费可用，所以我们部署到这上面。</p><p>安装<strong>hexo-deployer-git</strong>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure><p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">deploy:<br>  <span class="hljs-built_in">type</span>: git<br>  repository: git@github.com:用户名/用户名.github.io.git<br>  branch: main<br></code></pre></td></tr></table></figure><p>然后git控制台，输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo d <span class="hljs-comment"># d就是指deploy，部署</span><br></code></pre></td></tr></table></figure><p><strong>完成！</strong>这时访问我们的 GitHub 域名 <code>https://用户名.github.io</code> 就可以看到 Hexo 网站了。</p><h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><p>可能用用户名.github.io来登录不是很好看，所以可以买个域名，用域名来登录，显得更专业一些，这里面不少的坑，花费了不少时间才一个又一个解决了问题。</p><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>首先要购买域名, 作为一名穷学生, 当然是要买最便宜的域名, 在网上发现有个网站卖的域名还挺便宜的, <a href="https://www.namesilo.com/">namesilo</a>，先注册账号,之后找到个合适的域名, 进行购买, 之所以选择这个网站还是因为这个网站购买服务器可以用支付宝支付, 非常方便. </p><p>一刀就能拿下一个域名.</p><p>买完后, 点击右上角的用户图标, 点击<strong>My Account</strong>, 进入后点击<strong>Domain Manager</strong>, <em>这可能需要你先填写一下身份信息, 这些信息我都是随便填的, 好像是没太大的影响</em>, 之后在你购买的域名左边, 点击那个蓝色小球<strong>Manage DNS for this domain</strong>, 删除里面的所有默认.</p><p>进入下一步.</p><h2 id="与Git联系"><a href="#与Git联系" class="headerlink" title="与Git联系"></a>与Git联系</h2><p>进入你的github, 点击右上角用户图标, 选择<strong>settings</strong>, 进入后点击<strong>Pages</strong>, Add a domain, 之后填写你购买的域名, 切记, 不要加入www, 然后就一路next就行, 会生成两个txt信息, 复制一下, 一会得用.</p><p>进入namesilo, 回到Manage DNS for this domain界面, 选择添加txt, 把git中生成的第一行粘到第一个格子里, 第二行粘到第二个格子里. OK! </p><p>然后win+R, 输入cmd进入控制台, ping一下你的github pages, 复制一下ipv4地址, 继续在刚才的界面, 选择添加A, 第一个格子不用填, 第二个格子填入ip地址.</p><p>之后添加CNAME, 第一个格子www, 第二个格子添加你的github pages网址.</p><p>对了, 以上三条的ttl都是3600, 也就是十分钟.</p><p>然后返回github, 回到pages, 点击verify, 等待验证, 这可能需要一些时间, 你或许要等个一小时? 我是等了半小时大约, 才行.</p><p>然后到你的.io仓库中, <strong>settings</strong>-&gt;<strong>pages</strong>, 往下翻, 到<strong>Custom domain</strong>, 输入你的域名, 不加www, 点击sava, 等待验证, 可能又是需要一些时间, 我在这里卡了非常多的时间, 因为我最开始没有去验证我的域名, 就是我先进行的这一步, 没有进行上面的过程, 所以一直失败. 需要一步一步来, 才能最后成功.</p><p>等验证成功后, 选择enforce https, 不然你是用的是http协议, 会显示不安全, 挺难受的. <em>我是一个强迫症</em></p><p>OK, 大功告成! 现在你可以用你的域名来登陆了.</p><h1 id="Hexo-常用指令"><a href="#Hexo-常用指令" class="headerlink" title="Hexo 常用指令"></a>Hexo 常用指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">Hexo clean <span class="hljs-comment"># 清除缓存,方便后续部署</span><br><br>Hexo new <span class="hljs-string">&quot;文件名字&quot;</span> <span class="hljs-comment"># 创建一个新的文件 直接生成一个md文件加入_post好像不太行</span><br>Hexo s      <span class="hljs-comment"># 预览效果</span><br>Hexo g     <span class="hljs-comment"># 生成</span><br>Hexo d     <span class="hljs-comment"># 部署</span><br></code></pre></td></tr></table></figure><h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>我们可以对hexo进行优化, 用其他人的主题来美化自己的网站, 让其更加好看.</p><p>之后有空再进行更新.</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>技术</tag>
+      <tag>工具使用</tag>
       
     </tags>
     
@@ -333,6 +411,56 @@
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何利用hexo和github-page来创建个人博客</title>
+    <link href="/2024/03/11/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8hexo%E5%92%8Cgithub-page%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2024/03/11/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8hexo%E5%92%8Cgithub-page%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<p><strong>需要环境</strong>：</p><ol><li><p>git</p></li><li><p>node</p><p>请提前下载</p></li></ol><h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><h2 id="github邮箱创建"><a href="#github邮箱创建" class="headerlink" title="github邮箱创建"></a>github邮箱创建</h2><p>这里就不加多言了，没什么好说的。</p><h2 id="创建github-Pages"><a href="#创建github-Pages" class="headerlink" title="创建github Pages"></a>创建github Pages</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>点击右上角的加号，点击<strong>New Repository</strong>，在Repository的name里面填入，username.github.io，username就是你的github的用户名，注意不是邮箱名，是你的用户名，这个以github.io结尾的地址就是你之后的域名。</p><h3 id="设置SSH"><a href="#设置SSH" class="headerlink" title="设置SSH"></a>设置SSH</h3><p>SSH的目的就是更加安全的免密登录。</p><h4 id="生成ssh秘钥"><a href="#生成ssh秘钥" class="headerlink" title="生成ssh秘钥"></a>生成ssh秘钥</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;你的邮箱&quot;</span><br></code></pre></td></tr></table></figure><p>然后就是一路Enter，这时打开你的C盘，在用户&#x2F;你的用户名文件夹下，有个.ssh文件夹，<strong>注意</strong>前面带.的文件夹都需要把文件的隐藏给先打开。</p><p>然后有个.hub后缀的文件，这是公钥可以给别人看的，还有一个没有后缀的文件，这个是私钥，不能给比人看。</p><p>我们要用的就是这个.hub文件，选择用记事本打开，全选，复制。</p><h4 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h4><p>打开你的github，现在点击你的头像，然后点击Settings，在access中找到<strong>SSH And GPG keys</strong>，点击<strong>New SSH key</strong>，title随便命个名字，<strong>Key</strong>这一栏，粘贴之前复制的.hub文件里面的内容，最后点击<strong>Add SSH key</strong></p><h4 id="打开GitHub-Pages"><a href="#打开GitHub-Pages" class="headerlink" title="打开GitHub Pages"></a>打开GitHub Pages</h4><p>这一部分我也忘了，不过挺简单的，我之所以忘记就是因为这一部分不难，没卡到我，直接看github的官方文档就行：<a href="https://docs.github.com/en/pages/quickstart">Pages文档</a>。</p><p>这时候点击上方的<strong>Visit Site</strong>，你就可以看看是否成功了，可以点进去没有404就说明成功了。</p><h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>找一个空的文件夹来存放Hexo的程序文件，打开文件夹，右键，选择Git Bash here（<em>前提是你得先安装过git，并对git进行配置</em>），使用npm一键安装Hexo程序</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>因为网络问题，会很慢，如果能够科学上网，那会快非常多。</p><p>安装完成后，初始化hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init      <span class="hljs-comment"># 初始化</span><br>npm install    <span class="hljs-comment"># 安装组件</span><br></code></pre></td></tr></table></figure><p>完成后依然在git控制台中输入以下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g   <span class="hljs-comment"># 生成页面</span><br>hexo s   <span class="hljs-comment"># 启动预览</span><br></code></pre></td></tr></table></figure><p><strong>访问</strong> <code>http://localhost:4000</code><strong>，出现 Hexo 默认页面，本地博客安装成功！</strong></p><p>如果页面加载不出来，可能是<code>端口</code>被占用了，<strong>Ctrl+C</strong>关闭服务器，输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server -p port <span class="hljs-comment"># port是你电脑中空闲的端口号 </span><br></code></pre></td></tr></table></figure><p>Hexo文件夹的目录如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">_config.yml  <span class="hljs-comment"># 网站的配置信息</span><br>package.json <span class="hljs-comment"># 应用程序的信息</span><br>scaffolds    <span class="hljs-comment"># 模板文件夹</span><br><span class="hljs-built_in">source</span>       <span class="hljs-comment"># 存放用户资源，Md文件</span><br>_posts   <span class="hljs-comment"># 放md文件的地方，算是最常打开的文件夹了</span><br>themes     <span class="hljs-comment"># 主题文件夹</span><br>public      <span class="hljs-comment"># 网站文件</span><br></code></pre></td></tr></table></figure><h2 id="部署Hexo到GitHub-Pages上"><a href="#部署Hexo到GitHub-Pages上" class="headerlink" title="部署Hexo到GitHub Pages上"></a>部署Hexo到GitHub Pages上</h2><p>刚刚的是部署到了本地，如果要让别人也能看到，就要部署到服务器上，Github Pages免费可用，所以我们部署到这上面。</p><p>安装<strong>hexo-deployer-git</strong>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure><p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">deploy:<br>  <span class="hljs-built_in">type</span>: git<br>  repository: git@github.com:用户名/用户名.github.io.git<br>  branch: main<br></code></pre></td></tr></table></figure><p>然后git控制台，输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo d <span class="hljs-comment"># d就是指deploy，部署</span><br></code></pre></td></tr></table></figure><p><strong>完成！</strong>这时访问我们的 GitHub 域名 <code>https://用户名.github.io</code> 就可以看到 Hexo 网站了。</p><h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><p>可能用用户名.github.io来登录不是很好看，所以可以买个域名，用域名来登录，显得更专业一些，这里面不少的坑，花费了不少时间才一个又一个解决了问题。</p><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>首先要购买域名, 作为一名穷学生, 当然是要买最便宜的域名, 在网上发现有个网站卖的域名还挺便宜的, <a href="https://www.namesilo.com/">namesilo</a>，先注册账号,之后找到个合适的域名, 进行购买, 之所以选择这个网站还是因为这个网站购买服务器可以用支付宝支付, 非常方便. </p><p>一刀就能拿下一个域名.</p><p>买完后, 点击右上角的用户图标, 点击<strong>My Account</strong>, 进入后点击<strong>Domain Manager</strong>, <em>这可能需要你先填写一下身份信息, 这些信息我都是随便填的, 好像是没太大的影响</em>, 之后在你购买的域名左边, 点击那个蓝色小球<strong>Manage DNS for this domain</strong>, 删除里面的所有默认.</p><p>进入下一步.</p><h2 id="与Git联系"><a href="#与Git联系" class="headerlink" title="与Git联系"></a>与Git联系</h2><p>进入你的github, 点击右上角用户图标, 选择<strong>settings</strong>, 进入后点击<strong>Pages</strong>, Add a domain, 之后填写你购买的域名, 切记, 不要加入www, 然后就一路next就行, 会生成两个txt信息, 复制一下, 一会得用.</p><p>进入namesilo, 回到Manage DNS for this domain界面, 选择添加txt, 把git中生成的第一行粘到第一个格子里, 第二行粘到第二个格子里. OK! </p><p>然后win+R, 输入cmd进入控制台, ping一下你的github pages, 复制一下ipv4地址, 继续在刚才的界面, 选择添加A, 第一个格子不用填, 第二个格子填入ip地址.</p><p>之后添加CNAME, 第一个格子www, 第二个格子添加你的github pages网址.</p><p>对了, 以上三条的ttl都是3600, 也就是十分钟.</p><p>然后返回github, 回到pages, 点击verify, 等待验证, 这可能需要一些时间, 你或许要等个一小时? 我是等了半小时大约, 才行.</p><p>然后到你的.io仓库中, <strong>settings</strong>-&gt;<strong>pages</strong>, 往下翻, 到<strong>Custom domain</strong>, 输入你的域名, 不加www, 点击sava, 等待验证, 可能又是需要一些时间, 我在这里卡了非常多的时间, 因为我最开始没有去验证我的域名, 就是我先进行的这一步, 没有进行上面的过程, 所以一直失败. 需要一步一步来, 才能最后成功.</p><p>等验证成功后, 选择enforce https, 不然你是用的是http协议, 会显示不安全, 挺难受的. <em>我是一个强迫症</em></p><p>OK, 大功告成! 现在你可以用你的域名来登陆了.</p><h1 id="Hexo-常用指令"><a href="#Hexo-常用指令" class="headerlink" title="Hexo 常用指令"></a>Hexo 常用指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">Hexo clean <span class="hljs-comment"># 清除缓存,方便后续部署</span><br><br>Hexo new <span class="hljs-string">&quot;文件名字&quot;</span> <span class="hljs-comment"># 创建一个新的文件 直接生成一个md文件加入_post好像不太行</span><br>Hexo s      <span class="hljs-comment"># 预览效果</span><br>Hexo g     <span class="hljs-comment"># 生成</span><br>Hexo d     <span class="hljs-comment"># 部署</span><br></code></pre></td></tr></table></figure><h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>我们可以对hexo进行优化, 用其他人的主题来美化自己的网站, 让其更加好看.</p><p>之后有空再进行更新.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于unity的二三事</title>
+    <link href="/2024/03/09/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
+    <url>/2024/03/09/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</url>
+    
+    <content type="html"><![CDATA[<p>override controller 无法直接加入脚本, 无法自动生成controller的脚本(空)</p><p>这应该是unity的一个bug, 我习惯了把controller一加就自动有个脚本挂在object上, 但override controller却无法实现这个功能, 不过如果在object里面先添加一个controller的脚本, 然后把内部的controller给替换为override controller是不会有什么问题的.</p><p>嗯, 大概就是unity的一个小bug.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Unity</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
     
   </entry>
   
