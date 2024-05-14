@@ -16,24 +16,26 @@
   <meta name="author" content="Soleil">
   <meta name="keywords" content="">
   
-    <meta name="description" content="parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IP">
+    <meta name="description" content="如果没有方法，去做一件事情往往事倍功半，如果只去进行方法的思考与寻找，那么会什么都做不到，最后一事无成。所以关键的事情就在于两者之间的平衡。你不可能找到一个完美无缺，非常合适的方法论去指导你的所有的行为，那么这时候最好的方法就是花上十几二十分钟，做一个计划的草稿，然后就放手去做吧，你一边做，一边自然就能够感受到自己根据这个初稿的方法论去做事情是有什么问题的，那就再花上十几二十分钟考虑有什么问题，花">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Parsec远程连接6023问题的解决方法">
-<meta property="og:url" content="https://saintfore.github.io/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="关于方法论的思考">
+<meta property="og:url" content="https://saintfore.github.io/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/index.html">
 <meta property="og:site_name" content="Forest">
-<meta property="og:description" content="parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IP">
+<meta property="og:description" content="如果没有方法，去做一件事情往往事倍功半，如果只去进行方法的思考与寻找，那么会什么都做不到，最后一事无成。所以关键的事情就在于两者之间的平衡。你不可能找到一个完美无缺，非常合适的方法论去指导你的所有的行为，那么这时候最好的方法就是花上十几二十分钟，做一个计划的草稿，然后就放手去做吧，你一边做，一边自然就能够感受到自己根据这个初稿的方法论去做事情是有什么问题的，那就再花上十几二十分钟考虑有什么问题，花">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://saintfore.github.io/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83-1.png">
 <meta property="article:published_time" content="2024-05-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-10T12:20:28.230Z">
+<meta property="article:modified_time" content="2024-05-13T12:57:20.764Z">
 <meta property="article:author" content="Soleil">
-<meta property="article:tag" content="工具使用">
+<meta property="article:tag" content="八月箴言">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://saintfore.github.io/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83-1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Parsec远程连接6023问题的解决方法 - Forest</title>
+  <title>关于方法论的思考 - Forest</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Parsec远程连接6023问题的解决方法"></span>
+            <span id="subtitle" data-typed-text="关于方法论的思考"></span>
           
         </div>
 
@@ -222,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          388 字
+          231 字
         
       </span>
     
@@ -233,7 +235,7 @@
         
         
         
-          4 分钟
+          2 分钟
         
       </span>
     
@@ -270,12 +272,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Parsec远程连接6023问题的解决方法</h1>
+            <h1 id="seo-header">关于方法论的思考</h1>
             
             
               <div class="markdown-body">
                 
-                <p>parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。<br>其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。<br>经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IPv6基本都有公网IP，于是我就把寝室内的路由器的IPv6给开启了，于此同时平板要连接手机的热点，也使用IPv6，然后就可以用了，但是好戏不长，使用了几天之后就又一次出现6023问题。<br>我真是百思不得其解，但有一次看路由器太久没有重启了，就给重启了下，然后再连接就可以了，但是一天后就又不行了，不过再重启下就又可以了。<br>我至今不知道为什么，有些猜测，可能是天翼网关在检查到使用parsec后就在缓冲中写入一些阻拦的文件，当我重启之后缓存就被清除了，所以就由可以用了。间隔是一天以内。有些麻烦，因为这样我就得开启两个远程控制软件，parsec还是快的，我不愿意舍弃，就用todesk作为辅助。</p>
+                <p>如果没有方法，去做一件事情往往事倍功半，如果只去进行方法的思考与寻找，那么会什么都做不到，最后一事无成。所以关键的事情就在于两者之间的<strong>平衡</strong>。<br>你不可能找到一个完美无缺，非常合适的方法论去指导你的所有的行为，那么这时候最好的方法就是花上十几二十分钟，做一个计划的草稿，然后就放手去做吧，你一边做，一边自然就能够感受到自己根据这个初稿的方法论去做事情是有什么问题的，那就再花上十几二十分钟考虑有什么问题，花上半个小时一个小时去纠正这些问题，然后再来一版方法论来继续去做，以此类推，这其实是一个<strong>递归</strong>的过程。</p>
+<p><img src="/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83-1.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -294,7 +297,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="category-chain-item">解决方法</a>
+  <a href="/categories/%E6%80%9D%E8%80%83/" class="category-chain-item">思考</a>
   
   
 
@@ -309,7 +312,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="print-no-link">#工具使用</a>
+        <a href="/tags/%E5%85%AB%E6%9C%88%E7%AE%B4%E8%A8%80/" class="print-no-link">#八月箴言</a>
       
     </div>
   
@@ -321,8 +324,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Parsec远程连接6023问题的解决方法</div>
-      <div>https://saintfore.github.io/2024/05/10/Parsec远程连接6023问题的解决方法/</div>
+      <div>关于方法论的思考</div>
+      <div>https://saintfore.github.io/2024/05/10/关于方法论的思考/</div>
     </div>
     <div class="license-meta">
       
@@ -366,9 +369,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/05/10/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" title="Obsidan的一些问题">
+                      <a href="/2024/05/10/uniapp%E5%AD%A6%E4%B9%A0/" title="uniapp学习">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Obsidan的一些问题</span>
+                        <span class="hidden-mobile">uniapp学习</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -376,8 +379,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/" title="Obsidian图片存储问题">
-                        <span class="hidden-mobile">Obsidian图片存储问题</span>
+                      <a href="/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/" title="如何申请github学生认证">
+                        <span class="hidden-mobile">如何申请github学生认证</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

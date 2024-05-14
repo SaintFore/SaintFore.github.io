@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>软件工程</title>
+    <link href="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    <url>/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="序章"><a href="#序章" class="headerlink" title="序章"></a>序章</h1><p>软件工程就是用工程化的方法来开发软件。</p><p>需要掌握的：</p><ul><li>需求分析</li><li>软件设计</li><li>软件开发和测试</li><li>基于 UML 建模</li><li>Web 应用程序开发</li></ul><p><strong>不是学编程，做程序员，而是做架构师，分析师指导开发和运维</strong></p><p><strong>Learning By Doing</strong></p><p>一个工程的步骤：</p><ol><li>构想</li><li>分析</li><li>建设</li><li>交付</li><li>运行</li></ol><h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p><em>什么是软件？</em></p><blockquote><p>软件 &#x3D; 程序 + 数据 + 文档<br>程序：计算机接受的一系列指令，运行时提供要求的功能<br>数据：是程序能够操作信息的<em>数据结构</em><br>文档：描述程序的研发过程、方法和使用的<em>图文资料</em></p></blockquote><p>按软件的功能分类可以分为：</p><ol><li>系统软件</li><li>支撑软件</li><li>应用软件</li></ol><p>按软件工作方式划分：</p><ol><li>实时处理软件</li><li>分时软件</li><li>交互式软件</li><li>批处理软件</li></ol><p>软件具有<strong>复杂性，一致性，可变性以及不可见性</strong>，这是造成软件开发困难的原因。</p><blockquote><p>一致性的解释：</p><ol><li>软件不能独立存在，需要依附于一定的环境（如硬件、网络等）。</li><li>软件必须遵从人为的惯例并适应已有的技术和系统。</li><li>软件需要随接口不同而改变，随时间推移而变化，而这些变化是不同人设计的结果。</li></ol></blockquote><blockquote><p>可变性的解释：</p><ol><li>版本要不断更新</li><li><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-1.png"></li></ol></blockquote><blockquote><p>不可见性的解释：<br>能看到代码，但咱们是没法看到源代码是如何执行的，可能会出现种种错误，或是达不到我们的要求。</p></blockquote><h2 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h2><h3 id="软件危机"><a href="#软件危机" class="headerlink" title="软件危机"></a>软件危机</h3><p><em>什么是软件危机？</em></p><blockquote><p>在计算机软件的开发和维护过程中所遇到的一系列严重问题。</p></blockquote><p><strong>软件工程的目的就是为了创造出“足够好”的软件</strong></p><p>软件工程三要素：<em>过程，方法，工具</em><br>最后的目标是质量</p><p>软件工程的知识领域<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-2.png"></p><p>软件工程的过程<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-3.png"></p><p>软件工程的方法<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-4.png"></p><p>软件工程可能用到的工具<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-5.png"></p><p><em>软件开发的策略</em><br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-6.png"></p><p>不要重复造轮子，把复杂问题拆解，知道拆解成小的，简单的问题。<br>同时还要不断迭代，并找到各种与质量有关的特性的平衡。</p><h3 id="ISO-9126-质量模型"><a href="#ISO-9126-质量模型" class="headerlink" title="ISO 9126 质量模型"></a>ISO 9126 质量模型</h3><p>分为外部质量</p><ol><li>功能性</li><li>可靠性</li><li>易用性</li><li>效率</li></ol><p>内部质量</p><ol><li>可维护性</li><li>可移植性<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-7.png"><br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-8.png"><br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-9.png"></li></ol><p>实现高质量的软件</p><ul><li>高质量的设计</li><li>规范的编码</li><li>有效的测试</li></ul><h2 id="软件生命周期"><a href="#软件生命周期" class="headerlink" title="软件生命周期"></a>软件生命周期</h2><blockquote><p>软件生命周期：<br>软件从功能确定、设计到开发成功投入使用，并在使用中不断地修改、增补和完善，直到被新的需要所代替而停止使用该软件的全过程。</p></blockquote><p>软件生命周期</p><ol><li>软件定义<ol><li>问题定义</li><li>可行性研究</li><li>需求分析</li></ol></li><li>软件开发<ol><li>总体设计</li><li>详细设计</li><li>编码实现</li><li>单元测试</li><li>综合测试</li></ol></li><li>运行维护<ol><li>持久满足用户需求</li></ol></li></ol><p><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-11.png"></p><h4 id="ISO-IEC-12207-软件生命周期过程标准"><a href="#ISO-IEC-12207-软件生命周期过程标准" class="headerlink" title="ISO&#x2F;IEC 12207 软件生命周期过程标准"></a>ISO&#x2F;IEC 12207 软件生命周期过程标准</h4><p><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-10.png"></p><p><em>学以致用</em><br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-12.png"><br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-13.png"></p><hr><p>介绍了下什么是<em>软件工程</em>以及什么是<em>生命周期</em></p><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h2><blockquote><p>软件过程(Software Procedure)：是为获得软件产品，在软件工具支持下由软件工程师完成的一系列软件工程活动 。</p></blockquote><blockquote><p>用来规范软件开发的 <em>活动集合</em>，<em>活动顺序</em></p></blockquote><h3 id="过程模型"><a href="#过程模型" class="headerlink" title="过程模型"></a>过程模型</h3><blockquote><p>经过软件工程领域科学家在实际项目的基础上不断研究和发现，总结出了一些可以遵循的规律</p></blockquote><p>常用的开发过程模型：</p><ol><li>瀑布模型</li><li>原型（演化）模型</li><li>螺旋模型</li><li>统一过程模型RUP（迭代式模型）</li><li>敏捷模型</li></ol><h4 id="最古老的编码修正模型"><a href="#最古老的编码修正模型" class="headerlink" title="最古老的编码修正模型"></a>最古老的编码修正模型</h4><p><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-14.png"></p><h4 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h4><p><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-15.png"></p><blockquote><p>瀑布模型又称线性顺序模型、生命周期模型，它强调开发的阶段性、早期计划和需求调查以及产品测试。是一种有效的面向过程的管理模式，但缺乏灵活性。<br><strong>适合于用户需求明确、完整、无重大变化的软件项目</strong><br><em>文档驱动的模型</em></p></blockquote><p>修正过的瀑布模型，每项活动的实施都要进行检验，符合就是下一步，不符合就返回上一步。<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-16.png"></p><h5 id="V-模型"><a href="#V-模型" class="headerlink" title="V 模型"></a>V 模型</h5><p>瀑布模型的一种变体，每个环节都有测试，同时实现功能的人与进行测试的人进行了分离。写代码同时也能进行测试，效率更高。<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-18.png"></p><h4 id="原型模型"><a href="#原型模型" class="headerlink" title="原型模型"></a>原型模型</h4><blockquote><p>快速建造一个原型，展示可视化的软件样机，展示系统的主要功能和接口，然后进行评估，进一步精化，调整原型，满足用户的要求。<br><strong>适合于那些不能预先确切定义需求的软件系统的开发。</strong></p></blockquote><p><em>Axure</em>很好用。</p><p>流程图<br><img src="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-17.png"></p><p>原型的类型有两种:</p><ol><li>抛弃型（废弃型）<ol><li>先构造一个功能简单质量要求不高的模型系统，对其进行反复分析修改，形成比较好的设计思想，系统构造完成后就被废弃。针对系统的某些功能进行实际验证，本质仍是瀑布模型。</li></ol></li><li>演化型（追加型）<ol><li>由一个功能简单的模型系统作为最终系统的核心，再不断扩充修改逐步追加新要求，最后发展成最终系统。</li></ol></li></ol><p>存在的问题：</p><ol><li>为了使原型尽快的工作，没有考虑软件的总体质量和长期的可维护性。</li><li>为了演示，可能采用不合适的操作系统、编程语言、效率低的算法，这些不理想的选择成了系统的组成部分。</li><li>在需求没有完全弄清楚，过程管理不够严格时会影响最终产品的性能。</li></ol><p>原型实现模型的要求：</p><ol><li>提供主要的功能</li><li>体现界面风格</li><li>展示模糊的部分</li><li>主要功能模块要能够建立相互衔接</li></ol><h4 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h4>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件工程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>音乐处理</title>
     <link href="/2024/05/11/%E9%9F%B3%E4%B9%90%E5%A4%84%E7%90%86/"/>
     <url>/2024/05/11/%E9%9F%B3%E4%B9%90%E5%A4%84%E7%90%86/</url>
@@ -54,11 +79,11 @@
   
   
   <entry>
-    <title>Obsidian图片存储问题</title>
-    <link href="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/"/>
-    <url>/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
+    <title>Parsec远程连接6023问题的解决方法</title>
+    <link href="/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <url>/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改md名字也没法起效果了。</em></p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p><hr><h3 id="图片的路径问题"><a href="#图片的路径问题" class="headerlink" title="图片的路径问题"></a>图片的路径问题</h3><p>之前用obsidian写的博客，再用别的软件如typora打开的时候，图片没办法显示就如同这篇md文件。这其实是obsidian设置的问题。<br>依旧是打开设置，选择<strong>文件与链接</strong>，在<strong>内部链接</strong>中选择基于当前相对路径，默认是<em>尽可能短的形式</em>，正是因为这个默认的选择才导致问题的发生。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/Snipaste_2024-05-12_14-32-12.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。<br>其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。<br>经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IPv6基本都有公网IP，于是我就把寝室内的路由器的IPv6给开启了，于此同时平板要连接手机的热点，也使用IPv6，然后就可以用了，但是好戏不长，使用了几天之后就又一次出现6023问题。<br>我真是百思不得其解，但有一次看路由器太久没有重启了，就给重启了下，然后再连接就可以了，但是一天后就又不行了，不过再重启下就又可以了。<br>我至今不知道为什么，有些猜测，可能是天翼网关在检查到使用parsec后就在缓冲中写入一些阻拦的文件，当我重启之后缓存就被清除了，所以就由可以用了。间隔是一天以内。有些麻烦，因为这样我就得开启两个远程控制软件，parsec还是快的，我不愿意舍弃，就用todesk作为辅助。</p>]]></content>
     
     
     <categories>
@@ -79,11 +104,11 @@
   
   
   <entry>
-    <title>Parsec远程连接6023问题的解决方法</title>
-    <link href="/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <url>/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <title>Obsidian图片存储问题</title>
+    <link href="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
     
-    <content type="html"><![CDATA[<p>parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。<br>其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。<br>经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IPv6基本都有公网IP，于是我就把寝室内的路由器的IPv6给开启了，于此同时平板要连接手机的热点，也使用IPv6，然后就可以用了，但是好戏不长，使用了几天之后就又一次出现6023问题。<br>我真是百思不得其解，但有一次看路由器太久没有重启了，就给重启了下，然后再连接就可以了，但是一天后就又不行了，不过再重启下就又可以了。<br>我至今不知道为什么，有些猜测，可能是天翼网关在检查到使用parsec后就在缓冲中写入一些阻拦的文件，当我重启之后缓存就被清除了，所以就由可以用了。间隔是一天以内。有些麻烦，因为这样我就得开启两个远程控制软件，parsec还是快的，我不愿意舍弃，就用todesk作为辅助。</p>]]></content>
+    <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改md名字也没法起效果了。</em></p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p><hr><h3 id="图片的路径问题"><a href="#图片的路径问题" class="headerlink" title="图片的路径问题"></a>图片的路径问题</h3><p>之前用obsidian写的博客，再用别的软件如typora打开的时候，图片没办法显示就如同这篇md文件。这其实是obsidian设置的问题。<br>依旧是打开设置，选择<strong>文件与链接</strong>，在<strong>内部链接</strong>中选择基于当前相对路径，默认是<em>尽可能短的形式</em>，正是因为这个默认的选择才导致问题的发生。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/Snipaste_2024-05-12_14-32-12.png"></p>]]></content>
     
     
     <categories>
@@ -146,6 +171,31 @@
     <tags>
       
       <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于方法论的思考</title>
+    <link href="/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <url>/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    
+    <content type="html"><![CDATA[<p>如果没有方法，去做一件事情往往事倍功半，如果只去进行方法的思考与寻找，那么会什么都做不到，最后一事无成。所以关键的事情就在于两者之间的<strong>平衡</strong>。<br>你不可能找到一个完美无缺，非常合适的方法论去指导你的所有的行为，那么这时候最好的方法就是花上十几二十分钟，做一个计划的草稿，然后就放手去做吧，你一边做，一边自然就能够感受到自己根据这个初稿的方法论去做事情是有什么问题的，那就再花上十几二十分钟考虑有什么问题，花上半个小时一个小时去纠正这些问题，然后再来一版方法论来继续去做，以此类推，这其实是一个<strong>递归</strong>的过程。</p><p><img src="/2024/05/10/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83/%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E7%9A%84%E6%80%9D%E8%80%83-1.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>思考</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>八月箴言</tag>
       
     </tags>
     
