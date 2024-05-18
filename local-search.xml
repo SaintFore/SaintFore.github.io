@@ -13,7 +13,9 @@
     
     <categories>
       
-      <category>[Linux, Ubuntu]</category>
+      <category>Linux</category>
+      
+      <category>Ubuntu</category>
       
     </categories>
     
@@ -229,31 +231,6 @@
   
   
   <entry>
-    <title>如何申请github学生认证</title>
-    <link href="/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
-    <url>/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>解决方法</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>工具使用</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数据库ER图</title>
     <link href="/2024/05/10/%E6%95%B0%E6%8D%AE%E5%BA%93ER%E5%9B%BE/"/>
     <url>/2024/05/10/%E6%95%B0%E6%8D%AE%E5%BA%93ER%E5%9B%BE/</url>
@@ -271,6 +248,31 @@
     <tags>
       
       <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何申请github学生认证</title>
+    <link href="/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
+    <url>/2024/05/10/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
       
     </tags>
     
