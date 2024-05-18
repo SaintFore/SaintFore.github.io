@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>Linux学习</title>
+    <link href="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>最近因为看深入了解计算机系统这本书，这本书要求使用 linux 来进行一些实验，所以萌生了想要弄台 <em>Linux</em>电脑的想法，想起来就做。正巧，B 站最近老是给我推送开发板的内容，我是十分感兴趣的，毕竟我想要亲手做一些东西，刚好看到九十九的香橙派 zero 3 可以充当 linux 电脑，于是研究一下就直接买了一套，买的是 1 G 版本的，加上内存卡，电源，扩展板，外壳，连接线，一共不到两百块就拿下了一台 Linux 电脑。<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-1.jpg"></p><h1 id="开始组装"><a href="#开始组装" class="headerlink" title="开始组装"></a>开始组装</h1><p>就是把外壳给装到开发板上，不过注意引脚，电扇的供电要插到固定的引脚上（有个 5 V 还有个 GND 的引脚，插到这两个面才行。香橙派把对应的 pin 都涂上颜色了，GND 是黑色，供电的 5 V 涂得红色，而风扇的电线也有黑红两色，对应连接就行），因为我安装的时候没有拍照，所以这里就不放图片了。然后就没什么难度，也不需要螺丝就安装好了，没装散热片，不过还好。<br>最后的结果就是上图所示。</p><h2 id="引脚"><a href="#引脚" class="headerlink" title="引脚"></a>引脚</h2><p>做一些东西总得学到一些什么东西，所以说我每学到什么新东西，我都会去查一查资料来试图真正弄明白这些东西。不过现在有 AI 了，我用 Github Copilot 来帮我解答问题，chatGpt 4.0 的模型，是真的好用。</p><hr><blockquote><p>在电子和计算机硬件中，”引脚”（Pin）通常指的是连接器或集成电路（IC）的物理接口。这些引脚用于传输电力或数据。</p></blockquote><p>常见的引脚类型：</p><ol><li><strong>电源引脚（Power Pins）</strong>：这些引脚提供电源给设备或电路。例如，5V引脚提供5伏特的电压。</li><li><strong>接地引脚（Ground Pins）</strong>：这些引脚提供电路的公共接地点，也称为零电压参考点。所有的电源和信号都相对于这个接地点进行测量。</li><li><strong>数字输入&#x2F;输出引脚（Digital I&#x2F;O Pins）</strong>：这些引脚可以被编程为输入或输出，用于读取数字信号（如开关状态）或控制数字设备（如LED灯）。</li><li><strong>模拟输入&#x2F;输出引脚（Analog I&#x2F;O Pins）</strong>：这些引脚可以读取或输出模拟信号。模拟输入常用于读取模拟传感器（如温度传感器），模拟输出常用于控制设备（如伺服电机）。</li><li><strong>特殊功能引脚</strong>：一些引脚具有特殊的功能，如串行通信（如UART，SPI，I2C），脉冲宽度调制（PWM）输出，外部中断等。</li></ol><p>接地引脚的简称就是 GND</p><h2 id="不同类型的-Ubuntu"><a href="#不同类型的-Ubuntu" class="headerlink" title="不同类型的 Ubuntu"></a>不同类型的 Ubuntu</h2><p>有两种类型，其实 Linux 都有两种类型</p><ol><li>Desktop</li><li>Server</li></ol><p>很容易区分，桌面版大一些，就拿 ubuntu 举例，桌面版比服务器版大一倍。<br>不过桌面版有可视化界面，服务器版就只有敲命令行了。</p><h2 id="烧录"><a href="#烧录" class="headerlink" title="烧录"></a>烧录</h2><p>插上 tf 卡，打卡<em>balenaEtcher</em>，我们用这个软件进行 tf 卡的烧录，选择 Ubuntu 的映像，以 img 结尾的，点击烧录，等一会，然后就 OK 了。<br>将 tf 卡查到香橙派的 tf 卡槽里面，硬件的准备就结束了。</p><h1 id="连接电脑"><a href="#连接电脑" class="headerlink" title="连接电脑"></a>连接电脑</h1><h2 id="Hdmi-的分类"><a href="#Hdmi-的分类" class="headerlink" title="Hdmi 的分类"></a>Hdmi 的分类</h2><p>Hdmi 有三种类型</p><ol><li>Hdmi</li><li>Mini Hdmi</li><li>Micro Hdmi</li></ol><p>我起初认为只有两种，所谓的 minihdmi 和 microhdmi 是一样的，结果是不同的，microhdmi 比 typec 还要小。</p><h2 id="SSH-连接电脑"><a href="#SSH-连接电脑" class="headerlink" title="SSH 连接电脑"></a>SSH 连接电脑</h2><p>因为我买错线了，没有 microHDMI，所以没办法直接连接，所以就是用 <em>MobaXterm</em>来进行 ssh 远程连接。</p><h3 id="什么是-SSH"><a href="#什么是-SSH" class="headerlink" title="什么是 SSH"></a>什么是 SSH</h3><p>其实之前我也没有用过，这次是初次接触 SSH。<br>以下为 AI 的回答。</p><blockquote><p>SSH，全称为Secure Shell，是一种网络协议，用于在不安全的网络上进行安全的远程登录和其他安全网络服务。SSH提供了一个安全的通道，使你可以在这个通道上执行命令，传输文件，或者打开图形用户界面。</p></blockquote><blockquote><p>SSH 的主要特点是强大的安全性。它使用了公钥加密技术来验证远程计算机和允许远程计算机验证用户。这意味着，即使网络被监听，也无法获取到用户的密码或其他敏感信息。</p></blockquote><h3 id="使用-MobaXterm-进行-SSH-连接"><a href="#使用-MobaXterm-进行-SSH-连接" class="headerlink" title="使用 MobaXterm 进行 SSH 连接"></a>使用 MobaXterm 进行 SSH 连接</h3><p>首先打开 MobaXterm<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-1.png"><br>点击左上角的 Sessions，选择 <em>New session</em><br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-2.png"><br>点击 SSH，因为咱们要进行 SSH 连接。<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-3.png"><br>然后就只需要输入你要连接的设备的 ipv 4 地址就行，点击确定，就可以了。<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-4.png"><br>然后就进入 Linux 系统中了。<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-5.png"><br>接下来就可以操控电脑了。</p><h4 id="获得机器-IP-地址"><a href="#获得机器-IP-地址" class="headerlink" title="获得机器 IP 地址"></a>获得机器 IP 地址</h4><p><strong>但请注意，这里有个关键问题，就是如何得到设备的 IP 地址，我只有一台机器，没有屏幕，该怎么得到？</strong></p><p>这里因为没有显示器，没法连接蓝牙，于是就先连接网线进行有线连接了。<br>因为动态主机配置协议（DHCP）导致有线连接与无线连接得到的 IP 地址是不一样的，也就是说，我现在用 ssh 连接上了，之后换成 wifi 连接网络，还是要更换 session 的。</p><p>有两个方法</p><p>第一<br>直接看路由器的连接信息，一般都是路由器直接输入 192.168.1.1，直接进入网关，然后看有线连接，直接就能查到设备的 IP 地址。我这里第一次连接的时候没有显示，应该是运营商送的<em>光猫+路由器</em>有点问题（重启后就又能搜到了），所以用了第二种方法。</p><p>第二<br>用 cmd</p><ol><li><p>获得本网段的地址</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD"><span class="hljs-built_in">ipconfig</span> /all<br></code></pre></td></tr></table></figure><p><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-6.png"><br>一查，上图就是我的 IPv 4 地址，网段就是 192.168.1.1</p></li><li><p>然后清空 arp 映射表</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD">arp -d *<br></code></pre></td></tr></table></figure><p>不过好像不清空也不影响，只是比较乱。<br>而且一般用户没法删，必须的以<em>管理员</em>身份才能使用该指令。</p></li><li><p>之后遍历网段里面的所有 IP</p></li></ol><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD"><span class="hljs-keyword">for</span> /L %i <span class="hljs-keyword">IN</span> (<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">254</span>) <span class="hljs-keyword">DO</span> <span class="hljs-built_in">ping</span> -w <span class="hljs-number">1</span> -n <span class="hljs-number">1</span> <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">1</span>.%i<br></code></pre></td></tr></table></figure><ul><li><code>/L</code> 表示这是一个范围循环。<code>%i</code> 是循环变量，<code>(1,1,254)</code> 定义了循环的范围和步长，意思是从1开始，每次增加1，直到254。</li><li><code>DO</code> 就是做，每次循环都要做，后面跟着要做的事情。</li><li><code>ping -w 1 -n 1 192.168.1.%i</code>：这是在每次循环中执行的命令。<code>ping</code> 是一个网络工具，用于测试网络连接。<code>-w 1</code> 设置了等待每个回应的超时时间为1毫秒，<code>-n 1</code> 设置了发送ping请求的次数为1次。<code>192.168.1.%i</code> 是被ping的IP地址，<code>%i</code> 是循环变量，所以这个命令会依次ping <code>192.168.1.1</code> 到 <code>192.168.1.254</code> 的所有地址。</li></ul><ol start="4"><li>然后通过arp -a命令读取缓存的映射表获取所有与本机连接的设备的Mac地址</li></ol><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD">arp -a<br></code></pre></td></tr></table></figure><ol start="5"><li>最后比照能确定的 IP 地址找到新加入设备的 IP 地址<br>这最后一步挺麻烦的，我比照出来了，但是并不是特别确定。</li></ol><p>最后还是重启了下路由器，来找到 IP 地址的。</p><h2 id="使用-Linux-来连接-wifi"><a href="#使用-Linux-来连接-wifi" class="headerlink" title="使用 Linux 来连接 wifi"></a>使用 Linux 来连接 wifi</h2><p>网线离我挺远的，所以还是想要使用 Wifi 连接网络。其实直接在 Server 中敲命令就可以。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">iwconfig # 查看当前连接的WIFI网络信息，如Bit Rate。<br></code></pre></td></tr></table></figure><p>这是我已经连接过的结果：<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-7.png"></p><ol><li><strong>eth0</strong>：这通常是第一个以太网接口的名称。”eth”是”Ethernet”的缩写，”0”表示这是第一个接口。这个接口通常用于有线网络连接。</li><li><strong>wlan0</strong>：这通常是第一个无线网络接口的名称。”wlan”是”Wireless LAN”的缩写，”0”表示这是第一个接口。这个接口通常用于无线网络连接。</li><li><strong>lo</strong>：这是环回接口（loopback interface）的名称。这个接口主要用于网络服务的测试和本地通信。当你向环回接口发送数据时，数据会立即返回，不会真正发送到网络上。环回接口的IP地址通常是127.0.0.1。</li></ol><p>上面是查看已经连接的网，一下才是真的连接没有的 wifi。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">nmcli dev wifi # 查找可用的wifi网络<br>nmcli dev wifi connect &#x27;Your_WiFi_SSID&#x27; password &#x27;Your_WiFi_Password&#x27;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">用这个命令来连接可用的网络</span><br></code></pre></td></tr></table></figure><p>这样就结束了，再同上面介绍的，使用新的 Ip 地址来进行 ssh 连接，这时候可以使用下面的指令来查找 Ip 地址。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ip addr show # 能够显示IP地址<br></code></pre></td></tr></table></figure><p><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-8.png"></p><p>最后拔掉网线，大功告成。</p><p><strong>对了，有可能会出现权限不够的情况</strong><br>那就 <code>sudo</code>，前面加一个。它的全称是 “SuperUser DO”。它用于执行需要超级用户（也就是 root 用户）权限的命令。</p><h3 id="分页查看器"><a href="#分页查看器" class="headerlink" title="分页查看器"></a>分页查看器</h3><p>如果遇到进入一页，底部有什么 lines x-xx，然后可以换页的，那么你就是进入到了<em>分页查看器</em>中，按 <code>Space</code> 键或 <code>Enter</code> 键来查看更多的行；可以按 <code>q</code> 键来退出分页查看器。</p><h1 id="正式使用-Linux"><a href="#正式使用-Linux" class="headerlink" title="正式使用 Linux"></a>正式使用 Linux</h1><p>总算是进入正式进入 Linux 了，到这里我已经花费了整整两个小时写一篇博客了，总算是认识到写博客的艰难了。:loudly_crying_face:</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>[Linux, Ubuntu]</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>uniapp学习</title>
+    <link href="/2024/05/16/uniapp%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/16/uniapp%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>又是很久没有写博客了，深感惭愧。</p><hr><p>今天开始来写 uniapp 的博客，第一次写体系化的，文字量大的博客，如有不恰当不合适的地方，请多见谅。</p><h2 id="为什么使用-Uniapp"><a href="#为什么使用-Uniapp" class="headerlink" title="为什么使用 Uniapp"></a>为什么使用 Uniapp</h2><p>说实话，就俩字，省事。虽说之前看 uniapp 的问题，看到不同的平台会有不同的 bug，不过先做，之后出问题再看看怎么解决。</p><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Uniapp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>软件工程</title>
     <link href="/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
     <url>/2024/05/13/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
@@ -79,11 +129,11 @@
   
   
   <entry>
-    <title>Parsec远程连接6023问题的解决方法</title>
-    <link href="/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <url>/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <title>Obsidian图片存储问题</title>
+    <link href="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
     
-    <content type="html"><![CDATA[<p>parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。<br>其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。<br>经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IPv6基本都有公网IP，于是我就把寝室内的路由器的IPv6给开启了，于此同时平板要连接手机的热点，也使用IPv6，然后就可以用了，但是好戏不长，使用了几天之后就又一次出现6023问题。<br>我真是百思不得其解，但有一次看路由器太久没有重启了，就给重启了下，然后再连接就可以了，但是一天后就又不行了，不过再重启下就又可以了。<br>我至今不知道为什么，有些猜测，可能是天翼网关在检查到使用parsec后就在缓冲中写入一些阻拦的文件，当我重启之后缓存就被清除了，所以就由可以用了。间隔是一天以内。有些麻烦，因为这样我就得开启两个远程控制软件，parsec还是快的，我不愿意舍弃，就用todesk作为辅助。</p>]]></content>
+    <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改md名字也没法起效果了。</em></p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p><hr><h3 id="图片的路径问题"><a href="#图片的路径问题" class="headerlink" title="图片的路径问题"></a>图片的路径问题</h3><p>之前用obsidian写的博客，再用别的软件如typora打开的时候，图片没办法显示就如同这篇md文件。这其实是obsidian设置的问题。<br>依旧是打开设置，选择<strong>文件与链接</strong>，在<strong>内部链接</strong>中选择基于当前相对路径，默认是<em>尽可能短的形式</em>，正是因为这个默认的选择才导致问题的发生。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/Snipaste_2024-05-12_14-32-12.png"></p>]]></content>
     
     
     <categories>
@@ -104,11 +154,11 @@
   
   
   <entry>
-    <title>Obsidian图片存储问题</title>
-    <link href="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/"/>
-    <url>/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
+    <title>Parsec远程连接6023问题的解决方法</title>
+    <link href="/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <url>/2024/05/10/Parsec%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A56023%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改md名字也没法起效果了。</em></p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p><hr><h3 id="图片的路径问题"><a href="#图片的路径问题" class="headerlink" title="图片的路径问题"></a>图片的路径问题</h3><p>之前用obsidian写的博客，再用别的软件如typora打开的时候，图片没办法显示就如同这篇md文件。这其实是obsidian设置的问题。<br>依旧是打开设置，选择<strong>文件与链接</strong>，在<strong>内部链接</strong>中选择基于当前相对路径，默认是<em>尽可能短的形式</em>，正是因为这个默认的选择才导致问题的发生。<br><img src="/2024/05/10/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/Snipaste_2024-05-12_14-32-12.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>parsec进行局域网连接时，使用起来十分畅通，但是在远程连接时，时常发生无法连接的问题，说有什么东西prevent了p2p的连接，就是6023问题。<br>其实之前在2023年下旬以及2024年年初的时候我是从来没有遇到这个问题的，我用手机连接电脑毫无问题，响应十分的快。但今年四月份，买了平板之后使用parsec就老是出现6023问题。<br>经过查询，发现解决的方法就是得有公网IP，IPv4难以申请，但是IPv6基本都有公网IP，于是我就把寝室内的路由器的IPv6给开启了，于此同时平板要连接手机的热点，也使用IPv6，然后就可以用了，但是好戏不长，使用了几天之后就又一次出现6023问题。<br>我真是百思不得其解，但有一次看路由器太久没有重启了，就给重启了下，然后再连接就可以了，但是一天后就又不行了，不过再重启下就又可以了。<br>我至今不知道为什么，有些猜测，可能是天翼网关在检查到使用parsec后就在缓冲中写入一些阻拦的文件，当我重启之后缓存就被清除了，所以就由可以用了。间隔是一天以内。有些麻烦，因为这样我就得开启两个远程控制软件，parsec还是快的，我不愿意舍弃，就用todesk作为辅助。</p>]]></content>
     
     
     <categories>
@@ -139,31 +189,6 @@
     <categories>
       
       <category>人工智能</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>uniapp学习</title>
-    <link href="/2024/05/10/uniapp%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/05/10/uniapp%E5%AD%A6%E4%B9%A0/</url>
-    
-    <content type="html"><![CDATA[<p>又是很久没有写博客了，深感惭愧。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Uniapp</category>
       
     </categories>
     
