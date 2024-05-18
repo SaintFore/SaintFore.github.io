@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://saintfore.github.io/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-16.png">
 <meta property="og:image" content="https://saintfore.github.io/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-17.png">
 <meta property="article:published_time" content="2024-05-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-18T10:30:04.036Z">
+<meta property="article:modified_time" content="2024-05-18T10:35:05.016Z">
 <meta property="article:author" content="Soleil">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary_large_image">
@@ -465,7 +465,13 @@
 <p>在终端中看到”Hello, World!”的输出。<br>结果如下：<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-16.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="Vim-编辑器的使用"><a href="#Vim-编辑器的使用" class="headerlink" title="Vim 编辑器的使用"></a>Vim 编辑器的使用</h4><p>使用 vim 打开文件后，你可以按 <code>i</code> 键进入插入模式，然后输入你的代码。当你完成后，按 <code>Esc</code> 键退出插入模式，然后输入 <code>:wq</code> 并按 <code>Enter</code> 键保存你的文件并退出 <code>vim</code>。</p>
 <p>在<code>vim</code>编辑器中，<code>:wq</code>是一个命令，用于保存（write）当前的更改并退出（quit）编辑器。这个命令是在命令模式下输入的，你可以通过按<code>Esc</code>键进入命令模式。</p>
-<h2 id="这个命令的各部分含义如下：-：这个符号表示你要输入一个命令。在vim中，许多命令都是以这个符号开始的。-w：这个字母代表“write”，也就是保存。这个命令将会保存你对当前文件的所有更改。-q：这个字母代表“quit”，也就是退出。这个命令将会关闭vim编辑器。"><a href="#这个命令的各部分含义如下：-：这个符号表示你要输入一个命令。在vim中，许多命令都是以这个符号开始的。-w：这个字母代表“write”，也就是保存。这个命令将会保存你对当前文件的所有更改。-q：这个字母代表“quit”，也就是退出。这个命令将会关闭vim编辑器。" class="headerlink" title="这个命令的各部分含义如下：- :：这个符号表示你要输入一个命令。在vim中，许多命令都是以这个符号开始的。- w：这个字母代表“write”，也就是保存。这个命令将会保存你对当前文件的所有更改。- q：这个字母代表“quit”，也就是退出。这个命令将会关闭vim编辑器。"></a>这个命令的各部分含义如下：<br>- <code>:</code>：这个符号表示你要输入一个命令。在<code>vim</code>中，许多命令都是以这个符号开始的。<br>- <code>w</code>：这个字母代表“write”，也就是保存。这个命令将会保存你对当前文件的所有更改。<br>- <code>q</code>：这个字母代表“quit”，也就是退出。这个命令将会关闭<code>vim</code>编辑器。</h2><p>所以，<code>:wq</code> 命令的意思是“保存并退出”。这是一个非常常用的 <code>vim</code> 命令。</p>
+<p>这个命令的各部分含义如下：</p>
+<ul>
+<li><code>:</code>：这个符号表示你要输入一个命令。在<code>vim</code>中，许多命令都是以这个符号开始的。</li>
+<li><code>w</code>：这个字母代表“write”，也就是保存。这个命令将会保存你对当前文件的所有更改。</li>
+<li><code>q</code>：这个字母代表“quit”，也就是退出。这个命令将会关闭<code>vim</code>编辑器。</li>
+</ul>
+<p>所以，<code>:wq</code> 命令的意思是“保存并退出”。这是一个非常常用的 <code>vim</code> 命令。</p>
 <h4 id="Vim-与-nano-的区别"><a href="#Vim-与-nano-的区别" class="headerlink" title="Vim 与 nano 的区别"></a>Vim 与 nano 的区别</h4><p><code>vim</code>和<code>nano</code>都是文本编辑器，但它们之间有一些关键的区别：</p>
 <ol>
 <li><p><strong>易用性</strong>：<code>nano</code>是一个简单易用的文本编辑器，它在底部显示所有可用的命令，这对于新手来说非常有用。相比之下，<code>vim</code>有一个较陡的学习曲线，但一旦你熟悉了它，你就可以非常高效地编辑文本。</p>
