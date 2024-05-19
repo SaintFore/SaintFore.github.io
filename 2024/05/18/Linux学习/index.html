@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://saintfore.github.io/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-16.png">
 <meta property="og:image" content="https://saintfore.github.io/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-17.png">
 <meta property="article:published_time" content="2024-05-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-18T10:35:05.016Z">
+<meta property="article:modified_time" content="2024-05-19T11:50:39.785Z">
 <meta property="article:author" content="Soleil">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary_large_image">
@@ -317,7 +317,7 @@
 <li>Server</li>
 </ol>
 <p>很容易区分，桌面版大一些，就拿 ubuntu 举例，桌面版比服务器版大一倍。<br>不过桌面版有可视化界面，服务器版就只有敲命令行了。</p>
-<h2 id="烧录"><a href="#烧录" class="headerlink" title="烧录"></a>烧录</h2><p>插上 tf 卡，打卡<em>balenaEtcher</em>，我们用这个软件进行 tf 卡的烧录，选择 Ubuntu 的映像，以 img 结尾的，点击烧录，等一会，然后就 OK 了。<br>将 tf 卡查到香橙派的 tf 卡槽里面，硬件的准备就结束了。</p>
+<h2 id="烧录"><a href="#烧录" class="headerlink" title="烧录"></a>烧录</h2><p>插上 tf 卡，打开<em>balenaEtcher</em>，我们用这个软件进行 tf 卡的烧录，选择 Ubuntu 的映像，以 img 结尾的，点击烧录，等一会，然后就 OK 了。<br>将 tf 卡查到香橙派的 tf 卡槽里面，硬件的准备就结束了。</p>
 <h1 id="连接电脑"><a href="#连接电脑" class="headerlink" title="连接电脑"></a>连接电脑</h1><h2 id="Hdmi-的分类"><a href="#Hdmi-的分类" class="headerlink" title="Hdmi 的分类"></a>Hdmi 的分类</h2><p>Hdmi 有三种类型</p>
 <ol>
 <li>Hdmi</li>
@@ -340,16 +340,17 @@
 <p>第一<br>直接看路由器的连接信息，一般都是路由器直接输入 192.168.1.1，直接进入网关，然后看有线连接，直接就能查到设备的 IP 地址。我这里第一次连接的时候没有显示，应该是运营商送的<em>光猫+路由器</em>有点问题（重启后就又能搜到了），所以用了第二种方法。</p>
 <p>第二<br>用 cmd</p>
 <ol>
-<li><p>获得本网段的地址</p>
+<li>获得本网段的地址</li>
+</ol>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD"><span class="hljs-built_in">ipconfig</span> /all<br></code></pre></td></tr></table></figure>
 <p><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-6.png" srcset="/img/loading.gif" lazyload><br>一查，上图就是我的 IPv 4 地址，网段就是 192.168.1.1</p>
-</li>
-<li><p>然后清空 arp 映射表</p>
+<ol start="2">
+<li>然后清空 arp 映射表</li>
+</ol>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD">arp -d *<br></code></pre></td></tr></table></figure>
 <p>不过好像不清空也不影响，只是比较乱。<br>而且一般用户没法删，必须的以<em>管理员</em>身份才能使用该指令。</p>
-</li>
-<li><p>之后遍历网段里面的所有 IP</p>
-</li>
+<ol start="3">
+<li>之后遍历网段里面的所有 IP</li>
 </ol>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD"><span class="hljs-keyword">for</span> /L %i <span class="hljs-keyword">IN</span> (<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">254</span>) <span class="hljs-keyword">DO</span> <span class="hljs-built_in">ping</span> -w <span class="hljs-number">1</span> -n <span class="hljs-number">1</span> <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">1</span>.%i<br></code></pre></td></tr></table></figure>
 <ul>
@@ -363,9 +364,9 @@
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs CMD">arp -a<br></code></pre></td></tr></table></figure>
 
 <ol start="5">
-<li>最后比照能确定的 IP 地址找到新加入设备的 IP 地址<br>这最后一步挺麻烦的，我比照出来了，但是并不是特别确定。</li>
+<li>最后比照能确定的 IP 地址找到新加入设备的 IP 地址</li>
 </ol>
-<p>最后还是重启了下路由器，来找到 IP 地址的。</p>
+<p>这最后一步挺麻烦的，我比照出来了，但是并不是特别确定。<br>最后还是重启了下路由器，来找到 IP 地址的。</p>
 <h2 id="使用-Linux-来连接-wifi"><a href="#使用-Linux-来连接-wifi" class="headerlink" title="使用 Linux 来连接 wifi"></a>使用 Linux 来连接 wifi</h2><p>网线离我挺远的，所以还是想要使用 Wifi 连接网络。其实直接在 Server 中敲命令就可以。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">iwconfig # 查看当前连接的WIFI网络信息，如Bit Rate。<br></code></pre></td></tr></table></figure>
 <p>这是我已经连接过的结果：<br><img src="/2024/05/18/Linux%E5%AD%A6%E4%B9%A0/Linux%E5%AD%A6%E4%B9%A0-7.png" srcset="/img/loading.gif" lazyload></p>
@@ -589,6 +590,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/05/19/Linux%E4%B8%8EMySQL/" title="Linux与MySQL">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Linux与MySQL</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
