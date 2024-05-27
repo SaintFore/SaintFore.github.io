@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Notion学习</title>
+    <link href="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="如何进行数据库的循环建立"><a href="#如何进行数据库的循环建立" class="headerlink" title="如何进行数据库的循环建立"></a>如何进行数据库的循环建立</h1><p>其实非常简单，点击数据库右上角的一个向下箭头，建立一个新的模板（template）<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-1.png"><br>建一个模板，然后点击 Repeat 设置自己建立新的时间，我可能是因为眼拙的缘故，没找到中国，选日本也行，日本比中国快一个小时（中国 23 点，日本就 24 点），差别不是特别大。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-2.png"><br>之后还想继续编辑的话就点击 edit 进行编辑。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-3.png"><br>不想自动每天创建了，就把 repeat 给关了就行。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-4.png"></p><h1 id="Wrap-in-view"><a href="#Wrap-in-view" class="headerlink" title="Wrap in view"></a>Wrap in view</h1><p><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-5.png"><br>表示是否换行，关闭就不换行，默认是开启的，当字数超过格子的容纳量后就扩大格子的长，也就是多几行。关闭的话，如果字数太多，多出来的字就不显示了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Notion</category>
+      
+      <category>TODO</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+      <tag>TODO</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux与MySQL</title>
     <link href="/2024/05/26/Linux%E4%B8%8EMySQL/"/>
     <url>/2024/05/26/Linux%E4%B8%8EMySQL/</url>
@@ -60,62 +89,6 @@
   
   
   <entry>
-    <title>Notion学习</title>
-    <link href="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/</url>
-    
-    <content type="html"><![CDATA[<h1 id="如何进行数据库的循环建立"><a href="#如何进行数据库的循环建立" class="headerlink" title="如何进行数据库的循环建立"></a>如何进行数据库的循环建立</h1><p>其实非常简单，点击数据库右上角的一个向下箭头，建立一个新的模板（template）<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-1.png"><br>建一个模板，然后点击 Repeat 设置自己建立新的时间，我可能是因为眼拙的缘故，没找到中国，选日本也行，日本比中国快一个小时（中国 23 点，日本就 24 点），差别不是特别大。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-2.png"><br>之后还想继续编辑的话就点击 edit 进行编辑。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-3.png"><br>不想自动每天创建了，就把 repeat 给关了就行。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-4.png"></p><h1 id="Wrap-in-view"><a href="#Wrap-in-view" class="headerlink" title="Wrap in view"></a>Wrap in view</h1><p><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-5.png"><br>表示是否换行，关闭就不换行，默认是开启的，当字数超过格子的容纳量后就扩大格子的长，也就是多几行。关闭的话，如果字数太多，多出来的字就不显示了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Notion</category>
-      
-      <category>TODO</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-      <tag>TODO</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Obsidian加坚果云实现同步</title>
-    <link href="/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/"/>
-    <url>/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/</url>
-    
-    <content type="html"><![CDATA[<p>平板电脑回来之后，一直想着用平板电脑来远程电脑实现轻便的生产力办公，但最后发现因为缩放的关系，使用远程还是不太舒服，所以就一直使用notion来记笔记，但notion不是本地的，我到处md文件，也会显得相当之奇怪，所以一直想要写的博客就停了很长一段时间，大约有一个月。<br>在某次刷知乎的评论时，讨论的事vsc，突然看到obsidian是全平台的，就想通过obsidian来写md文件，然后用hexo上传到我的网站上去。不过这个还是要有线连接，于是就又想要看看能不能通过同步来实现，发现坚果云可以。不费吹灰之力就完成了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>解决方法</category>
-      
-      <category>Obsidian</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>工具使用</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Obsidan的一些问题</title>
     <link href="/2024/05/26/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
     <url>/2024/05/26/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
@@ -148,6 +121,33 @@
     <url>/2024/05/26/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/</url>
     
     <content type="html"><![CDATA[<p>因为我是要写博客，大量的图片的插入是必须的，之前用typora是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便我之后将博客放到我的网站上。<br>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，但也看到有人吐槽图床有些问题，比如如果放图片的服务器出问题的话就没法看图片了，还有种种。所以我就只能选择第二个，也就是插件，不得不说obsidian的插件是真的多，不愧是小vsc，找到个类似typora的插件，如下图：<br><img src="/2024/05/26/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.png"><br>就是<em>Custom Attachment Location</em>，安装之后就点击设置，设置如上图，就能够自动创建于md文件名字相同的子文件夹。并且注意<strong>当你更改md文件的名字时，根据md文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改md名字也没法起效果了。</em></p><p>然后就是<em>图片命名的问题了</em>又找了个插件，<em>paste image rename</em>这个插件的配置如下：<br><img src="/2024/05/26/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-2.png"><br>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。<br><img src="/2024/05/26/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98-1.jpg"><br>又尝试了下，把Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png格式。</p><hr><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。<br>obsidian图片的插入格式为![[]]这不是通用的md图片格式，通用的md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><hr><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的wiki选项给取消掉。就可以了。</p><hr><h3 id="图片的路径问题"><a href="#图片的路径问题" class="headerlink" title="图片的路径问题"></a>图片的路径问题</h3><p>之前用obsidian写的博客，再用别的软件如typora打开的时候，图片没办法显示就如同这篇md文件。这其实是obsidian设置的问题。<br>依旧是打开设置，选择<strong>文件与链接</strong>，在<strong>内部链接</strong>中选择基于当前相对路径，默认是<em>尽可能短的形式</em>，正是因为这个默认的选择才导致问题的发生。<br><img src="/2024/05/26/Obsidian%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E9%97%AE%E9%A2%98/Snipaste_2024-05-12_14-32-12.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+      <category>Obsidian</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Obsidian加坚果云实现同步</title>
+    <link href="/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/"/>
+    <url>/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/</url>
+    
+    <content type="html"><![CDATA[<p>平板电脑回来之后，一直想着用平板电脑来远程电脑实现轻便的生产力办公，但最后发现因为缩放的关系，使用远程还是不太舒服，所以就一直使用notion来记笔记，但notion不是本地的，我到处md文件，也会显得相当之奇怪，所以一直想要写的博客就停了很长一段时间，大约有一个月。<br>在某次刷知乎的评论时，讨论的事vsc，突然看到obsidian是全平台的，就想通过obsidian来写md文件，然后用hexo上传到我的网站上去。不过这个还是要有线连接，于是就又想要看看能不能通过同步来实现，发现坚果云可以。不费吹灰之力就完成了。</p>]]></content>
     
     
     <categories>
