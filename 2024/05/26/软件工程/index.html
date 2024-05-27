@@ -43,8 +43,9 @@
 <meta property="og:image" content="https://saintfore.github.io/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-17.png">
 <meta property="og:image" content="https://saintfore.github.io/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-19.png">
 <meta property="og:image" content="https://saintfore.github.io/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-20.png">
+<meta property="og:image" content="https://saintfore.github.io/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-23.png">
 <meta property="article:published_time" content="2024-05-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-26T15:46:19.558Z">
+<meta property="article:modified_time" content="2024-05-27T13:33:29.403Z">
 <meta property="article:author" content="Soleil">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          3.4k 字
         
       </span>
     
@@ -254,7 +255,7 @@
         
         
         
-          19 分钟
+          29 分钟
         
       </span>
     
@@ -485,7 +486,40 @@
 <p>4.项目管理人员把握全局的水平较高。</p>
 <h5 id="增量模型与迭代模型的区别"><a href="#增量模型与迭代模型的区别" class="headerlink" title="增量模型与迭代模型的区别"></a>增量模型与迭代模型的区别</h5><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-19.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-20.png" srcset="/img/loading.gif" lazyload></p>
-
+<h4 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h4><blockquote>
+<p>对于复杂的大型软件，开发一个原型往往达不到要求。螺旋模型将瀑布模型和增量模型结合起来，加入了风险分析。在该模型中，软件开发是一系列的增量发布，早期的迭代中，发布的增量可能是一个纸上的模型或原型，在以后的迭代中，逐步产生系统更加完善的版本。<br>螺旋模型的基本思想是降低风险。需要风险控制的一系列专门技术，因此投入较大，适用于规模较大的复杂系统。</p>
+</blockquote>
+<p><strong>螺旋模型 &#x3D; 瀑布模型 + 快速原型 + 风险分析</strong></p>
+<p><em>螺旋模型</em>是一种用于风险较大的大型软件项目开发的过程模型<br>存在四种活动：</p>
+<ol>
+<li>制定计划</li>
+<li>风险分析</li>
+<li>实施工程</li>
+<li>客户评估</li>
+</ol>
+<h5 id="螺旋模型的优点"><a href="#螺旋模型的优点" class="headerlink" title="螺旋模型的优点"></a>螺旋模型的优点</h5><p>对可选方案和约束条件的强调有利于已有软件的重用，也有助于把软件质量作为软件开发的一个重要目标。<br>减少了过多测试或测试不足。<br>维护和开发之间并没有本质区别。</p>
+<h5 id="螺旋模型的缺点"><a href="#螺旋模型的缺点" class="headerlink" title="螺旋模型的缺点"></a>螺旋模型的缺点</h5><p>风险驱动，需要相当丰富的风险评估经验和专门知识，否则风险更大。<br>主要适用于内部开发的大规模软件项目，随着过程的进展演化，开发者和用户能够更好的识别和对待每一个演化级别上的风险。<br>随着迭代次数的增加，工作量加大，软件开发成本增加。</p>
+<h4 id="喷泉模型"><a href="#喷泉模型" class="headerlink" title="喷泉模型"></a>喷泉模型</h4><blockquote>
+<p>该模型认为软件开发过程自下而上周期的各阶段是相互重叠和多次反复的。<br>是一种以用户需求为动力，以对象作为驱动的模型，主要用于支持面向对象开发过程，体现了软件创建所固有的迭代和无间隙的特征。克服了瀑布模型不支持软件重用和多项开发活动集成的局限性。</p>
+</blockquote>
+<p>存在四个阶段：</p>
+<ol>
+<li>分析</li>
+<li>系统设计</li>
+<li>软件设计</li>
+<li>实现</li>
+</ol>
+<p>各阶段相互重叠，反映了软件过程并行性的特点。<br>强调增量开发。<br>反映了软件过程迭代性的自然特性，从高层返回低层无资源消耗。</p>
+<h4 id="过程模型的选择"><a href="#过程模型的选择" class="headerlink" title="过程模型的选择"></a>过程模型的选择</h4><p>首先，了解每一种过程模型的特点和适用性。<br>其次，根据软件项目的特点选择合适的过程模型。<br>值得注意的是，由于现实中项目的复杂性，通常会在一个项目中选择几种过程模型综合起来使用。</p>
+<p>在软件开发活动中要遵循软件工程原理实行分阶段，实行阶段评审和控制。按基线与里程碑的目标进行总结、评审、调整和部署阶段活动。<br><strong>在活动的执行顺序上可以有循环、往复、重叠、迭代、嵌套或者是有条件地引发，不一定都是线性顺序。</strong><br>在活动的内容上是遵循自顶向下、层层分解、逐步抽象与细化的思想。<br>在构建软件的结构上遵循模块分解原理，可以自顶向下，也可自底向上。</p>
+<h4 id="RUP-统一软件开发工程"><a href="#RUP-统一软件开发工程" class="headerlink" title="RUP 统一软件开发工程"></a>RUP 统一软件开发工程</h4><p>基于迭代思想的软件开发模型，多次执行各个工作流程。<br>适用范围广泛，但是对开发者的素质要求较高。<br>有一系列周期，每个周期交付一次给用户<br>一个周期有四个阶段：初始，细化，构造，移交。<br>每个阶段围绕九个核心工作流分别迭代。</p>
+<p>核心过程工作流：业务建模，需求，分析与设计，实现，测试，部署<br>核心支撑工作流：配置与变更管理，项目管理，环境</p>
+<p>风险驱动，基于 UseCase 技术，以架构为中心，迭代的，可配置的软件开发流程。</p>
+<p>它是一个流程框架。</p>
+<p>特点：<br>软件开发是一个迭代与增量相结合的过程；<br>软件开发是由用例驱动的；<br>软件开发是以架构设计（Architecture Design）为中心的。</p>
+<p>统一软件过程（RUP）采用迭代和增量的开发方式，把一个软件产品分成多个较小的部分，每一次完成一个部分，每次要迭代部分是产品的一个增量部分。每个增量部分的生产过程是受控的。<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-23.png" srcset="/img/loading.gif" lazyload></p>
+<p>管理需求<br>可视化建模，RUP 与 UML 联系在一起。<br>验证软件质量<br>控制软件变更</p>
+<h4 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h4>
                 
               </div>
             
