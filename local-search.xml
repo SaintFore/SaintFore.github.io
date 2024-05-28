@@ -407,6 +407,31 @@
   
   
   <entry>
+    <title>关于android的二三十事</title>
+    <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/"/>
+    <url>/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/</url>
+    
+    <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Android</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于unity的二三事</title>
     <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
     <url>/2024/05/26/%E5%85%B3%E4%BA%8Eunity%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</url>
@@ -457,11 +482,11 @@
   
   
   <entry>
-    <title>如何申请github学生认证</title>
-    <link href="/2024/05/26/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
-    <url>/2024/05/26/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
+    <title>内网串流与外网串流</title>
+    <link href="/2024/05/26/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/"/>
+    <url>/2024/05/26/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>今天本想要用新买的pad串流电脑, 结果折腾了两三节课, 三四个小时都没有成功, 内网串流是没什么问题的, 但是外网串流就一直连不上, 不知道是什么问题. 之后解决了再继续写. 暂且如此.</p>]]></content>
     
     
     <categories>
@@ -507,56 +532,6 @@
   
   
   <entry>
-    <title>关于android的二三十事</title>
-    <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/"/>
-    <url>/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/</url>
-    
-    <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Android</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>内网串流与外网串流</title>
-    <link href="/2024/05/26/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/"/>
-    <url>/2024/05/26/%E5%86%85%E7%BD%91%E4%B8%B2%E6%B5%81%E4%B8%8E%E5%A4%96%E7%BD%91%E4%B8%B2%E6%B5%81/</url>
-    
-    <content type="html"><![CDATA[<p>今天本想要用新买的pad串流电脑, 结果折腾了两三节课, 三四个小时都没有成功, 内网串流是没什么问题的, 但是外网串流就一直连不上, 不知道是什么问题. 之后解决了再继续写. 暂且如此.</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>解决方法</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>工具使用</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数据库</title>
     <link href="/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <url>/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
@@ -576,6 +551,31 @@
     <tags>
       
       <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何申请github学生认证</title>
+    <link href="/2024/05/26/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
+    <url>/2024/05/26/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
       
     </tags>
     
