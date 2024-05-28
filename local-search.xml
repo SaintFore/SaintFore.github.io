@@ -60,35 +60,6 @@
   
   
   <entry>
-    <title>Notion学习</title>
-    <link href="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/</url>
-    
-    <content type="html"><![CDATA[<h1 id="如何进行数据库的循环建立"><a href="#如何进行数据库的循环建立" class="headerlink" title="如何进行数据库的循环建立"></a>如何进行数据库的循环建立</h1><p>其实非常简单，点击数据库右上角的一个向下箭头，建立一个新的模板（template）<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-1.png"><br>建一个模板，然后点击 Repeat 设置自己建立新的时间，我可能是因为眼拙的缘故，没找到中国，选日本也行，日本比中国快一个小时（中国 23 点，日本就 24 点），差别不是特别大。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-2.png"><br>之后还想继续编辑的话就点击 edit 进行编辑。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-3.png"><br>不想自动每天创建了，就把 repeat 给关了就行。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-4.png"></p><h1 id="Wrap-in-view"><a href="#Wrap-in-view" class="headerlink" title="Wrap in view"></a>Wrap in view</h1><p><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-5.png"><br>表示是否换行，关闭就不换行，默认是开启的，当字数超过格子的容纳量后就扩大格子的长，也就是多几行。关闭的话，如果字数太多，多出来的字就不显示了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Notion</category>
-      
-      <category>TODO</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-      <tag>TODO</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Linux学习</title>
     <link href="/2024/05/26/Linux%E5%AD%A6%E4%B9%A0/"/>
     <url>/2024/05/26/Linux%E5%AD%A6%E4%B9%A0/</url>
@@ -135,6 +106,35 @@
     <tags>
       
       <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Notion学习</title>
+    <link href="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="如何进行数据库的循环建立"><a href="#如何进行数据库的循环建立" class="headerlink" title="如何进行数据库的循环建立"></a>如何进行数据库的循环建立</h1><p>其实非常简单，点击数据库右上角的一个向下箭头，建立一个新的模板（template）<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-1.png"><br>建一个模板，然后点击 Repeat 设置自己建立新的时间，我可能是因为眼拙的缘故，没找到中国，选日本也行，日本比中国快一个小时（中国 23 点，日本就 24 点），差别不是特别大。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-2.png"><br>之后还想继续编辑的话就点击 edit 进行编辑。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-3.png"><br>不想自动每天创建了，就把 repeat 给关了就行。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-4.png"></p><h1 id="Wrap-in-view"><a href="#Wrap-in-view" class="headerlink" title="Wrap in view"></a>Wrap in view</h1><p><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-5.png"><br>表示是否换行，关闭就不换行，默认是开启的，当字数超过格子的容纳量后就扩大格子的长，也就是多几行。关闭的话，如果字数太多，多出来的字就不显示了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Notion</category>
+      
+      <category>TODO</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
@@ -382,16 +382,16 @@
   
   
   <entry>
-    <title>uniapp学习</title>
-    <link href="/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/</url>
+    <title>关于android的二三十事</title>
+    <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/"/>
+    <url>/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/</url>
     
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>又是很久没有写博客了，深感惭愧。</p><hr><p>今天开始来写 uniapp 的博客，第一次写体系化的，文字量大的博客，如有不恰当不合适的地方，请多见谅。</p><h2 id="为什么使用-Uniapp"><a href="#为什么使用-Uniapp" class="headerlink" title="为什么使用 Uniapp"></a>为什么使用 Uniapp</h2><p>说实话，就俩字，省事。虽说之前看 uniapp 的问题，看到不同的平台会有不同的 bug，不过先做，之后出问题再看看怎么解决。</p><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+    <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
     
     
     <categories>
       
-      <category>Uniapp</category>
+      <category>Android</category>
       
     </categories>
     
@@ -407,16 +407,16 @@
   
   
   <entry>
-    <title>关于android的二三十事</title>
-    <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/"/>
-    <url>/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/</url>
+    <title>uniapp学习</title>
+    <link href="/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/</url>
     
-    <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>又是很久没有写博客了，深感惭愧。</p><hr><p>今天开始来写 uniapp 的博客，第一次写体系化的，文字量大的博客，如有不恰当不合适的地方，请多见谅。</p><h2 id="为什么使用-Uniapp"><a href="#为什么使用-Uniapp" class="headerlink" title="为什么使用 Uniapp"></a>为什么使用 Uniapp</h2><p>说实话，就俩字，省事。虽说之前看 uniapp 的问题，看到不同的平台会有不同的 bug，不过先做，之后出问题再看看怎么解决。</p><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
     
     
     <categories>
       
-      <category>Android</category>
+      <category>Uniapp</category>
       
     </categories>
     
@@ -532,33 +532,6 @@
   
   
   <entry>
-    <title>数据库</title>
-    <link href="/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <url>/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>TODO</category>
-      
-      <category>数据库</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>如何申请github学生认证</title>
     <link href="/2024/05/26/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
     <url>/2024/05/26/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7github%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/</url>
@@ -592,6 +565,33 @@
     
     
     <categories>
+      
+      <category>数据库</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据库</title>
+    <link href="/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <url>/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    
+    <content type="html"><![CDATA[<p>我其实自己都不知道自己在做些什么事情，我只是在做，但是看不到什么成效，就像是我现在在写博客，我用的是静态的网页，其实我只是在写而已，至于说有人看，在看什么，觉得怎么样，我其实根本就不知道。我关注吗？我其实不关注，但我很焦虑，很焦虑，我就是仅仅在做一些东西，但我不知道会引领我走向一种何样的结果。<br>我想要写作，这是根植于我脑海中的一种想法，但我到底喜不喜欢，我不知道，写博客算是一种写作吗？其实应该算是，但到底，追根到底是不算的，只是一种介绍，有可能是因为我本人写博客太差了，我不能通过博客来介绍我的思考，我的思想，至少不能百分百的去表达出来，博客对我而言只是一个记录，记录我学到了什么，或者就是一个备忘录，没什么可说道的，甚至可以说写博客只是因为我不知道干什么。我什么也不想要做，至少写博客让我有事可做。<br>当我有事可做的时候，我就不那么焦虑了。</p><p>我现在写博客就是为了拆解数据，拆解学习到的课程，让我能拿到跟多的分，掌握更多的知识。</p><hr><h1 id="数据库绪论"><a href="#数据库绪论" class="headerlink" title="数据库绪论"></a>数据库绪论</h1><p>数据库就是为了管理信息。</p><h2 id="数据库系统概述"><a href="#数据库系统概述" class="headerlink" title="数据库系统概述"></a>数据库系统概述</h2><p>就是讲一些常用的属于与基本的概念。</p><h4 id="四个基本概念"><a href="#四个基本概念" class="headerlink" title="四个基本概念"></a>四个基本概念</h4><ol><li>数据</li><li>数据库</li><li>数据库管理系统</li><li>数据库系统</li></ol><blockquote><p>描述事物的符号记录就是数据（data）<br>数据的含义称为数据的语义，数据与其语义是不可分的。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>TODO</category>
       
       <category>数据库</category>
       
