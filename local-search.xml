@@ -85,6 +85,35 @@
   
   
   <entry>
+    <title>Notion学习</title>
+    <link href="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="如何进行数据库的循环建立"><a href="#如何进行数据库的循环建立" class="headerlink" title="如何进行数据库的循环建立"></a>如何进行数据库的循环建立</h1><p>其实非常简单，点击数据库右上角的一个向下箭头，建立一个新的模板（template）<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-1.png"><br>建一个模板，然后点击 Repeat 设置自己建立新的时间，我可能是因为眼拙的缘故，没找到中国，选日本也行，日本比中国快一个小时（中国 23 点，日本就 24 点），差别不是特别大。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-2.png"><br>之后还想继续编辑的话就点击 edit 进行编辑。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-3.png"><br>不想自动每天创建了，就把 repeat 给关了就行。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-4.png"></p><h1 id="Wrap-in-view"><a href="#Wrap-in-view" class="headerlink" title="Wrap in view"></a>Wrap in view</h1><p><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-5.png"><br>表示是否换行，关闭就不换行，默认是开启的，当字数超过格子的容纳量后就扩大格子的长，也就是多几行。关闭的话，如果字数太多，多出来的字就不显示了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Notion</category>
+      
+      <category>TODO</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习笔记</tag>
+      
+      <tag>TODO</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux学习</title>
     <link href="/2024/05/26/Linux%E5%AD%A6%E4%B9%A0/"/>
     <url>/2024/05/26/Linux%E5%AD%A6%E4%B9%A0/</url>
@@ -117,62 +146,6 @@
     <url>/2024/05/26/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
     
     <content type="html"><![CDATA[<p>首先是文档属性中的tags一栏，当你在obsidian的标签属性中创建了一个新的标签时，那么这个标签就会显示在其他md文件的文档属性中相应属性里面<br><img src="/2024/05/26/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98-1.png"><br><img src="/2024/05/26/Obsidan%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/Snipaste_2024-05-10_21-36-47.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>解决方法</category>
-      
-      <category>Obsidian</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>工具使用</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Notion学习</title>
-    <link href="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/</url>
-    
-    <content type="html"><![CDATA[<h1 id="如何进行数据库的循环建立"><a href="#如何进行数据库的循环建立" class="headerlink" title="如何进行数据库的循环建立"></a>如何进行数据库的循环建立</h1><p>其实非常简单，点击数据库右上角的一个向下箭头，建立一个新的模板（template）<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-1.png"><br>建一个模板，然后点击 Repeat 设置自己建立新的时间，我可能是因为眼拙的缘故，没找到中国，选日本也行，日本比中国快一个小时（中国 23 点，日本就 24 点），差别不是特别大。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-2.png"><br>之后还想继续编辑的话就点击 edit 进行编辑。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-3.png"><br>不想自动每天创建了，就把 repeat 给关了就行。<br><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-4.png"></p><h1 id="Wrap-in-view"><a href="#Wrap-in-view" class="headerlink" title="Wrap in view"></a>Wrap in view</h1><p><img src="/2024/05/26/Notion%E5%AD%A6%E4%B9%A0/Notion%E5%AD%A6%E4%B9%A0-5.png"><br>表示是否换行，关闭就不换行，默认是开启的，当字数超过格子的容纳量后就扩大格子的长，也就是多几行。关闭的话，如果字数太多，多出来的字就不显示了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Notion</category>
-      
-      <category>TODO</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-      <tag>TODO</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Obsidian加坚果云实现同步</title>
-    <link href="/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/"/>
-    <url>/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/</url>
-    
-    <content type="html"><![CDATA[<p>平板电脑回来之后，一直想着用平板电脑来远程电脑实现轻便的生产力办公，但最后发现因为缩放的关系，使用远程还是不太舒服，所以就一直使用notion来记笔记，但notion不是本地的，我到处md文件，也会显得相当之奇怪，所以一直想要写的博客就停了很长一段时间，大约有一个月。<br>在某次刷知乎的评论时，讨论的事vsc，突然看到obsidian是全平台的，就想通过obsidian来写md文件，然后用hexo上传到我的网站上去。不过这个还是要有线连接，于是就又想要看看能不能通过同步来实现，发现坚果云可以。不费吹灰之力就完成了。</p>]]></content>
     
     
     <categories>
@@ -234,6 +207,33 @@
       <category>解决方法</category>
       
       <category>Parsec</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Obsidian加坚果云实现同步</title>
+    <link href="/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/"/>
+    <url>/2024/05/26/Obsidian%E5%8A%A0%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5/</url>
+    
+    <content type="html"><![CDATA[<p>平板电脑回来之后，一直想着用平板电脑来远程电脑实现轻便的生产力办公，但最后发现因为缩放的关系，使用远程还是不太舒服，所以就一直使用notion来记笔记，但notion不是本地的，我到处md文件，也会显得相当之奇怪，所以一直想要写的博客就停了很长一段时间，大约有一个月。<br>在某次刷知乎的评论时，讨论的事vsc，突然看到obsidian是全平台的，就想通过obsidian来写md文件，然后用hexo上传到我的网站上去。不过这个还是要有线连接，于是就又想要看看能不能通过同步来实现，发现坚果云可以。不费吹灰之力就完成了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方法</category>
+      
+      <category>Obsidian</category>
       
     </categories>
     
@@ -407,16 +407,16 @@
   
   
   <entry>
-    <title>uniapp学习</title>
-    <link href="/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/"/>
-    <url>/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/</url>
+    <title>关于android的二三十事</title>
+    <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/"/>
+    <url>/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/</url>
     
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>又是很久没有写博客了，深感惭愧。</p><hr><p>今天开始来写 uniapp 的博客，第一次写体系化的，文字量大的博客，如有不恰当不合适的地方，请多见谅。</p><h2 id="为什么使用-Uniapp"><a href="#为什么使用-Uniapp" class="headerlink" title="为什么使用 Uniapp"></a>为什么使用 Uniapp</h2><p>说实话，就俩字，省事。虽说之前看 uniapp 的问题，看到不同的平台会有不同的 bug，不过先做，之后出问题再看看怎么解决。</p><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+    <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
     
     
     <categories>
       
-      <category>Uniapp</category>
+      <category>Android</category>
       
     </categories>
     
@@ -432,16 +432,16 @@
   
   
   <entry>
-    <title>关于android的二三十事</title>
-    <link href="/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/"/>
-    <url>/2024/05/26/%E5%85%B3%E4%BA%8Eandroid%E7%9A%84%E4%BA%8C%E4%B8%89%E5%8D%81%E4%BA%8B/</url>
+    <title>uniapp学习</title>
+    <link href="/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/26/uniapp%E5%AD%A6%E4%B9%A0/</url>
     
-    <content type="html"><![CDATA[<p><strong>首先我要感谢, <em>ChatGpt</em>, 我的一下所有学习都是在它的辅助下完成的</strong></p><p><em>这是一种全新的学习方案, 对一些人而言这方案很早就被他们开始提倡, 但对我而言, 这无疑是一个全新的世界, 受限于国内的网路环境, 我开始的略有些晚, 但我相信以我的天赋很快就能超越大多数人.</em></p><p>这是一篇漫谈类的安卓博客, 因为我是一位博客初写者, 而且是一位安卓的初学者, 所以不加以分门别类, 无需一板一眼, 就我所遇之问题, 写一写解决方案, 以及我到底学到了什么.</p><h3 id="1-RadioButton-初始的点没法取消"><a href="#1-RadioButton-初始的点没法取消" class="headerlink" title="1. RadioButton 初始的点没法取消"></a>1. RadioButton 初始的点没法取消</h3><p>RadioGroup 中的 <em>RadioButton</em> 必须要有id, 不然当checked属性设置为true时, 选其他的按钮, 是无法取消被选中状态的.</p><h3 id="2-多个Module生成apk只会生成第一个"><a href="#2-多个Module生成apk只会生成第一个" class="headerlink" title="2. 多个Module生成apk只会生成第一个"></a>2. 多个Module生成apk只会生成第一个</h3><p>我最开始是想肯定有一个东西控制这apk的生成, 在<em>Main Menu</em>中找到了build variants这个选项, 我想着可以删除掉第一个apk, 这样就可以生成第二个module的apk了, 但事与愿违, 答案是没有, <em>不过发现可以更改apk的属性, 由debug改为release, 之前我就挺疑惑的, 为什么生成的apk的后面总得带个</em><em>_debug**现在知道了</em>. 之后我想着就卸载掉module吧, 这又引起了另一个问题.</p><h4 id="2-1-如何在as中卸载module"><a href="#2-1-如何在as中卸载module" class="headerlink" title="2.1. 如何在as中卸载module"></a>2.1. 如何在as中卸载module</h4><p>因为之前我也是用过idea的, 同为jetbrain的产品, as在mainmenu-&gt;file-&gt;project structure中也是可以删除module的, 但我不知道按了什么, 最开始是有那一列的, 有那个减号与加号, 但我一按, 给按没了, 我还不知道该怎么恢复.</p><p>于是尝试右键module删除, 但结果是没有找到delete键.</p><p>于是查阅其他方法, 突然发现在project视图下的settings.gradle.kts文件中有include方法, 里面包含的就是module, 注释掉后, 再点击右上角的小象, 也就是sync project with gradle file 然后就卸载了module.</p><p>然后再build, 就可以得到所需的apk了.</p><p>恢复的话就是在include里面加入module名就可以了.</p><p><em>不过, 之后, 我突然发现, build对于所有module是分别的, 也就是分别build了apk, 只不过因为build在了分别的文件夹中, 外加我没有认真去看右下角提示的小字, 我就自认为是仅仅只build了第一个module, 其实都build了, 只是我眼残外加脑残, 没发现.</em></p><h3 id="3-使用显式-Intent-进行页面跳转"><a href="#3-使用显式-Intent-进行页面跳转" class="headerlink" title="3. 使用显式 Intent 进行页面跳转"></a>3. 使用显式 Intent 进行页面跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>(当前.<span class="hljs-built_in">this</span>, 要跳转.class)<br></code></pre></td></tr></table></figure><p>我一开始以为都是this.</p><p>第一个必须是.this, 不能是.class, 第二个必须是.class, 不能是.this</p><h3 id="4-空指针异常-NullPointerException"><a href="#4-空指针异常-NullPointerException" class="headerlink" title="4. 空指针异常(NullPointerException)"></a>4. 空指针异常(<strong>NullPointerException</strong>)</h3><h4 id="4-1-Button"><a href="#4-1-Button" class="headerlink" title="4.1. Button"></a>4.1. Button</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Button</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> findViewById(xxxx);<br></code></pre></td></tr></table></figure><p>这行代码必须要写在protected void onCreate()里面, onCreate之后页面的ui之类的东西才会被加载, 放在oncreate以前, 就会出现空指针错误.</p><h4 id="4-2-其他"><a href="#4-2-其他" class="headerlink" title="4.2. 其他"></a>4.2. 其他</h4><p><strong>同上</strong></p><h3 id="5-res下添加资源"><a href="#5-res下添加资源" class="headerlink" title="5. res下添加资源"></a>5. res下添加资源</h3><p>res下添加资源, 文件夹名字只能小写, 大写会报错</p><p>从电脑拖拽资源到as中, 是剪切功能, 不是复制粘贴.</p><h4 id="5-1-icon"><a href="#5-1-icon" class="headerlink" title="5.1. icon"></a>5.1. icon</h4><p>icon有圆形有方形, 处理的时候要加两张图片, 得有圆有方才行, 不然会放缩会变得很难看.</p><h4 id="5-2-dpi"><a href="#5-2-dpi" class="headerlink" title="5.2. dpi"></a>5.2. dpi</h4><p>dpi有hdpi, xhdpi之类的东西, 设备中会有显示, 安卓软件也会自己匹配, 可以展示出的代码是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dpi</span> <span class="hljs-operator">=</span> getResources().getDisplayMetrics().densityDpi;<br></code></pre></td></tr></table></figure><p>如果要用textView.setText()给展示出来的话, 记得要把int类型转为String类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">dpiText</span> <span class="hljs-operator">=</span> String.valueOf(dpi);<br></code></pre></td></tr></table></figure><p>不然会报错.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>又是很久没有写博客了，深感惭愧。</p><hr><p>今天开始来写 uniapp 的博客，第一次写体系化的，文字量大的博客，如有不恰当不合适的地方，请多见谅。</p><h2 id="为什么使用-Uniapp"><a href="#为什么使用-Uniapp" class="headerlink" title="为什么使用 Uniapp"></a>为什么使用 Uniapp</h2><p>说实话，就俩字，省事。虽说之前看 uniapp 的问题，看到不同的平台会有不同的 bug，不过先做，之后出问题再看看怎么解决。</p><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
     
     
     <categories>
       
-      <category>Android</category>
+      <category>Uniapp</category>
       
     </categories>
     
@@ -607,33 +607,6 @@
   
   
   <entry>
-    <title>数据库</title>
-    <link href="/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <url>/2024/05/26/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    
-    <content type="html"><![CDATA[<p>我其实自己都不知道自己在做些什么事情，我只是在做，但是看不到什么成效，就像是我现在在写博客，我用的是静态的网页，其实我只是在写而已，至于说有人看，在看什么，觉得怎么样，我其实根本就不知道。我关注吗？我其实不关注，但我很焦虑，很焦虑，我就是仅仅在做一些东西，但我不知道会引领我走向一种何样的结果。<br>我想要写作，这是根植于我脑海中的一种想法，但我到底喜不喜欢，我不知道，写博客算是一种写作吗？其实应该算是，但到底，追根到底是不算的，只是一种介绍，有可能是因为我本人写博客太差了，我不能通过博客来介绍我的思考，我的思想，至少不能百分百的去表达出来，博客对我而言只是一个记录，记录我学到了什么，或者就是一个备忘录，没什么可说道的，甚至可以说写博客只是因为我不知道干什么。我什么也不想要做，至少写博客让我有事可做。<br>当我有事可做的时候，我就不那么焦虑了。</p><p>我现在写博客就是为了拆解数据，拆解学习到的课程，让我能拿到跟多的分，掌握更多的知识。</p><hr><h1 id="数据库绪论"><a href="#数据库绪论" class="headerlink" title="数据库绪论"></a>数据库绪论</h1><p>数据库就是为了管理信息。</p><h2 id="数据库系统概述"><a href="#数据库系统概述" class="headerlink" title="数据库系统概述"></a>数据库系统概述</h2><p>就是讲一些常用的属于与基本的概念。</p><h4 id="四个基本概念"><a href="#四个基本概念" class="headerlink" title="四个基本概念"></a>四个基本概念</h4><ol><li>数据</li><li>数据库</li><li>数据库管理系统</li><li>数据库系统</li></ol><blockquote><p>描述事物的符号记录就是数据（data）<br>数据的含义称为数据的语义，数据与其语义是不可分的。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>TODO</category>
-      
-      <category>数据库</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>清理电脑</title>
     <link href="/2024/05/26/%E6%B8%85%E7%90%86%E7%94%B5%E8%84%91/"/>
     <url>/2024/05/26/%E6%B8%85%E7%90%86%E7%94%B5%E8%84%91/</url>
@@ -684,31 +657,6 @@
   
   
   <entry>
-    <title>软件工程</title>
-    <link href="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    <url>/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</url>
-    
-    <content type="html"><![CDATA[<h1 id="序章"><a href="#序章" class="headerlink" title="序章"></a>序章</h1><p>软件工程就是用工程化的方法来开发软件。</p><p>需要掌握的：</p><ul><li>需求分析</li><li>软件设计</li><li>软件开发和测试</li><li>基于 UML 建模</li><li>Web 应用程序开发</li></ul><p><strong>不是学编程，做程序员，而是做架构师，分析师指导开发和运维</strong></p><p><strong>Learning By Doing</strong></p><p>一个工程的步骤：</p><ol><li>构想</li><li>分析</li><li>建设</li><li>交付</li><li>运行</li></ol><h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p><em>什么是软件？</em></p><blockquote><p>软件 &#x3D; 程序 + 数据 + 文档<br>程序：计算机接受的一系列指令，运行时提供要求的功能<br>数据：是程序能够操作信息的<em>数据结构</em><br>文档：描述程序的研发过程、方法和使用的<em>图文资料</em></p></blockquote><p>按软件的功能分类可以分为：</p><ol><li>系统软件</li><li>支撑软件</li><li>应用软件</li></ol><p>按软件工作方式划分：</p><ol><li>实时处理软件</li><li>分时软件</li><li>交互式软件</li><li>批处理软件</li></ol><p>软件具有<strong>复杂性，一致性，可变性以及不可见性</strong>，这是造成软件开发困难的原因。</p><blockquote><p>一致性的解释：</p><ol><li>软件不能独立存在，需要依附于一定的环境（如硬件、网络等）。</li><li>软件必须遵从人为的惯例并适应已有的技术和系统。</li><li>软件需要随接口不同而改变，随时间推移而变化，而这些变化是不同人设计的结果。</li></ol></blockquote><blockquote><p>可变性的解释：</p><ol><li>版本要不断更新</li><li><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-1.png"></li></ol></blockquote><blockquote><p>不可见性的解释：<br>能看到代码，但咱们是没法看到源代码是如何执行的，可能会出现种种错误，或是达不到我们的要求。</p></blockquote><h2 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h2><h3 id="软件危机"><a href="#软件危机" class="headerlink" title="软件危机"></a>软件危机</h3><p><em>什么是软件危机？</em></p><blockquote><p>在计算机软件的开发和维护过程中所遇到的一系列严重问题。</p></blockquote><p><strong>软件工程的目的就是为了创造出“足够好”的软件</strong></p><p>软件工程三要素：<em>过程，方法，工具</em><br>最后的目标是质量</p><p>软件工程的知识领域<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-2.png"></p><p>软件工程的过程<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-3.png"></p><p>软件工程的方法<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-4.png"></p><p>软件工程可能用到的工具<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-5.png"></p><p><em>软件开发的策略</em><br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-6.png"></p><p>不要重复造轮子，把复杂问题拆解，知道拆解成小的，简单的问题。<br>同时还要不断迭代，并找到各种与质量有关的特性的平衡。</p><h3 id="ISO-9126-质量模型"><a href="#ISO-9126-质量模型" class="headerlink" title="ISO 9126 质量模型"></a>ISO 9126 质量模型</h3><p>分为外部质量</p><ol><li>功能性</li><li>可靠性</li><li>易用性</li><li>效率</li></ol><p>内部质量</p><ol><li>可维护性</li><li>可移植性<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-7.png"><br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-8.png"><br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-9.png"></li></ol><p>实现高质量的软件</p><ul><li>高质量的设计</li><li>规范的编码</li><li>有效的测试</li></ul><h2 id="软件生命周期"><a href="#软件生命周期" class="headerlink" title="软件生命周期"></a>软件生命周期</h2><blockquote><p>软件生命周期：<br>软件从功能确定、设计到开发成功投入使用，并在使用中不断地修改、增补和完善，直到被新的需要所代替而停止使用该软件的全过程。</p></blockquote><p>软件生命周期</p><ol><li>软件定义<ol><li>问题定义</li><li>可行性研究</li><li>需求分析</li></ol></li><li>软件开发<ol><li>总体设计</li><li>详细设计</li><li>编码实现</li><li>单元测试</li><li>综合测试</li></ol></li><li>运行维护<ol><li>持久满足用户需求</li></ol></li></ol><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-11.png"></p><h4 id="ISO-IEC-12207-软件生命周期过程标准"><a href="#ISO-IEC-12207-软件生命周期过程标准" class="headerlink" title="ISO&#x2F;IEC 12207 软件生命周期过程标准"></a>ISO&#x2F;IEC 12207 软件生命周期过程标准</h4><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-10.png"></p><p><em>学以致用</em><br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-12.png"><br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-13.png"></p><hr><p>介绍了下什么是<em>软件工程</em>以及什么是<em>生命周期</em></p><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h2><blockquote><p>软件过程(Software Procedure)：是为获得软件产品，在软件工具支持下由软件工程师完成的一系列软件工程活动 。</p></blockquote><blockquote><p>用来规范软件开发的 <em>活动集合</em>，<em>活动顺序</em></p></blockquote><h3 id="过程模型"><a href="#过程模型" class="headerlink" title="过程模型"></a>过程模型</h3><blockquote><p>经过软件工程领域科学家在实际项目的基础上不断研究和发现，总结出了一些可以遵循的规律</p></blockquote><p>常用的开发过程模型：</p><ol><li>瀑布模型</li><li>原型（演化）模型</li><li>螺旋模型</li><li>统一过程模型RUP（迭代式模型）</li><li>敏捷模型</li></ol><h4 id="最古老的编码修正模型"><a href="#最古老的编码修正模型" class="headerlink" title="最古老的编码修正模型"></a>最古老的编码修正模型</h4><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-14.png"></p><h4 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h4><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-15.png"></p><blockquote><p>瀑布模型又称线性顺序模型、生命周期模型，它强调开发的阶段性、早期计划和需求调查以及产品测试。是一种有效的面向过程的管理模式，但缺乏灵活性。<br><strong>适合于用户需求明确、完整、无重大变化的软件项目</strong><br><em>文档驱动的模型</em></p></blockquote><p>修正过的瀑布模型，每项活动的实施都要进行检验，符合就是下一步，不符合就返回上一步。<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-16.png"></p><h5 id="V-模型"><a href="#V-模型" class="headerlink" title="V 模型"></a>V 模型</h5><p>瀑布模型的一种变体，每个环节都有测试，同时实现功能的人与进行测试的人进行了分离。写代码同时也能进行测试，效率更高。<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-18.png"></p><h4 id="原型模型"><a href="#原型模型" class="headerlink" title="原型模型"></a>原型模型</h4><blockquote><p>快速建造一个原型，展示可视化的软件样机，展示系统的主要功能和接口，然后进行评估，进一步精化，调整原型，满足用户的要求。<br><strong>适合于那些不能预先确切定义需求的软件系统的开发。</strong></p></blockquote><p><em>Axure</em>很好用。</p><p>流程图<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-17.png"></p><p>原型的类型有两种:</p><ol><li>抛弃型（废弃型）<ol><li>先构造一个功能简单质量要求不高的模型系统，对其进行反复分析修改，形成比较好的设计思想，系统构造完成后就被废弃。针对系统的某些功能进行实际验证，本质仍是瀑布模型。</li></ol></li><li>演化型（追加型）<ol><li>由一个功能简单的模型系统作为最终系统的核心，再不断扩充修改逐步追加新要求，最后发展成最终系统。</li></ol></li></ol><p>存在的问题：</p><ol><li>为了使原型尽快的工作，没有考虑软件的总体质量和长期的可维护性。</li><li>为了演示，可能采用不合适的操作系统、编程语言、效率低的算法，这些不理想的选择成了系统的组成部分。</li><li>在需求没有完全弄清楚，过程管理不够严格时会影响最终产品的性能。</li></ol><p>原型实现模型的要求：</p><ol><li>提供主要的功能</li><li>体现界面风格</li><li>展示模糊的部分</li><li>主要功能模块要能够建立相互衔接</li></ol><h4 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h4><blockquote><p>是渐进地开发逐步完善的软件版本的模型。把待开发的软件系统模块化，将每个模块作为一个增量组件，从而分批次地分析、设计、编码和测试这些增量组件。</p></blockquote><ul><li>反复的应用瀑布模型的基本成分和原型模型的迭代特征，每一个线型过程产生一个“增量”的发布或提交，该增量均是一个可运行的产品。</li><li>早期的版本实现用户的基本需求，并提供给用户评估的平台。</li></ul><p>一个增量就是<br>分析 -&gt; 设计 -&gt; 编码 -&gt; 测试 -&gt; 交付<br>增量模型就是不断地加增量，逐个增量完成，最后实现软件。</p><h5 id="增量模型的优点"><a href="#增量模型的优点" class="headerlink" title="增量模型的优点"></a>增量模型的优点</h5><p>1.整个产品被分解成许多个增量构件，开发人员可逐步开发。</p><p>2.在较短时间内向用户提交可完成部分工作的产品，并分批、逐步地提交。从第一个构件交付之日起，用户就能做一些有用的工作。</p><p>3.以组件为单位进行开发降低了软件开发的风险。一个开发周期内的错误不会影响到整个软件系统。</p><p>4.开发顺序灵活。开发人员可以对组件的实现顺序进行优先级排序，先完成需求稳定的核心组件。当组件的优先级发生变化时，还能及时地对实现顺序进行调整。</p><p>5.逐步增加产品功能可以使用户有较充裕的时间学习和适应新产品，从而减少一个全新的软件可能给客户组织带来的冲击。</p><h5 id="增量模型的缺点"><a href="#增量模型的缺点" class="headerlink" title="增量模型的缺点"></a>增量模型的缺点</h5><p>1.在把每个新的增量构件集成到现有软件体系结构中时，必须不破坏原来已经开发出的产品。此外，必须把软件的体系结构设计得便于按这种方式进行扩充，向现有产品中加入新构件的过程必须简单、方便，也就是说，<strong>软件体系结构必须是开放的</strong>。</p><p>2.开发人员既要把软件系统看作整体。又要看成可独立的构件，相互矛盾。多个构件并行开发，具有无法集成的风险。</p><p>3.采用增量模型比采用瀑布模型和快速原型模型需要更精心的设计，但在设计阶段多付出的劳动将在维护阶段获得回报。</p><h5 id="适用的情况"><a href="#适用的情况" class="headerlink" title="适用的情况"></a>适用的情况</h5><p>1.软件产品可以分批次地进行交付。</p><p>2.待开发的软件系统能够被模块化。</p><p>3.软件开发人员对应用领域不熟悉，难以一次性地进行系统开发。</p><p>4.项目管理人员把握全局的水平较高。</p><h5 id="增量模型与迭代模型的区别"><a href="#增量模型与迭代模型的区别" class="headerlink" title="增量模型与迭代模型的区别"></a>增量模型与迭代模型的区别</h5><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-19.png"></p><p><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-20.png"></p><h4 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h4><blockquote><p>对于复杂的大型软件，开发一个原型往往达不到要求。螺旋模型将瀑布模型和增量模型结合起来，加入了风险分析。在该模型中，软件开发是一系列的增量发布，早期的迭代中，发布的增量可能是一个纸上的模型或原型，在以后的迭代中，逐步产生系统更加完善的版本。<br>螺旋模型的基本思想是降低风险。需要风险控制的一系列专门技术，因此投入较大，适用于规模较大的复杂系统。</p></blockquote><p><strong>螺旋模型 &#x3D; 瀑布模型 + 快速原型 + 风险分析</strong></p><p><em>螺旋模型</em>是一种用于风险较大的大型软件项目开发的过程模型<br>存在四种活动：</p><ol><li>制定计划</li><li>风险分析</li><li>实施工程</li><li>客户评估</li></ol><h5 id="螺旋模型的优点"><a href="#螺旋模型的优点" class="headerlink" title="螺旋模型的优点"></a>螺旋模型的优点</h5><p>对可选方案和约束条件的强调有利于已有软件的重用，也有助于把软件质量作为软件开发的一个重要目标。<br>减少了过多测试或测试不足。<br>维护和开发之间并没有本质区别。</p><h5 id="螺旋模型的缺点"><a href="#螺旋模型的缺点" class="headerlink" title="螺旋模型的缺点"></a>螺旋模型的缺点</h5><p>风险驱动，需要相当丰富的风险评估经验和专门知识，否则风险更大。<br>主要适用于内部开发的大规模软件项目，随着过程的进展演化，开发者和用户能够更好的识别和对待每一个演化级别上的风险。<br>随着迭代次数的增加，工作量加大，软件开发成本增加。</p><h4 id="喷泉模型"><a href="#喷泉模型" class="headerlink" title="喷泉模型"></a>喷泉模型</h4><blockquote><p>该模型认为软件开发过程自下而上周期的各阶段是相互重叠和多次反复的。<br>是一种以用户需求为动力，以对象作为驱动的模型，主要用于支持面向对象开发过程，体现了软件创建所固有的迭代和无间隙的特征。克服了瀑布模型不支持软件重用和多项开发活动集成的局限性。</p></blockquote><p>存在四个阶段：</p><ol><li>分析</li><li>系统设计</li><li>软件设计</li><li>实现</li></ol><p>各阶段相互重叠，反映了软件过程并行性的特点。<br>强调增量开发。<br>反映了软件过程迭代性的自然特性，从高层返回低层无资源消耗。</p><h4 id="过程模型的选择"><a href="#过程模型的选择" class="headerlink" title="过程模型的选择"></a>过程模型的选择</h4><p>首先，了解每一种过程模型的特点和适用性。<br>其次，根据软件项目的特点选择合适的过程模型。<br>值得注意的是，由于现实中项目的复杂性，通常会在一个项目中选择几种过程模型综合起来使用。</p><p>在软件开发活动中要遵循软件工程原理实行分阶段，实行阶段评审和控制。按基线与里程碑的目标进行总结、评审、调整和部署阶段活动。<br><strong>在活动的执行顺序上可以有循环、往复、重叠、迭代、嵌套或者是有条件地引发，不一定都是线性顺序。</strong><br>在活动的内容上是遵循自顶向下、层层分解、逐步抽象与细化的思想。<br>在构建软件的结构上遵循模块分解原理，可以自顶向下，也可自底向上。</p><h4 id="RUP-统一软件开发工程"><a href="#RUP-统一软件开发工程" class="headerlink" title="RUP 统一软件开发工程"></a>RUP 统一软件开发工程</h4><p>基于迭代思想的软件开发模型，多次执行各个工作流程。<br>适用范围广泛，但是对开发者的素质要求较高。<br>有一系列周期，每个周期交付一次给用户<br>一个周期有四个阶段：初始，细化，构造，移交。<br>每个阶段围绕九个核心工作流分别迭代。</p><p>核心过程工作流：业务建模，需求，分析与设计，实现，测试，部署<br>核心支撑工作流：配置与变更管理，项目管理，环境</p><p>风险驱动，基于 UseCase 技术，以架构为中心，迭代的，可配置的软件开发流程。</p><p>它是一个流程框架。</p><p>特点：<br>软件开发是一个迭代与增量相结合的过程；<br>软件开发是由用例驱动的；<br>软件开发是以架构设计（Architecture Design）为中心的。</p><p>统一软件过程（RUP）采用迭代和增量的开发方式，把一个软件产品分成多个较小的部分，每一次完成一个部分，每次要迭代部分是产品的一个增量部分。每个增量部分的生产过程是受控的。<br><img src="/2024/05/26/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-23.png"></p><p>管理需求<br>可视化建模，RUP 与 UML 联系在一起。<br>验证软件质量<br>控制软件变更</p><h4 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h4>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件工程</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>音乐处理</title>
     <link href="/2024/05/26/%E9%9F%B3%E4%B9%90%E5%A4%84%E7%90%86/"/>
     <url>/2024/05/26/%E9%9F%B3%E4%B9%90%E5%A4%84%E7%90%86/</url>
@@ -721,6 +669,25 @@
       <category>解决方法</category>
       
     </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>工具网站整理</title>
+    <link href="/2024/05/26/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E4%B8%9C%E8%A5%BF/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/"/>
+    <url>/2024/05/26/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E4%B8%9C%E8%A5%BF/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/2024/05/26/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E4%B8%9C%E8%A5%BF/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86-1.jpg"></p>]]></content>
+    
     
     
     <tags>
