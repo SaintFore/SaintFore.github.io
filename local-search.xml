@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title> 使用Visio建立数据库模型图 </title>
+    <link href="/2024/07/16/%E4%BD%BF%E7%94%A8Visio%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B%E5%9B%BE/"/>
+    <url>/2024/07/16/%E4%BD%BF%E7%94%A8Visio%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<p>为了方便建立数据库的模型图，我们可以使用 Visio的一个模板，使用它的方向工程，能够快速建立数据模型的图片，非常方便。</p><h1 id="mysql-connector">MySQL Connector</h1><p>有些电脑在安装 MySQL 的时候不安装 MySQL Connector，这导致之后加入ODBC 数据源的时候只有一些微软自带的数据库，例如 SQL Server，但是没有MySQL 的选项。</p><p>我们可以通过 Installer 来进行安装 MySQL Connector。</p><p>先打开 MySQL Installer，点击右边的 Add。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407162206071.webp" alt="Visio使用反向工程建立数据模型-1.png"><figcaption aria-hidden="true">Visio使用反向工程建立数据模型-1.png</figcaption></figure><p>选择 Connector/ODBC，选择自己的版本，一般六十四位，这个 Connector的版本跟 MySQL 的版本是不同的，只用管是 8.0 还是5.7，这个得一样，小版本不用管，可以不同。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407162206917.webp" alt="Visio使用反向工程建立数据模型-2.png"><figcaption aria-hidden="true">Visio使用反向工程建立数据模型-2.png</figcaption></figure><h1 id="通过-visio-来建立数据模型图片">通过 Visio来建立数据模型图片</h1><p>选择数据库模型图，注意用管理员模式打开。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407162207854.webp" alt="Visio使用反向工程建立数据模型-3.png"><figcaption aria-hidden="true">Visio使用反向工程建立数据模型-3.png</figcaption></figure><p>进入后，点击上面的数据库，选择反向工程，选择数据源，然后就可以了。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407162208613.webp" alt="Visio使用反向工程建立数据模型-4.png"><figcaption aria-hidden="true">Visio使用反向工程建立数据模型-4.png</figcaption></figure><p>注意选择 ODBC。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407162208536.webp" alt="Visio使用反向工程建立数据模型-5.png"><figcaption aria-hidden="true">Visio使用反向工程建立数据模型-5.png</figcaption></figure><h1 id="笔者的话">笔者的话</h1><p>画图也是重要的一项工作。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+      <category>Visio</category>
+      
+      <category>数据库</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+      <tag>Visio</tag>
+      
+      <tag>软件工程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title> 利用github page和hexo搭建个人博客 </title>
     <link href="/2024/07/15/%E5%88%A9%E7%94%A8github%20page%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <url>/2024/07/15/%E5%88%A9%E7%94%A8github%20page%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
