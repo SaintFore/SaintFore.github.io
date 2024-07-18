@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title> Python与MySQL </title>
+    <link href="/2024/07/18/Python%E4%B8%8EMySQL/"/>
+    <url>/2024/07/18/Python%E4%B8%8EMySQL/</url>
+    
+    <content type="html"><![CDATA[<p>我发现不管是做什么，最开始总是会遇到各种各样的问题，而学习的过程就是解决这些问题的过程。</p><p>首先就是anaconda的问题，因为我电脑里面没有安装python环境，就只能用anaconda的虚拟环境来做，但如果你用pycharm来新建个项目，它默认是让你新建一个虚拟环境，而我只想用已经有的环境来做，毕竟环境的新建是在c盘的，我以往一贯的习惯就是不把东西放到c盘。</p><p>所以就在看怎么解决这个问题。</p><p>自己摸索了一会，发现了解决方法：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407182222324.webp" alt="Snipaste_2024-03-27_21-50-51.png"><figcaption aria-hidden="true">Snipaste_2024-03-27_21-50-51.png</figcaption></figure><p>首先进入settings中</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407182222206.webp" alt="Snipaste_2024-03-27_21-51-03.png"><figcaption aria-hidden="true">Snipaste_2024-03-27_21-51-03.png</figcaption></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407182222593.webp" alt="Snipaste_2024-03-27_21-51-11.png"><figcaption aria-hidden="true">Snipaste_2024-03-27_21-51-11.png</figcaption></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407182223679.webp" alt="Snipaste_2024-03-27_21-51-23.png"><figcaption aria-hidden="true">Snipaste_2024-03-27_21-51-23.png</figcaption></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407182223474.webp" alt="Snipaste_2024-03-27_21-51-39.png"><figcaption aria-hidden="true">Snipaste_2024-03-27_21-51-39.png</figcaption></figure><p>然后就可以了。</p><h3 id="创建连接">创建连接</h3><p>之后就开始用python操作mysql了，先下载pymysql包，然后在文件中导入改包。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pymysql <span class="hljs-keyword">import</span> Connection<br></code></pre></td></tr></table></figure><p>我们要用到这个connection组件</p><p>然后就是创建这个connection：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">con = Connection(<br>    host=<span class="hljs-string">&quot;localhost&quot;</span>, <span class="hljs-comment"># 你的本地地址</span><br>    port=<span class="hljs-number">3306</span>, <span class="hljs-comment"># mysql开启的端口号</span><br>    user=<span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-comment"># 你的mysql的用户名</span><br>    password=<span class="hljs-string">&quot;123&quot;</span> <span class="hljs-comment"># 你的密码   </span><br>    database=<span class="hljs-string">&quot;xxxx&quot;</span> <span class="hljs-comment"># 默认的数据库的名字  这样也行con.select_db(&quot;数据库名字&quot;)，但是会被下方的覆盖掉</span><br>)<br></code></pre></td></tr></table></figure><p>对了如果要更改密码的话，记得是在cmd中输入指令，不是mysql的那个控制台中。</p><p>建立连接后也要关闭连接：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">con.close()<br></code></pre></td></tr></table></figure><p>当然咱们也要考虑到异常的状况：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pymysql <span class="hljs-keyword">import</span> Connection<br><br>con = <span class="hljs-literal">None</span><br><br><span class="hljs-keyword">try</span>:<br>    con = Connection(<br>        host=<span class="hljs-string">&quot;localhost&quot;</span>,<br>        port=<span class="hljs-number">3306</span>,<br>        user=<span class="hljs-string">&quot;root2&quot;</span>,<br>        password=<span class="hljs-string">&quot;123&quot;</span><br>    )<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(con))<br>    <span class="hljs-built_in">print</span>(con.get_host_info())<br>    <span class="hljs-built_in">print</span>(con.get_server_info())<br><span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;异常&quot;</span>, e)<br><span class="hljs-keyword">finally</span>:<br>    <span class="hljs-keyword">if</span> con:<br>        con.close()<br></code></pre></td></tr></table></figure><h3 id="使用数据库执行ddl语句">使用数据库执行ddl语句</h3><p>其实关键的就是游标cursor</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">cursor = con.cursor()<br></code></pre></td></tr></table></figure><p>这是建立游标，获得你数据库的游标</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">cursor.execute(<span class="hljs-string">&quot;sql&quot;</span>) <span class="hljs-comment"># sql就是正常的sql语句了</span><br></code></pre></td></tr></table></figure><p>在这就是这行sql语句了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">sql = <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        CREATE TABLE `STUDENT` (</span><br><span class="hljs-string">            `Sno` CHAR(9) NOT NULL PRIMARY KEY COMMENT &#x27;主键&#x27;,</span><br><span class="hljs-string">            `Sname` VARCHAR(10) NOT NULL,</span><br><span class="hljs-string">            `Ssex` CHAR(2) NULL DEFAULT &#x27;男&#x27; COMMENT &quot;默认设置为&#x27;男&#x27;&quot;, </span><br><span class="hljs-string">            `Sage` INT NULL,</span><br><span class="hljs-string">            `Sdept` VARCHAR(4) NULL,</span><br><span class="hljs-string">            `Sbirth` DATETIME NULL</span><br><span class="hljs-string">        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure><p>比如这样，用python的多行注释来做</p><p>最后就是关闭游标</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">cursor.close() <span class="hljs-comment"># 这一步可以省略,因为最后con关闭后,cursor自动关闭</span><br></code></pre></td></tr></table></figure><hr><p>最后总结一下，就是用游标，先建立游标，然后写sql语句，execute执行就行了，最后关闭也是可以省略的。也就是说就两步。</p><h1 id="笔者的话">笔者的话</h1><p>一旦陷入自暴自弃的境地，就像深陷流沙要脱离，越挣扎或许就越陷越深。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>语言</category>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title> 利用Linux学习MySQL </title>
+    <link href="/2024/07/17/%E5%88%A9%E7%94%A8Linux%E5%AD%A6%E4%B9%A0MySQL/"/>
+    <url>/2024/07/17/%E5%88%A9%E7%94%A8Linux%E5%AD%A6%E4%B9%A0MySQL/</url>
+    
+    <content type="html"><![CDATA[<h1 id="引言">引言</h1><p>使用 Linux 进行 MySQL 的学习。</p><p>首先来看两个指令，这两个是用来查 Linux 版本的。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">lsb_release -a # 这个非常之详细，有发行版的信息<br>uname -a # 这个就只会显示内核信息<br></code></pre></td></tr></table></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010656.webp" alt="Linux与MySQL-1.png"><figcaption aria-hidden="true">Linux与MySQL-1.png</figcaption></figure><p>今天用 ssh登陆的时候突然连接不到香橙派了，最后是用网线才解决问题。</p><p>或许是因为路由器每天重启的原因。</p><h1 id="安装-mysql">安装 MySQL</h1><p>首先，先要更新包列表，每次安装什么新的东西都要操作一次</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get update<br></code></pre></td></tr></table></figure><p>然后就直接安装 MySQL 的服务器了</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get install mysql-server<br></code></pre></td></tr></table></figure><p>可以查一下 MySQL 的版本，看看是 5.7 还是 8.0</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql --version<br></code></pre></td></tr></table></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010944.webp" alt="Linux与MySQL-2.png"><figcaption aria-hidden="true">Linux与MySQL-2.png</figcaption></figure><p>这里可以看到是 8.0。</p><p>我们也可以看看这个 mysql 是安在哪里了</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">which mysql<br></code></pre></td></tr></table></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010989.webp" alt="Linux与MySQL-3.png"><figcaption aria-hidden="true">Linux与MySQL-3.png</figcaption></figure><h2 id="apt-get-的作用以及常见命令">apt-get 的作用以及常见命令</h2><p><code>apt-get</code> 是 Debian 和 Ubuntu 等基于 Debian 的 Linux发行版中的一个命令行工具，用于处理包。</p><p>这个工具可以用来安装、升级或删除软件包。</p><p>以下是一些常用的 <code>apt-get</code> 命令：</p><ul><li><code>sudo apt-get update</code>：更新你的包列表。这将获取最新的软件包版本信息，但不会安装或升级任何软件包。</li><li><code>sudo apt-get upgrade</code>：升级所有已安装的软件包到最新版本。</li><li><code>sudo apt-get install &lt;package&gt;</code>：安装一个软件包。你需要将<code>&lt;package&gt;</code> 替换为你想要安装的软件包的名称。</li><li><code>sudo apt-get remove &lt;package&gt;</code>：删除一个软件包。你需要将<code>&lt;package&gt;</code> 替换为你想要删除的软件包的名称。</li><li><code>sudo apt-get autoremove</code>：删除所有不再需要的软件包。这通常用来清理那些被安装为其他软件包的依赖，但现在不再需要的软件包。</li><li><code>sudo apt-get dist-upgrade</code>：升级系统到新的发行版。</li></ul><p>这些命令可以帮助管理 Linux 系统，保持软件包的最新状态。</p><h1 id="使用-mysql">使用 MySQL</h1><p>第一步是创建用户，不过这个 root用户应该一开始就已经有了，这里只是给这个 root用户设置一下初始的密码。（这一步还是在 linux 的 shell 中进行）</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -u root -p<br></code></pre></td></tr></table></figure><p>输入这行指令之后，让你输入密码，同样是不显示位数的，什么都没有。</p><p>然后就可以开始使用了。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">SHOW</span> DATABASES;<br></code></pre></td></tr></table></figure><p>先显示一下所有的数据库，注意是 <code>databases</code> 后面是有个<code>s</code> 的，还有得加个 <code>；</code>。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172011720.webp" alt="Linux与MySQL-4.png"><figcaption aria-hidden="true">Linux与MySQL-4.png</figcaption></figure><p>除了 <code>soleilbase</code> 是我创建的，其他的都是 MySQL自带的，都是有用的。</p><ul><li><code>information_schema</code> 是 MySQL中的一个特殊数据库，它提供了关于 MySQL服务器的元数据，包括数据库的信息、表的信息、列的信息、权限的信息等等。这些信息以表的形式存储，你可以像查询普通的表一样查询这些信息。</li><li><code>mysql</code> 是 MySQL 中的一个系统数据库，它存储了 MySQL服务器的元数据，包括用户账户信息、权限信息、系统配置等等。 以下是<code>mysql</code> 数据库中一些重要的表：<ul><li><code>user</code>：存储了用户账户信息，包括用户名、密码、权限等等。</li><li><code>db</code>：存储了数据库级别的权限信息。</li><li><code>tables_priv</code>：存储了表级别的权限信息。</li><li><code>columns_priv</code>：存储了列级别的权限信息。</li><li><code>procs_priv</code>：存储了存储过程和函数的权限信息。</li><li><code>time_zone*</code>：存储了时区信息。</li></ul></li><li><code>performance_schema</code>数据库是虚拟的，它的数据并不存储在磁盘上，而是在查询时动态生成。因此，你不会在文件系统中找到<code>performance_schema</code> 数据库的数据文件。</li><li><code>sys</code> 是 MySQL中的一个特殊数据库，它提供了一组视图、函数和过程，用于帮助数据库管理员更好地理解和优化MySQL 服务器的性能。<code>sys</code> 数据库中的对象是基于<code>performance_schema</code> 和 <code>information_schema</code>数据库的数据创建的，它们提供了一种更易于理解和使用的方式来访问这些数据例如，<code>sys</code>数据库中的 <code>schema_tables_with_full_table_scans</code>视图可以帮助你找出那些经常进行全表扫描的表，这可能是性能问题的一个指标。</li></ul><p>创建一个数据库</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">CREATE</span> DATABASE sqlTest；<br></code></pre></td></tr></table></figure><p><em>注意，linux 上的 mysql 是区分大小写的，但是 win上面的是不区分的都是小写，但是如果你 linux 上以及区分大小写了，你用 win连接这个 linux 上的数据库，那么 win 上面也就区分大小写了。</em></p><p>使用这个新建的数据库</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">use sqlTest; <span class="hljs-comment">-- 注意大小写了</span><br></code></pre></td></tr></table></figure><p>至于说其他的操作，就请期待我的数据库的内容了。</p><h2 id="更改-mysql-用户验证方式">更改 MySQL 用户验证方式</h2><p>接下来你如果切换为其他用户，不是 root 用户，可能无法登录 MySQL 的root 用户，这是因为 MySQL 默认的 <code>root</code> 用户使用了<code>auth_socket</code> 插件进行身份验证，这意味着只有系统的<code>root</code> 用户才能以 MySQL 的 <code>root</code>用户身份登录。</p><p>先切换为 linux 的 root 用户。</p><p>然后登录 MySQL 的 root 用户。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">su root<br>mysql -u root -p<br></code></pre></td></tr></table></figure><p>登录进去后更改 root 用户的验证方式</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;你的密码&#x27;</span>; <span class="hljs-comment">-- By包括后面可以不要，就是不用改密码了，有的话可以更改密码</span><br></code></pre></td></tr></table></figure><p>最后刷新下权限（可有可无）</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">FLUSH PRIVILEGES;<br></code></pre></td></tr></table></figure><p>恢复的话就更改第二步的内容</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> auth_socket;<br></code></pre></td></tr></table></figure><h2 id="新建-mysql-用户">新建 MySQL 用户</h2><p>第一步还是要用 mysql 的 root 用户登录。</p><p>之后在 MySQL 提示符下，使用 <code>CREATE USER</code>命令创建新用户</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;<br></code></pre></td></tr></table></figure><ul><li><code>'username'</code> 是用户的名称，它可以是任何有效的标识符。在MySQL中，标识符可以包含字母、数字、下划线、美元符号等字符，但不能包含空格、点、破折号等特殊字符。标识符的长度不能超过32 个字符。</li><li><code>'%'</code> 是主机名，它指定了用户可以从哪些主机连接到 MySQL服务器。<code>'%'</code> 表示任何主机，也就是说，用户可以从任何 IP地址连接到 MySQL 服务器。你也可以指定一个具体的 IP 地址或主机名，例如<code>'192.168.1.1'</code> 或 <code>'localhost'</code>。你也可以给个名字<code>Soleil</code> 这就要求连接到 MySQL 服务器的主机名字要叫Soleil。如果主机不符合@后面规定的要求，那就没法连接。</li><li><code>password</code>为你想设置的密码，注意<strong>千万别忘记</strong>。</li></ul><p>最后，你需要给新用户分配权限。你可以使用 <code>GRANT</code>命令来做这个。 这里我们要给我们的新用户赋予全部的权限。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> PRIVILEGES <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;<br></code></pre></td></tr></table></figure><ul><li><code>GRANT</code>：这是一个 SQL 关键字，它用于授予用户权限。</li><li><code>ALL PRIVILEGES</code>：这表示所有的权限。在 MySQL中，权限包括读取数据、写入数据、修改表结构、管理用户等等。<code>ALL PRIVILEGES</code>表示所有这些权限。</li><li><code>ON *.*</code>：这表示所有的数据库和表。在 MySQL中，<code>*.*</code>表示所有的数据库和表。你也可以指定一个具体的数据库或表，例如<code>ON database_name.*</code>表示指定数据库的所有表，<code>ON database_name.table_name</code>表示指定的表。</li><li><code>TO 'username'@'%'</code>：这表示要授予权限的用户。<code>'username'@'%'</code>是用户的账户名，它由用户名和主机名组成。你需要将 <code>'username'</code>和 <code>'%'</code> 替换为实际的值。</li></ul><p>得有足够的权限才能使用 <code>GRANT</code>。</p><p>创建完用户后<code>FLUSH PRIVILEGES</code>，当然这一步也是可有可无的，不影响使用。</p><p>如果你想要更改用户名可以使用</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">RENAME <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;old_username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;new_username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;<br></code></pre></td></tr></table></figure><h1 id="远程连接-mysql">远程连接 MySQL</h1><p>既然有了 MySQL 服务器，那就试一试远程连接。</p><h2 id="修改-mysql-配置文件">修改 MySQL 配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">nano /etc/mysql/my.cnf<br></code></pre></td></tr></table></figure><p>进入编辑栏，添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nano">[mysqld]<br>bind-address = 0.0.0.0<br></code></pre></td></tr></table></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013842.webp" alt="Linux与MySQL-5.png"><figcaption aria-hidden="true">Linux与MySQL-5.png</figcaption></figure><p>最后就重启一下 MySQL 服务</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo service mysql restart<br></code></pre></td></tr></table></figure><h2 id="用-datagrip-测试结果">用 DataGrip 测试结果</h2><p>进入 DataGrip，File 点击 Data Source，点击+号，选择 MySQL。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013182.webp" alt="Linux与MySQL-6.png"><figcaption aria-hidden="true">Linux与MySQL-6.png</figcaption></figure><p>填写下 name，host，user。<code>host</code> 就是你的 linxu 主机的 ip地址，<code>user</code> 是 MySQL 的你要使用的用户。<code>port</code>也有可能不是 3306，有时候需要查询一下。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013070.webp" alt="Linux与MySQL-7.png"><figcaption aria-hidden="true">Linux与MySQL-7.png</figcaption></figure><h3 id="进程号和端口号的区别">进程号和端口号的区别</h3><ol type="1"><li>进程号（ProcessID，PID）：每个在操作系统中运行的进程都有一个唯一的进程号。这个进程号是由操作系统在进程创建时自动分配的。进程号可以用来唯一标识一个进程，例如在任务管理器中查看进程的状态，或者在命令行中结束一个进程。</li><li>端口号（Portnumber）：在网络通信中，端口号用来标识主机上的特定应用程序。每个网络服务都监听一个或多个端口，当其他主机想要与这个服务通信时，就需要连接到这个端口。例如，HTTP服务通常监听 80 端口，HTTPS 服务通常监听 443 端口，MySQL 服务通常监听3306 端口。</li></ol><p>所以，进程号和端口号是两个完全不同的概念，它们用来标识的也是两个完全不同的东西：进程号标识的是进程，端口号标识的是网络服务。</p><h1 id="笔者的话">笔者的话</h1><p>又是没什么可说的一天。最初我是打算一天一篇博客写下去的，但是这还没开始几天就开始疲倦了，短暂兴奋过后就是长久的烦躁，自律之类的话完全是虚假的，最终还是需要习惯，到无意识开始才是真正做到了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title> 使用Visio建立数据库模型图 </title>
     <link href="/2024/07/16/%E4%BD%BF%E7%94%A8Visio%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B%E5%9B%BE/"/>
     <url>/2024/07/16/%E4%BD%BF%E7%94%A8Visio%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B%E5%9B%BE/</url>
@@ -86,36 +144,9 @@
       
       <tag>学习</tag>
       
-      <tag>香橙派</tag>
-      
       <tag>Linux</tag>
       
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title> 使用IDM下载速度过慢 </title>
-    <link href="/2024/07/14/%E4%BD%BF%E7%94%A8IDM%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2/"/>
-    <url>/2024/07/14/%E4%BD%BF%E7%94%A8IDM%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2/</url>
-    
-    <content type="html"><![CDATA[<p>我在下载 github 中的内容的时候，有时使用 IDM托管下载的时候速度会非常的慢，这时候就把IDM插件给关了，让浏览器去下载，速度很快。</p><p>唯一的问题就是下完后可能要等待比较长时间。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>小技巧</category>
-      
-      <category>IDM</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>小技巧</tag>
+      <tag>香橙派</tag>
       
     </tags>
     
@@ -151,27 +182,25 @@
   
   
   <entry>
-    <title> CSS简介 </title>
-    <link href="/2024/07/13/CSS%E7%AE%80%E4%BB%8B/"/>
-    <url>/2024/07/13/CSS%E7%AE%80%E4%BB%8B/</url>
+    <title> 使用IDM下载速度过慢 </title>
+    <link href="/2024/07/14/%E4%BD%BF%E7%94%A8IDM%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2/"/>
+    <url>/2024/07/14/%E4%BD%BF%E7%94%A8IDM%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2/</url>
     
-    <content type="html"><![CDATA[<h1 id="介绍">介绍</h1><p>css 也就是Cascading Style Sheets，层叠样式表。</p><p>如果说</p>]]></content>
+    <content type="html"><![CDATA[<p>我在下载 github 中的内容的时候，有时使用 IDM托管下载的时候速度会非常的慢，这时候就把IDM插件给关了，让浏览器去下载，速度很快。</p><p>唯一的问题就是下完后可能要等待比较长时间。</p>]]></content>
     
     
     <categories>
       
-      <category>语言</category>
+      <category>小技巧</category>
       
-      <category>CSS</category>
+      <category>IDM</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>学习</tag>
-      
-      <tag>CSS</tag>
+      <tag>小技巧</tag>
       
     </tags>
     
@@ -199,6 +228,35 @@
     <tags>
       
       <tag>HTML</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title> CSS简介 </title>
+    <link href="/2024/07/13/CSS%E7%AE%80%E4%BB%8B/"/>
+    <url>/2024/07/13/CSS%E7%AE%80%E4%BB%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍">介绍</h1><p>css 也就是Cascading Style Sheets，层叠样式表。</p><p>如果说</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>语言</category>
+      
+      <category>CSS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>CSS</tag>
       
     </tags>
     
