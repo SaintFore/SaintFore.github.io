@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407130708376.webp">
 <meta property="article:published_time" content="2024-07-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-13T15:45:38.005Z">
+<meta property="article:modified_time" content="2024-07-20T04:09:16.367Z">
 <meta property="article:author" content="Soleil">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary_large_image">
@@ -292,7 +292,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年7月13日 晚上
+                    本文最后更新于 2024年7月20日 中午
                   
                 
               </p>
@@ -302,10 +302,19 @@
                 
                 <h1 id="介绍">介绍</h1>
 <p>超文本标记语言，用来创建网页的框架，相当于人体的骨架。</p>
-<p>如果使用的是 vscode，按下！可以快速生成 html 的结构。 <img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132150852.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="快捷方式"> 之后生成下图所示： <img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132151717.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="生成后的结构"></p>
+<p>如果使用的是 vscode，按下！可以快速生成 html 的结构。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132150852.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="快捷方式">
+<figcaption aria-hidden="true">快捷方式</figcaption>
+</figure>
+<p>之后生成下图所示：</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132151717.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="生成后的结构">
+<figcaption aria-hidden="true">生成后的结构</figcaption>
+</figure>
 <h2 id="一些插件">一些插件</h2>
-<p>如果使用 vscode 的话一些插件必不可少。 如 <em>live
-server</em>，能够实时预览编写的代码。</p>
+<p>如果使用 vscode 的话一些插件必不可少。</p>
+<p>如 <em>live server</em>，能够实时预览编写的代码。</p>
 <h1 id="组成拆分">组成拆分</h1>
 <p>!DOCTYPE 从英语来看就知道是声明类的，doc 就是文档，type
 不就是类型，也就是文档类型，后面跟着个 html，说明是声明了个 html
@@ -341,8 +350,8 @@ server</em>，能够实时预览编写的代码。</p>
 <h3 id="图片">图片</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://tree-1327913400.cos.apnanjing.myqcloud.com/imgs/202407132155733.webp?imageSlim&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;这是一个图片&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>src
-放的是图片的来源，我这里用的是网络资源，也可以使用本地资源，推荐使用相对路径也就是./的形式。
-alt 的话就是 src 中没内容，或者是没加载出来资源的时候，就使用 alt
+放的是图片的来源，我这里用的是网络资源，也可以使用本地资源，推荐使用相对路径也就是./的形式。</p>
+<p>alt 的话就是 src 中没内容，或者是没加载出来资源的时候，就使用 alt
 里面的文字对用户进行解释这是什么。</p>
 <h3 id="无序列表">无序列表</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>这是一个无序列表<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>这是一个无序列表<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>这是一个无序列表<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br></code></pre></td></tr></table></figure>
@@ -352,16 +361,18 @@ alt 的话就是 src 中没内容，或者是没加载出来资源的时候，�
 <p>前面有 1，2，3。会根据代码的前后顺序添加数字进行排列。</p>
 <h3 id="自定义列表">自定义列表</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>这是一个自定义列表<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>这是一个自定义列表<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>这是一个自定义列表<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<p>可以没有 dt，dt 比 dd 要靠左一些。 自定义就是前面啥也没有了。</p>
+<p>可以没有 dt，dt 比 dd 要靠左一些。</p>
+<p>自定义就是前面啥也没有了。</p>
 <h3 id="表格">表格</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>表头<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>表头<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>表格数据<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>表格数据<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>表格数据<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>表格数据<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<p>tr 是 table row，表示一行 td 是 table data，表示一格 th 是 table
-header，表示表头的单元格，相比 td 字体有所加粗</p>
+<p>tr 是 table row，表示一行</p>
+<p>td 是 table data，表示一格</p>
+<p>th 是 table header，表示表头的单元格，相比 td 字体有所加粗</p>
 <h3 id="表单">表单</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>用户名：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>密码：<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;提交&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<p>action 属性定义了表单数据提交的目标 url。 lable
-元素为表单添加了标签，提高了可访问性。 input 可以根据 type
-的内容创建文本输入框，密码框等输入框的类型。</p>
+<p>action 属性定义了表单数据提交的目标 url。</p>
+<p>lable 元素为表单添加了标签，提高了可访问性。</p>
+<p>input 可以根据 type 的内容创建文本输入框，密码框等输入框的类型。</p>
 <h3 id="按钮">按钮</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>这是一个按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>仅仅是一个按钮。</p>
@@ -391,10 +402,12 @@ title 里面的内容, 123。</p>
 <figcaption aria-hidden="true">网页中显示网页</figcaption>
 </figure>
 <h2 id="元素的分类">元素的分类</h2>
-<p>块级元素 div 就是块级元素。独占一行，或者说一整块。
-可以设置宽度，高度以及边距等样式属性。</p>
-<p>行内元素（内联元素） span 就是内联元素。可以很多个内联元素并存。
-宽度默认由其内容决定。</p>
+<p>块级元素</p>
+<p>div 就是块级元素。独占一行，或者说一整块。</p>
+<p>可以设置宽度，高度以及边距等样式属性。</p>
+<p>行内元素（内联元素）</p>
+<p>span 就是内联元素。可以很多个内联元素并存。</p>
+<p>宽度默认由其内容决定。</p>
 <p>div 和 span 是最常用的元素。</p>
 <h1 id="笔者的话">笔者的话</h1>
 <p>html
@@ -470,7 +483,7 @@ title 里面的内容, 123。</p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年7月13日</div>
+          <div>2024年7月20日</div>
         </div>
       
       
