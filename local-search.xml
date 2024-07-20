@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title> FileZilla Cilent进行FTP传输 </title>
+    <link href="/2024/07/20/FileZilla%20Cilent%E8%BF%9B%E8%A1%8CFTP%E4%BC%A0%E8%BE%93/"/>
+    <url>/2024/07/20/FileZilla%20Cilent%E8%BF%9B%E8%A1%8CFTP%E4%BC%A0%E8%BE%93/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>当设备多的时候文件的传输就成了一种问题。</p><p>就比如说我想将手机上的文件传到电脑里面，因为我使用的电脑跟我的手机不是一个生态的，它们唯一的联系或许就是连接到了统一WIFI 下，也就是说它们在同一个局域网里面。</p><p>这样我们就可以使用 FTP 进行传输。对了 FTP 使用的是 TCP 协议。</p><p>使用 FTP 传输的前提是确保两台设备都能运行 FTP 服务，手机可以安装 ES文件浏览器，或者 KSWEB，都能一键启用。电脑一般是默认启用了。</p><p>其实可以直接用电脑自带的进行连接，但不是特别的方便，所以这里用<em>FileZillaCilent</em> 进行 ftp 的传输。其实主要是介绍怎么用的，而不是 ftp传输。</p><p>很简单。</p><h1 id="使用-filezilla">使用 FileZilla</h1><p>点击安装的 exe 文件，一直下一步就安装成功。</p><p>打开软件。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201924669.webp" alt="Snipaste_2024-07-20_19-23-38.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-23-38.png</figcaption></figure><p>输入你想要进行连接的主机（也就是 <code>ftp://</code>加上局域网中该机器的 IP地址），用户名，密码，以及端口，注意不同的用户对应的权限可能也不一样。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201926659.webp" alt="Snipaste_2024-07-20_19-25-02.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-25-02.png</figcaption></figure><p>如果之前已经进行过连接，就可以点击最右侧的向下的小三角。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201928048.webp" alt="Snipaste_2024-07-20_19-26-39.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-26-39.png</figcaption></figure><p>点击已经进行过连接的标识。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201929662.webp" alt="Snipaste_2024-07-20_19-29-10.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-29-10.png</figcaption></figure><p>这里提醒不安全的 FTP 连接，这是因为我的手机开启的 FTP 服务器不支持FTP over TLS，因为家庭局域网，不用管这个问题，直接点击确定。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201931263.webp" alt="Snipaste_2024-07-20_19-30-55.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-30-55.png</figcaption></figure><p>接下来就可以愉快的进行文件的传输了。</p><p>本地站点表示正在使用的电脑，远程站点表示另一台设备。</p><p>可以进行多选，然后点击下载，这样就将文件从我的手机传到电脑上了。速度挺快的。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201935717.webp" alt="Snipaste_2024-07-20_19-33-56.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-33-56.png</figcaption></figure><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201935674.webp" alt="Snipaste_2024-07-20_19-34-03.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-34-03.png</figcaption></figure><p>当然也可以在电脑上对手机上的文件进行快速操作，例如删除，转移之类的。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407201937438.webp" alt="Snipaste_2024-07-20_19-36-49.png"><figcaption aria-hidden="true">Snipaste_2024-07-20_19-36-49.png</figcaption></figure><p>至于说直接双击文件，是将文件从一端传向另一端，真要看的话还得传到本地后，才能看。</p><h1 id="笔者的话">笔者的话</h1><p>这里只进行了部分介绍，因为我也就用到了这么多东西，这些应该也是够用的了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+      <category>FTP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+      <tag>FTP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title> 小米ROOT方法 </title>
     <link href="/2024/07/20/%E5%B0%8F%E7%B1%B3ROOT%E6%96%B9%E6%B3%95/"/>
     <url>/2024/07/20/%E5%B0%8F%E7%B1%B3ROOT%E6%96%B9%E6%B3%95/</url>
@@ -186,33 +215,6 @@
   
   
   <entry>
-    <title> JS简介 </title>
-    <link href="/2024/07/14/JS%E7%AE%80%E4%BB%8B/"/>
-    <url>/2024/07/14/JS%E7%AE%80%E4%BB%8B/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>语言</category>
-      
-      <category>JS</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>JS</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title> 使用IDM下载速度过慢 </title>
     <link href="/2024/07/14/%E4%BD%BF%E7%94%A8IDM%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2/"/>
     <url>/2024/07/14/%E4%BD%BF%E7%94%A8IDM%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2/</url>
@@ -232,35 +234,6 @@
     <tags>
       
       <tag>小技巧</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title> CSS简介 </title>
-    <link href="/2024/07/13/CSS%E7%AE%80%E4%BB%8B/"/>
-    <url>/2024/07/13/CSS%E7%AE%80%E4%BB%8B/</url>
-    
-    <content type="html"><![CDATA[<h1 id="介绍">介绍</h1><p>css 也就是Cascading Style Sheets，层叠样式表。</p><p>如果说</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>语言</category>
-      
-      <category>CSS</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习</tag>
-      
-      <tag>CSS</tag>
       
     </tags>
     
