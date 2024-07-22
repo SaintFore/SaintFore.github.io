@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title> Obsidian本地存储图片的一些技巧 </title>
+    <link href="/2024/07/22/Obsidian%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/"/>
+    <url>/2024/07/22/Obsidian%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<p>使用 Obsidian记录一些事情的时候，可能会大量的插入一些图片在文档中。</p><p>之前用 typora 是可以设置插入图片时自动创建相同名字的子文件夹，而obsidian插入图片后直接就放在根目录下，十分不方便之后的查看与文件的管理。</p><p>在上网一同查阅后，发现有两个方法，第一是利用图床，把图片传到网上，之后就用网络链接来引用就行，还有种就是使用插件进行图片的管理。这里我先介绍第二种方法，第一种之后再进行介绍。</p><p>不得不说 obsidian 的插件是真的多，不愧是小 vsc。</p><h1 id="图片设置文件夹">图片设置文件夹</h1><p>使用<em>Custom AttachmentLocation</em>插件，在插件市场进行搜索，然后安装。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407222343007.webp" alt="obsidian图片存储问题-1.png"><figcaption aria-hidden="true">obsidian图片存储问题-1.png</figcaption></figure><p>安装之后就点击设置，设置如上图，就能够自动创建于 md文件名字相同的子文件夹。并且注意<strong>当你更改 md 文件的名字时，根据md 文件创建的子文件夹的名字也会随之更改</strong>可以说是相当好用了。</p><p><em>但是注意，如果在安卓平台更改 md文件名字的话，这个方法就丧失了，不会再更改了，之后即便在电脑上更改 md名字也没法起效果了。</em></p><h1 id="图片重新命名">图片重新命名</h1><p>重新命名图片后便于进行管理。</p><p>使用<em>paste image rename</em>插件。</p><p><em>paste image rename</em>这个插件的配置如下：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407222344673.webp" alt="obsidian图片存储问题-2.png"><figcaption aria-hidden="true">obsidian图片存储问题-2.png</figcaption></figure><p>当然这个插件还是有问题的，比如命名时第一个文件没有-0，而第二张照片是-1，不太统一，这挺不舒服的，然后就是当后缀不同时会有重复的名称。</p><p>又尝试了下，把 Always add dublicate number给勾选上就能够解决第一张图片没有-1的问题，至于说不同格式名称相同，这个不是什么大问题，因为主要还是以截图为主，也就是png 格式。</p><p>不过还是有一个大问题就是我今天安装的这两个插件好像都不太适配<em>安卓</em>。obsidian 图片的插入格式为![[]]这不是通用的 md 图片格式，通用的 md图片插入格式是！【】（）,这里就用中文表示了，因为直接用的话会看不见。</p><p>解决方法是在选项中点击<em>文件与链接</em>，把默认的 wiki选项给取消掉。就可以了。</p><h1 id="图片的路径问题">图片的路径问题</h1><p>之前用 obsidian 写的博客，再用别的软件如 typora打开的时候，图片没办法显示就如同这篇 md 文件。这其实是 obsidian设置的问题。依旧是打开设置，选择<strong>文件与链接</strong>，在<strong>内部链接</strong>中选择基于当前相对路径，默认是<em>尽可能短的形式</em>，正是因为这个默认的选择才导致问题的发生。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407222346987.webp" alt="Snipaste_2024-05-12_14-32-12.png"><figcaption aria-hidden="true">Snipaste_2024-05-12_14-32-12.png</figcaption></figure><h1 id="笔者的话">笔者的话</h1><p>Obsidian 我认为好用程度胜过了typora，只要你愿意花费时间去尝试插件。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+      <category>Obsidian</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+      <tag>Obsidian</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title> ComfyUI使用 </title>
     <link href="/2024/07/21/ComfyUI%E4%BD%BF%E7%94%A8/"/>
     <url>/2024/07/21/ComfyUI%E4%BD%BF%E7%94%A8/</url>
