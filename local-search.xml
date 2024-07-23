@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title> VScode使用Github Copilot插件时出现read ECONNREST问题的解决方法 </title>
+    <link href="/2024/07/23/VScode%E4%BD%BF%E7%94%A8Github%20Copilot%E6%8F%92%E4%BB%B6%E6%97%B6%E5%87%BA%E7%8E%B0read%20ECONNREST%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <url>/2024/07/23/VScode%E4%BD%BF%E7%94%A8Github%20Copilot%E6%8F%92%E4%BB%B6%E6%97%B6%E5%87%BA%E7%8E%B0read%20ECONNREST%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="read-econnrest">read ECONNREST</h1><p>最近使用 Copilot 时一直出现 read ECONNREST问题，这个表示连接被对方重置了，就是说在读取数据时连接被关闭。</p><p>我首先怀疑是不是会员过期了。</p><h1 id="查看是否仍是-copilot-会员">查看是否仍是 Copilot 会员</h1><p>首先进入 github，点击 your copilot</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232116297.webp" alt="Snipaste_2024-07-23_21-16-41.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-16-41.png</figcaption></figure><p>如果你的会员到期了，会出现页面让你买会员。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232118748.webp" alt="Snipaste_2024-07-23_21-16-59.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-16-59.png</figcaption></figure><p>如果仍然是 copilot 会员，就会直接进入配置页面。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232119728.webp" alt="Snipaste_2024-07-23_21-17-23.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-17-23.png</figcaption></figure><p>经过检查发现我还是会员，这就排除掉会员过期这个问题。</p><h1 id="查看控制台输出">查看控制台输出</h1><p>其实这一步应该先做的。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232128824.webp" alt="Snipaste_2024-07-23_21-27-34.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-27-34.png</figcaption></figure><p>看起来是没有问题的，身份验证也成功通过了。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232153663.webp" alt="Snipaste_2024-07-23_21-52-45.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-52-45.png</figcaption></figure><p>我们再看 copilot 状态</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232154501.webp" alt="Snipaste_2024-07-23_21-53-06.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-53-06.png</figcaption></figure><p>好像都没什么问题。</p><p>但还是没法使用 copilot。</p><h1 id="网络连接问题">网络连接问题</h1><p>使用 wireshark 进行排查，发现也没有问题。</p><p>同时在 IDEA 使用 copilot 插件也是没有问题的，说明不是网络的锅。</p><p>网络连接导致的问题也排除。</p><h1 id="浏览器设置问题">浏览器设置问题</h1><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232122179.webp" alt="Snipaste_2024-07-23_21-12-23.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-12-23.png</figcaption></figure><p>打开 edge 浏览器，将关闭继续运行后台扩展与应用打开。（google浏览器的这个选项我是关闭着的）</p><p>然后重启一下 edge浏览器。稍等一会，当然这个时间是不固定的，有长有短。</p><p>也可以重启一下电脑。</p><p>再重启 vscode，现在就可以使用 copilot 了。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232145795.webp" alt="Snipaste_2024-07-23_21-13-02.png"><figcaption aria-hidden="true">Snipaste_2024-07-23_21-13-02.png</figcaption></figure><h1 id="笔者的话">笔者的话</h1><p>花了比较长的时间找问题，但我还是不知道原因是什么，这个解决方法是出于经验主义的，不一定真的有效。但经过我个人的测试，能使用copilot 的时候，关闭浏览器的后台选项，再重启 vscode，立马不能使用copilot，我测试了几遍都是一样的结果，所以应该是有所关联的。</p><p>网络不好的时候也同样会出现最上面的问题。</p><p>如果还不行就安装一下 <em>win-ca</em> 插件，将 inject 改为append。</p><p>或者试一下测试版的 <a href="https://code.visualstudio.com/insiders/">Visual Studio CodeInsiders</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决问题</category>
+      
+      <category>Copilot</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>解决问题</tag>
+      
+      <tag>VSCode</tag>
+      
+      <tag>Copilot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title> Obsidian本地存储图片的一些技巧 </title>
     <link href="/2024/07/22/Obsidian%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/"/>
     <url>/2024/07/22/Obsidian%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/</url>
