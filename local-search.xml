@@ -62,35 +62,6 @@
   
   
   <entry>
-    <title> no main mainifest attribute的解决方法 </title>
-    <link href="/2024/07/25/no%20main%20mainifest%20attribute%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <url>/2024/07/25/no%20main%20mainifest%20attribute%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    
-    <content type="html"><![CDATA[<h1 id="发现问题">发现问题</h1><p>当使用 <code>java -jar</code> 来使用 java 运行时环境启动 jar文件时，可能会遇到下面的情况：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251908868.webp" alt="Snipaste_2024-07-25_15-16-41.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_15-16-41.png</figcaption></figure><p>我们可以把 jar 包给解压来看看。</p><p>是 META-INF 文件夹下面的 MANIFEST. MF 文件。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251911139.webp" alt="Snipaste_2024-07-25_19-09-40.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-09-40.png</figcaption></figure><p>用记事本打开：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251911470.webp" alt="Snipaste_2024-07-25_19-09-50.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-09-50.png</figcaption></figure><p>明显缺少了 。</p><p>正常的应该是下面这样的：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251913970.webp" alt="Snipaste_2024-07-25_19-10-04.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-10-04.png</figcaption></figure><h1 id="解决问题的方法">解决问题的方法</h1><p>打开 pom. xml 文件，翻到最下面的插件部分。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251916846.webp" alt="Snipaste_2024-07-25_19-16-17.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-16-17.png</figcaption></figure><p>这里的 skip 的值是true，表明构建过程中实际上跳过了插件的执行，因此不会将主类信息添加到 JAR文件的 MANIFEST. MF 文件中。</p><p>改为 false。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251917981.webp" alt="Snipaste_2024-07-25_15-16-19.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_15-16-19.png</figcaption></figure><p>再打包就可以了。</p><h1 id="笔者的话">笔者的话</h1><p>何须赘言。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>解决问题</category>
-      
-      <category>服务器</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>解决问题</tag>
-      
-      <tag>未发</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title> anki学习 </title>
     <link href="/2024/07/25/anki%E5%AD%A6%E4%B9%A0/"/>
     <url>/2024/07/25/anki%E5%AD%A6%E4%B9%A0/</url>
@@ -114,6 +85,35 @@
       <tag>Anki</tag>
       
       <tag>记忆力</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title> no main mainifest attribute的解决方法 </title>
+    <link href="/2024/07/25/no%20main%20mainifest%20attribute%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <url>/2024/07/25/no%20main%20mainifest%20attribute%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="发现问题">发现问题</h1><p>当使用 <code>java -jar</code> 来使用 java 运行时环境启动 jar文件时，可能会遇到下面的情况：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251908868.webp" alt="Snipaste_2024-07-25_15-16-41.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_15-16-41.png</figcaption></figure><p>我们可以把 jar 包给解压来看看。</p><p>是 META-INF 文件夹下面的 MANIFEST. MF 文件。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251911139.webp" alt="Snipaste_2024-07-25_19-09-40.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-09-40.png</figcaption></figure><p>用记事本打开：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251911470.webp" alt="Snipaste_2024-07-25_19-09-50.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-09-50.png</figcaption></figure><p>明显缺少了 。</p><p>正常的应该是下面这样的：</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251913970.webp" alt="Snipaste_2024-07-25_19-10-04.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-10-04.png</figcaption></figure><h1 id="解决问题的方法">解决问题的方法</h1><p>打开 pom. xml 文件，翻到最下面的插件部分。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251916846.webp" alt="Snipaste_2024-07-25_19-16-17.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_19-16-17.png</figcaption></figure><p>这里的 skip 的值是true，表明构建过程中实际上跳过了插件的执行，因此不会将主类信息添加到 JAR文件的 MANIFEST. MF 文件中。</p><p>改为 false。</p><figure><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407251917981.webp" alt="Snipaste_2024-07-25_15-16-19.png"><figcaption aria-hidden="true">Snipaste_2024-07-25_15-16-19.png</figcaption></figure><p>再打包就可以了。</p><h1 id="笔者的话">笔者的话</h1><p>何须赘言。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决问题</category>
+      
+      <category>服务器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>解决问题</tag>
+      
+      <tag>未发</tag>
       
     </tags>
     
