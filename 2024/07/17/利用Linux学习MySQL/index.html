@@ -1,0 +1,965 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Cn" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/sun_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Soleil">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="引言 使用 Linux 进行 MySQL 的学习。 首先来看两个指令，这两个是用来查 Linux 版本的。 12lsb_release -a # 这个非常之详细，有发行版的信息uname -a # 这个就只会显示内核信息   Linux与MySQL-1.png  今天用 ssh 登陆的时候突然连接不到香橙派了，最后是用网线才解决问题。 或许是因为路由器每天重启的原因。 安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" 利用Linux学习MySQL ">
+<meta property="og:url" content="https://saintfore.github.io/2024/07/17/%E5%88%A9%E7%94%A8Linux%E5%AD%A6%E4%B9%A0MySQL/index.html">
+<meta property="og:site_name" content="Forest">
+<meta property="og:description" content="引言 使用 Linux 进行 MySQL 的学习。 首先来看两个指令，这两个是用来查 Linux 版本的。 12lsb_release -a # 这个非常之详细，有发行版的信息uname -a # 这个就只会显示内核信息   Linux与MySQL-1.png  今天用 ssh 登陆的时候突然连接不到香橙派了，最后是用网线才解决问题。 或许是因为路由器每天重启的原因。 安装">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010656.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010944.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010989.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172011720.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013842.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013182.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013070.webp">
+<meta property="article:published_time" content="2024-07-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-17T12:20:35.853Z">
+<meta property="article:author" content="Soleil">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010656.webp">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title> 利用Linux学习MySQL  - Forest</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"saintfore.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>双木非林</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=" 利用Linux学习MySQL "></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Soleil
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-17 00:00" pubdate>
+          2024年7月17日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"> 利用Linux学习MySQL </h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年7月17日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="引言">引言</h1>
+<p>使用 Linux 进行 MySQL 的学习。</p>
+<p>首先来看两个指令，这两个是用来查 Linux 版本的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">lsb_release -a # 这个非常之详细，有发行版的信息<br>uname -a # 这个就只会显示内核信息<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010656.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-1.png">
+<figcaption aria-hidden="true">Linux与MySQL-1.png</figcaption>
+</figure>
+<p>今天用 ssh
+登陆的时候突然连接不到香橙派了，最后是用网线才解决问题。</p>
+<p>或许是因为路由器每天重启的原因。</p>
+<h1 id="安装-mysql">安装 MySQL</h1>
+<p>首先，先要更新包列表，每次安装什么新的东西都要操作一次</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get update<br></code></pre></td></tr></table></figure>
+<p>然后就直接安装 MySQL 的服务器了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get install mysql-server<br></code></pre></td></tr></table></figure>
+<p>可以查一下 MySQL 的版本，看看是 5.7 还是 8.0</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql --version<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010944.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-2.png">
+<figcaption aria-hidden="true">Linux与MySQL-2.png</figcaption>
+</figure>
+<p>这里可以看到是 8.0。</p>
+<p>我们也可以看看这个 mysql 是安在哪里了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">which mysql<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172010989.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-3.png">
+<figcaption aria-hidden="true">Linux与MySQL-3.png</figcaption>
+</figure>
+<h2 id="apt-get-的作用以及常见命令">apt-get 的作用以及常见命令</h2>
+<p><code>apt-get</code> 是 Debian 和 Ubuntu 等基于 Debian 的 Linux
+发行版中的一个命令行工具，用于处理包。</p>
+<p>这个工具可以用来安装、升级或删除软件包。</p>
+<p>以下是一些常用的 <code>apt-get</code> 命令：</p>
+<ul>
+<li><code>sudo apt-get update</code>：更新你的包列表。这将获取最新的软件包版本信息，但不会安装或升级任何软件包。</li>
+<li><code>sudo apt-get upgrade</code>：升级所有已安装的软件包到最新版本。</li>
+<li><code>sudo apt-get install &lt;package&gt;</code>：安装一个软件包。你需要将
+<code>&lt;package&gt;</code> 替换为你想要安装的软件包的名称。</li>
+<li><code>sudo apt-get remove &lt;package&gt;</code>：删除一个软件包。你需要将
+<code>&lt;package&gt;</code> 替换为你想要删除的软件包的名称。</li>
+<li><code>sudo apt-get autoremove</code>：删除所有不再需要的软件包。这通常用来清理那些被安装为其他软件包的依赖，但现在不再需要的软件包。</li>
+<li><code>sudo apt-get dist-upgrade</code>：升级系统到新的发行版。</li>
+</ul>
+<p>这些命令可以帮助管理 Linux 系统，保持软件包的最新状态。</p>
+<h1 id="使用-mysql">使用 MySQL</h1>
+<p>第一步是创建用户，不过这个 root
+用户应该一开始就已经有了，这里只是给这个 root
+用户设置一下初始的密码。（这一步还是在 linux 的 shell 中进行）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -u root -p<br></code></pre></td></tr></table></figure>
+<p>输入这行指令之后，让你输入密码，同样是不显示位数的，什么都没有。</p>
+<p>然后就可以开始使用了。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">SHOW</span> DATABASES;<br></code></pre></td></tr></table></figure>
+<p>先显示一下所有的数据库，注意是 <code>databases</code> 后面是有个
+<code>s</code> 的，还有得加个 <code>；</code>。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172011720.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-4.png">
+<figcaption aria-hidden="true">Linux与MySQL-4.png</figcaption>
+</figure>
+<p>除了 <code>soleilbase</code> 是我创建的，其他的都是 MySQL
+自带的，都是有用的。</p>
+<ul>
+<li><code>information_schema</code> 是 MySQL
+中的一个特殊数据库，它提供了关于 MySQL
+服务器的元数据，包括数据库的信息、表的信息、列的信息、权限的信息等等。这些信息以表的形式存储，你可以像查询普通的表一样查询这些信息。</li>
+<li><code>mysql</code> 是 MySQL 中的一个系统数据库，它存储了 MySQL
+服务器的元数据，包括用户账户信息、权限信息、系统配置等等。 以下是
+<code>mysql</code> 数据库中一些重要的表：
+<ul>
+<li><code>user</code>：存储了用户账户信息，包括用户名、密码、权限等等。</li>
+<li><code>db</code>：存储了数据库级别的权限信息。</li>
+<li><code>tables_priv</code>：存储了表级别的权限信息。</li>
+<li><code>columns_priv</code>：存储了列级别的权限信息。</li>
+<li><code>procs_priv</code>：存储了存储过程和函数的权限信息。</li>
+<li><code>time_zone*</code>：存储了时区信息。</li>
+</ul></li>
+<li><code>performance_schema</code>
+数据库是虚拟的，它的数据并不存储在磁盘上，而是在查询时动态生成。因此，你不会在文件系统中找到
+<code>performance_schema</code> 数据库的数据文件。</li>
+<li><code>sys</code> 是 MySQL
+中的一个特殊数据库，它提供了一组视图、函数和过程，用于帮助数据库管理员更好地理解和优化
+MySQL 服务器的性能。<code>sys</code> 数据库中的对象是基于
+<code>performance_schema</code> 和 <code>information_schema</code>
+数据库的数据创建的，它们提供了一种更易于理解和使用的方式来访问这些数据例如，<code>sys</code>
+数据库中的 <code>schema_tables_with_full_table_scans</code>
+视图可以帮助你找出那些经常进行全表扫描的表，这可能是性能问题的一个指标。</li>
+</ul>
+<p>创建一个数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">CREATE</span> DATABASE sqlTest；<br></code></pre></td></tr></table></figure>
+<p><em>注意，linux 上的 mysql 是区分大小写的，但是 win
+上面的是不区分的都是小写，但是如果你 linux 上以及区分大小写了，你用 win
+连接这个 linux 上的数据库，那么 win 上面也就区分大小写了。</em></p>
+<p>使用这个新建的数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">use sqlTest; <span class="hljs-comment">-- 注意大小写了</span><br></code></pre></td></tr></table></figure>
+<p>至于说其他的操作，就请期待我的数据库的内容了。</p>
+<h2 id="更改-mysql-用户验证方式">更改 MySQL 用户验证方式</h2>
+<p>接下来你如果切换为其他用户，不是 root 用户，可能无法登录 MySQL 的
+root 用户，这是因为 MySQL 默认的 <code>root</code> 用户使用了
+<code>auth_socket</code> 插件进行身份验证，这意味着只有系统的
+<code>root</code> 用户才能以 MySQL 的 <code>root</code>
+用户身份登录。</p>
+<p>先切换为 linux 的 root 用户。</p>
+<p>然后登录 MySQL 的 root 用户。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">su root<br>mysql -u root -p<br></code></pre></td></tr></table></figure>
+<p>登录进去后更改 root 用户的验证方式</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;你的密码&#x27;</span>; <span class="hljs-comment">-- By包括后面可以不要，就是不用改密码了，有的话可以更改密码</span><br></code></pre></td></tr></table></figure>
+<p>最后刷新下权限（可有可无）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">FLUSH PRIVILEGES;<br></code></pre></td></tr></table></figure>
+<p>恢复的话就更改第二步的内容</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> auth_socket;<br></code></pre></td></tr></table></figure>
+<h2 id="新建-mysql-用户">新建 MySQL 用户</h2>
+<p>第一步还是要用 mysql 的 root 用户登录。</p>
+<p>之后在 MySQL 提示符下，使用 <code>CREATE USER</code>
+命令创建新用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>'username'</code> 是用户的名称，它可以是任何有效的标识符。在
+MySQL
+中，标识符可以包含字母、数字、下划线、美元符号等字符，但不能包含空格、点、破折号等特殊字符。标识符的长度不能超过
+32 个字符。</li>
+<li><code>'%'</code> 是主机名，它指定了用户可以从哪些主机连接到 MySQL
+服务器。<code>'%'</code> 表示任何主机，也就是说，用户可以从任何 IP
+地址连接到 MySQL 服务器。你也可以指定一个具体的 IP 地址或主机名，例如
+<code>'192.168.1.1'</code> 或 <code>'localhost'</code>。你也可以给个名字
+<code>Soleil</code> 这就要求连接到 MySQL 服务器的主机名字要叫
+Soleil。如果主机不符合@后面规定的要求，那就没法连接。</li>
+<li><code>password</code>
+为你想设置的密码，注意<strong>千万别忘记</strong>。</li>
+</ul>
+<p>最后，你需要给新用户分配权限。你可以使用 <code>GRANT</code>
+命令来做这个。 这里我们要给我们的新用户赋予全部的权限。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> PRIVILEGES <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>GRANT</code>：这是一个 SQL 关键字，它用于授予用户权限。</li>
+<li><code>ALL PRIVILEGES</code>：这表示所有的权限。在 MySQL
+中，权限包括读取数据、写入数据、修改表结构、管理用户等等。<code>ALL PRIVILEGES</code>
+表示所有这些权限。</li>
+<li><code>ON *.*</code>：这表示所有的数据库和表。在 MySQL
+中，<code>*.*</code>
+表示所有的数据库和表。你也可以指定一个具体的数据库或表，例如
+<code>ON database_name.*</code>
+表示指定数据库的所有表，<code>ON database_name.table_name</code>
+表示指定的表。</li>
+<li><code>TO 'username'@'%'</code>：这表示要授予权限的用户。<code>'username'@'%'</code>
+是用户的账户名，它由用户名和主机名组成。你需要将 <code>'username'</code>
+和 <code>'%'</code> 替换为实际的值。</li>
+</ul>
+<p>得有足够的权限才能使用 <code>GRANT</code>。</p>
+<p>创建完用户后
+<code>FLUSH PRIVILEGES</code>，当然这一步也是可有可无的，不影响使用。</p>
+<p>如果你想要更改用户名可以使用</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">RENAME <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;old_username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;new_username&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<h1 id="远程连接-mysql">远程连接 MySQL</h1>
+<p>既然有了 MySQL 服务器，那就试一试远程连接。</p>
+<h2 id="修改-mysql-配置文件">修改 MySQL 配置文件</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">nano /etc/mysql/my.cnf<br></code></pre></td></tr></table></figure>
+<p>进入编辑栏，添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nano">[mysqld]<br>bind-address = 0.0.0.0<br></code></pre></td></tr></table></figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013842.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-5.png">
+<figcaption aria-hidden="true">Linux与MySQL-5.png</figcaption>
+</figure>
+<p>最后就重启一下 MySQL 服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo service mysql restart<br></code></pre></td></tr></table></figure>
+<h2 id="用-datagrip-测试结果">用 DataGrip 测试结果</h2>
+<p>进入 DataGrip，File 点击 Data Source，点击+号，选择 MySQL。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013182.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-6.png">
+<figcaption aria-hidden="true">Linux与MySQL-6.png</figcaption>
+</figure>
+<p>填写下 name，host，user。<code>host</code> 就是你的 linxu 主机的 ip
+地址，<code>user</code> 是 MySQL 的你要使用的用户。<code>port</code>
+也有可能不是 3306，有时候需要查询一下。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407172013070.webp" srcset="/img/loading.gif" lazyload alt="Linux与MySQL-7.png">
+<figcaption aria-hidden="true">Linux与MySQL-7.png</figcaption>
+</figure>
+<h3 id="进程号和端口号的区别">进程号和端口号的区别</h3>
+<ol type="1">
+<li>进程号（Process
+ID，PID）：每个在操作系统中运行的进程都有一个唯一的进程号。这个进程号是由操作系统在进程创建时自动分配的。进程号可以用来唯一标识一个进程，例如在任务管理器中查看进程的状态，或者在命令行中结束一个进程。</li>
+<li>端口号（Port
+number）：在网络通信中，端口号用来标识主机上的特定应用程序。每个网络服务都监听一个或多个端口，当其他主机想要与这个服务通信时，就需要连接到这个端口。例如，HTTP
+服务通常监听 80 端口，HTTPS 服务通常监听 443 端口，MySQL 服务通常监听
+3306 端口。</li>
+</ol>
+<p>所以，进程号和端口号是两个完全不同的概念，它们用来标识的也是两个完全不同的东西：进程号标识的是进程，端口号标识的是网络服务。</p>
+<h1 id="笔者的话">笔者的话</h1>
+<p>又是没什么可说的一天。最初我是打算一天一篇博客写下去的，但是这还没开始几天就开始疲倦了，短暂兴奋过后就是长久的烦躁，自律之类的话完全是虚假的，最终还是需要习惯，到无意识开始才是真正做到了。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div> 利用Linux学习MySQL </div>
+      <div>https://saintfore.github.io/2024/07/17/利用Linux学习MySQL/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Soleil</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月17日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年7月17日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/18/Python%E4%B8%8EMySQL/" title=" Python与MySQL ">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"> Python与MySQL </span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/16/%E4%BD%BF%E7%94%A8Visio%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B%E5%9B%BE/" title=" 使用Visio建立数据库模型图 ">
+                        <span class="hidden-mobile"> 使用Visio建立数据库模型图 </span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

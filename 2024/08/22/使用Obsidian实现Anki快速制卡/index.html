@@ -1,0 +1,905 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Cn" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/sun_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Soleil">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前言 我现在使用 Anki 的同时也使用 Obsidian，正好可以通过插件来让这两个十分好用的软件实现联动。 在 Obsidian 中实现 Anki 的快速制卡。 准备 首先要在这两个软件中安装相应的插件。  Anki 中安装 AnkiConnect Obsidian 中安装 Export to Anki（我这里放的是 Github 仓库的地址，安装还是要在 Obsidian">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" 使用Obsidian实现Anki快速制卡 ">
+<meta property="og:url" content="https://saintfore.github.io/2024/08/22/%E4%BD%BF%E7%94%A8Obsidian%E5%AE%9E%E7%8E%B0Anki%E5%BF%AB%E9%80%9F%E5%88%B6%E5%8D%A1/index.html">
+<meta property="og:site_name" content="Forest">
+<meta property="og:description" content="前言 我现在使用 Anki 的同时也使用 Obsidian，正好可以通过插件来让这两个十分好用的软件实现联动。 在 Obsidian 中实现 Anki 的快速制卡。 准备 首先要在这两个软件中安装相应的插件。  Anki 中安装 AnkiConnect Obsidian 中安装 Export to Anki（我这里放的是 Github 仓库的地址，安装还是要在 Obsidian">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192217229.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192218466.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192220874.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192222245.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192223089.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192226060.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192228194.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192234897.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221826263.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221831230.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221831482.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221831877.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202409272219932.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202409272219611.webp">
+<meta property="article:published_time" content="2024-08-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-27T14:20:46.431Z">
+<meta property="article:author" content="Soleil">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Anki">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192217229.webp">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title> 使用Obsidian实现Anki快速制卡  - Forest</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"saintfore.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>双木非林</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=" 使用Obsidian实现Anki快速制卡 "></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Soleil
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-22 00:00" pubdate>
+          2024年8月22日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          883 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"> 使用Obsidian实现Anki快速制卡 </h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年9月27日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="前言">前言</h1>
+<p>我现在使用 Anki 的同时也使用
+Obsidian，正好可以通过插件来让这两个十分好用的软件实现联动。</p>
+<p>在 Obsidian 中实现 Anki 的快速制卡。</p>
+<h1 id="准备">准备</h1>
+<p>首先要在这两个软件中安装相应的插件。</p>
+<ol type="1">
+<li>Anki 中安装 <a target="_blank" rel="noopener" href="https://ankiweb.net/shared/info/2055492159">AnkiConnect</a></li>
+<li>Obsidian 中安装 <a target="_blank" rel="noopener" href="https://github.com/ObsidianToAnki/Obsidian_to_Anki">Export to
+Anki</a>（我这里放的是 Github 仓库的地址，安装还是要在 Obsidian
+中安装）</li>
+</ol>
+<p>如何安装这第三方插件请看：</p>
+<ul>
+<li>[[Anki如何安装插件]]</li>
+<li>[[Obsidian如何安装插件]]</li>
+</ul>
+<h1 id="双双启用">双双启用</h1>
+<p>当安装完两个插件并且启用后，打开 anki，注意 anki 是一定要打开的。</p>
+<h2 id="遇到问题">遇到问题</h2>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192217229.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-09-11.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-09-11.png</figcaption>
+</figure>
+<p>开启后发现出现问题了，没法连接到 Anki。</p>
+<h2 id="查看是什么问题">查看是什么问题</h2>
+<p>这时候不要慌。</p>
+<p>按下<em>Ctrl + Shift + I</em> 可以打开 Obsidian
+的控制台，能够看到是什么问题。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192218466.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-11-02.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-11-02.png</figcaption>
+</figure>
+<p>这时候就可以看到问题，即便看不懂也没问题，复制问题到百度上搜索就行。</p>
+<h2 id="解决问题">解决问题</h2>
+<p>这是一个跨域问题，可以通过代码进行更改，但这个问题插件开发者一定是知道的，肯定是有现成的解决方法的。所以我就打开插件商店好好看了看怎么安装的。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192220874.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-13-13.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-13-13.png</figcaption>
+</figure>
+<p>第六条就告诉我们怎么解决了。</p>
+<p>根据开发者的步骤，再次打开 anki，对 AnkiConnect
+这个插件进行设置，添加红框中的代码。</p>
+<p>注意改完后要点击确定。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192222245.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-15-51.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-15-51.png</figcaption>
+</figure>
+<p>返回 Obsidian，再次启用 Export to
+Anki，可以看到左侧多了个小按钮，说明安装成功！</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192223089.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-16-34.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-16-34.png</figcaption>
+</figure>
+<h1 id="开始使用">开始使用</h1>
+<h2 id="使用前的一些设置">使用前的一些设置</h2>
+<p>两个插件都启用成功后，我们可以在 Anki
+中看到插件自动创建的牌组，Default。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192226060.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-25-35.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-25-35.png</figcaption>
+</figure>
+<p>这个跟我的牌组风格不太一样，我是挺不舒服的，所以改一下设置，这个设置在
+Obsidian 中进行更改。</p>
+<p>打开 Obsidian 中的设置，左侧往下滑，可以看到 Export to Anki。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192228194.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-27-18.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-27-18.png</figcaption>
+</figure>
+<p>点击后在右侧可以进行一些设置上的更改，详细的内容请看<a target="_blank" rel="noopener" href="https://github.com/ObsidianToAnki/Obsidian_to_Anki/wiki">Home ·
+ObsidianToAnki/Obsidian_to_Anki Wiki (github.com)</a></p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408192234897.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-19_22-32-17.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-19_22-32-17.png</figcaption>
+</figure>
+<p>在 Note Type Table 中设置每张卡片的具体设置。</p>
+<p>可以添加正则表达式实现更快的制卡。</p>
+<p>规则如下 <a target="_blank" rel="noopener" href="https://github.com/ObsidianToAnki/Obsidian_to_Anki/wiki/Regex">Regex
+· ObsidianToAnki/Obsidian_to_Anki Wiki (github.com)</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ObsidianToAnki/Obsidian_to_Anki/wiki/Neuracache-flashcard-style">Neuracache
+flashcard style · ObsidianToAnki/Obsidian_to_Anki Wiki (github.com)</a>
+其中这个规则最为简洁。只要使用 <code>#flashcard</code>
+就能标记一个卡片。</p>
+<p>当然你也可以自我定义。</p>
+<h2 id="快速制卡">快速制卡</h2>
+<p>新建一个笔记，在开头加上 TARGET DECK 和 FILE
+TAGS，然后加上你的卡片的集合名以及卡片的标签。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221826263.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-22_18-25-48.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-22_18-25-48.png</figcaption>
+</figure>
+<p>在你想要制卡的位置加上 <code>#lcard</code> ，<code>#lcard</code>
+同一行的就是正面，下面的就是反面，<em>卡片之间要空行</em>。这个是正则表达式定义的。</p>
+<p>点击左侧的 Anki 图标，就能生成 ID。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221831230.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-22_18-30-10.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-22_18-30-10.png</figcaption>
+</figure>
+<p>然后我们就能看到 Anki 中生成的卡片。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221831482.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-22_18-30-32.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-22_18-30-32.png</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202408221831877.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-08-22_18-30-48.png">
+<figcaption aria-hidden="true">Snipaste_2024-08-22_18-30-48.png</figcaption>
+</figure>
+<p>这个标签和牌组名就是根据你的开头的 TARGET DECK 和 FILE TAGS
+定义的。</p>
+<h3 id="tags-的一些事项">Tags 的一些事项</h3>
+<p>有时候需要打上多个 tag，这时候我们可以在 Tags 下面写多个
+tag，注意每个 tag 用空格隔开就行。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202409272219932.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-09-27_22-17-23.png">
+<figcaption aria-hidden="true">Snipaste_2024-09-27_22-17-23.png</figcaption>
+</figure>
+<p>再点击生成，就会对应文件下生成的卡片就会有设置的两个 tag。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202409272219611.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-09-27_22-19-50.png">
+<figcaption aria-hidden="true">Snipaste_2024-09-27_22-19-50.png</figcaption>
+</figure>
+<p>Obsidian 是插件设置的默认 tag，也可以不设置。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%B7%A5%E5%85%B7/Anki/" class="category-chain-item">Anki</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/" class="print-no-link">#工具</a>
+      
+        <a href="/tags/Anki/" class="print-no-link">#Anki</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div> 使用Obsidian实现Anki快速制卡 </div>
+      <div>https://saintfore.github.io/2024/08/22/使用Obsidian实现Anki快速制卡/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Soleil</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月22日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年9月27日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/08/23/Anki%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E8%AF%AD%E9%9F%B3/" title=" Anki自动生成语音">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"> Anki自动生成语音</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/20/Obsidian%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" title=" Obsidian如何安装插件 ">
+                        <span class="hidden-mobile"> Obsidian如何安装插件 </span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

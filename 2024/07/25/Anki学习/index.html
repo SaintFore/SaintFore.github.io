@@ -1,0 +1,980 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Cn" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/sun_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Soleil">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="如何使用anki">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anki学习">
+<meta property="og:url" content="https://saintfore.github.io/2024/07/25/Anki%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Forest">
+<meta property="og:description" content="如何使用anki">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232328342.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232341311.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232344224.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407240006125.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407240009202.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407240009463.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241202283.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241202702.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241202413.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232357693.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232359688.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232356757.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241224105.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241240696.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241240789.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241236318.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241236332.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241238817.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241239550.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241242965.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241243854.webp">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241244071.webp">
+<meta property="article:published_time" content="2024-07-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-28T04:21:32.234Z">
+<meta property="article:author" content="Soleil">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Anki">
+<meta property="article:tag" content="记忆力">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232328342.webp">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Anki学习 - Forest</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"saintfore.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>双木非林</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Anki学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Soleil
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-25 00:00" pubdate>
+          2024年7月25日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Anki学习</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年9月28日 中午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="前言">前言</h1>
+<p>anki
+我是一直想学习的，但我重度拖延症，从初认识到现在真正下定决心要学习已经整整过去了三年时间。</p>
+<p>今天不再等待，直接使用来学习。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.ankiweb.net/getting-started.html">anki官方文档</a></p>
+<h1 id="主要界面的几个功能">主要界面的几个功能</h1>
+<ul>
+<li>牌组</li>
+<li>添加</li>
+<li>浏览</li>
+<li>统计</li>
+<li>同步</li>
+</ul>
+<p>有这五个功能，接下来我一个简单的介绍一下，之所以简单介绍，是因为我也是初学者。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232328342.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-01-15.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-01-15.png</figcaption>
+</figure>
+<h2 id="牌组">牌组</h2>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232341311.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-41-17.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-41-17.png</figcaption>
+</figure>
+<p>其实就是你的主页面，显示你的所有牌组，你可以从网上获取牌组，然后导入。</p>
+<p>也可以自己创建。</p>
+<p>点击已经有的牌组就可以学习了。</p>
+<p>牌组之间可以嵌套，在命名中可以前后添加 <code>::</code>
+前面的是父级，后面的是子级。</p>
+<p>嵌套也可以通过拖拽来进行。</p>
+<h2 id="添加">添加</h2>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232344224.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-44-00.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-44-00.png</figcaption>
+</figure>
+<p>可以添加卡牌，有用的就是模板，牌组，字段，卡片。</p>
+<p>模板不必多言。</p>
+<p>牌组是你创建的卡片要放到哪一个牌组里面去。</p>
+<p>字段是卡片的构成元素。</p>
+<p>卡片能够预览卡片的样式。同时也可以更改卡片长什么样。使用 css。</p>
+<h2 id="浏览">浏览</h2>
+<p>显示你创建的各种卡片。</p>
+<h2 id="统计">统计</h2>
+<p>就是一些你的数据。</p>
+<h2 id="同步">同步</h2>
+<h3 id="注册账号">注册账号</h3>
+<p>第一次点击同步的时候需要创建一个账号，按照要求进行创建，验证邮箱即可。</p>
+<h3 id="同步的三种情况">同步的三种情况</h3>
+<p>同步会出现三种情况，只有冲突情况需要注意，其他的不用管。</p>
+<h4 id="正常情况">正常情况</h4>
+<p>字体为黑色。</p>
+<h4 id="冲突情况">冲突情况</h4>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407240006125.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-01-15.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-01-15.png</figcaption>
+</figure>
+<p>红色，需要解决冲突。上传时选择本地还是云端。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407240009202.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-47-27.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-47-27.png</figcaption>
+</figure>
+<p>手机 app 名字为 <strong>ankidroid</strong>，是让你选择使用
+<strong>ankidroid</strong> 的数据还是 <em>ankiweb</em> #### 新增情况</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407240009463.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-55-43.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-55-43.png</figcaption>
+</figure>
+<p>蓝色，直接上传就行。</p>
+<h1 id="五种基本卡片">五种基本卡片</h1>
+<p>这个是 anki
+官方给的五种最基本的卡片，可以稍微学习一下，既可以直接使用，也可以知道如何制卡片。</p>
+<p>这里我以宋词的第一首为例。</p>
+<blockquote>
+<p>燕山亭·北行见杏花 宋 赵佶
+裁剪冰绡，轻叠数重，淡著燕脂匀注。新样靓妆，艳溢香融，羞杀蕊珠宫女。易得凋零，更多少、无情风雨。愁苦。闲院落凄凉，几番春暮。
+凭寄离恨重重，这双燕，何曾会人言语。天遥地远，万水千山，知他故宫何处。怎不思量，除梦里、有时曾去。无据，和梦也新来不做。</p>
+</blockquote>
+<p>制作卡片的依据是记忆，这里有篇文章可以看看 <a target="_blank" rel="noopener" href="https://super-memory.com/articles/20rules.htm">20 rules of
+formulating knowledge in learning (super-memory.com)</a></p>
+<h2 id="问答题">问答题</h2>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241202283.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-02-13.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-02-13.png</figcaption>
+</figure>
+<p>最简单的，正面填问题，背面填答案。</p>
+<p>看到正面的问题，你要想一想，然后显示答案，根据你自我感知，或者列个时间选熟练程度。</p>
+<p>基本上都适合吧。</p>
+<p>效果就是下面的这样。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241202702.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-01-29.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-01-29.png</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241202413.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-01-39.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-01-39.png</figcaption>
+</figure>
+<h2 id="问答题翻转">问答题翻转</h2>
+<p>一次生成两张卡片。就是填一次，生成两张，第一张跟<em>问答题模板</em>一样，第二张是第一张的问题和回答交换位置，问题变成回答，回答变成问题。</p>
+<p>适用于问题与回答同等重要的。</p>
+<p>适合语言学习。</p>
+<h2 id="问答题翻转可选">问答题翻转可选</h2>
+<p>第三个字段可以选择是否生成两张，随便填个东西，填了就是问答题翻转，没填任何东西就是问答题。</p>
+<h2 id="问答题输入答案">问答题输入答案</h2>
+<p>正面是问题，背面是你要填的空。这里我就填的太多了。这个模板最好就是简单的回答，适合用这个。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232357693.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-55-23.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-55-23.png</figcaption>
+</figure>
+<p>这是你要填的框</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232359688.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-58-48.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-58-48.png</figcaption>
+</figure>
+<p>填完之后会告诉你错的，注意是完全匹配，错一点都不行。</p>
+<p>并且怎么样还是得你手填。凭你感觉你记得怎么样。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407232356757.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-23_23-56-34.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-23_23-56-34.png</figcaption>
+</figure>
+<h2 id="填空题">填空题</h2>
+<p>挖空，在右上角有个独特的两个图标，进行挖空。</p>
+<p>有两种情况：</p>
+<ol type="1">
+<li>填空新增卡片</li>
+<li>填空相同卡片</li>
+</ol>
+<p>不过这俩应该是混合着用比较好。</p>
+<h3 id="新增卡片">新增卡片</h3>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241224105.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-22-19.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-22-19.png</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241240696.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-24-51.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-24-51.png</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241240789.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-24-55.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-24-55.png</figcaption>
+</figure>
+<p>可以看到是 c 1，c 2，c 3，c
+4，根据每个空去生成一张卡，当然这样描述不准确，是根据 <code>::</code>
+前面的字母来生成。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241236318.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-35-52.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-35-52.png</figcaption>
+</figure>
+<p>背面额外用于写补充的信息。在你点击显示答案或者空格后补充给你一些东西。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241236332.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-36-08.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-36-08.png</figcaption>
+</figure>
+<p>不过注意，只能识别出来 c 开头的。</p>
+<p>这个就是一个材料切割成多张卡片的时候使用的。</p>
+<h3 id="相同卡片">相同卡片</h3>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241238817.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-21-36.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-21-36.png</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241239550.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-24-44.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-24-44.png</figcaption>
+</figure>
+<p>挖多个空在一张卡上面。</p>
+<h1 id="其他知识">其他知识</h1>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241242965.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-42-35.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-42-35.png</figcaption>
+</figure>
+<p>这里介绍有用的部分。</p>
+<h2 id="文件">文件</h2>
+<p>可以导入，导出，备份。</p>
+<p>导入可以批量制卡。</p>
+<p>也可以创建，切换账号。账号之间的信息是相互独立的。每个<em>账号</em>对应的
+<em>ankiweb</em> 是不一样的。</p>
+<h2 id="工具">工具</h2>
+<p>左上角的工具也很有用。</p>
+<p><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241243854.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-43-03.png"> ### 检查媒体</p>
+<p>检查媒体可以看到之前制卡遗留的媒体文件，可以删除未使用的，减少空间。还有其他的操作。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407241244071.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-24_12-43-40.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-24_12-43-40.png</figcaption>
+</figure>
+<h3 id="清空卡片">清空卡片</h3>
+<p>能清空都是空白的卡片。批量生成后可以点一点。</p>
+<h1 id="笔者的话">笔者的话</h1>
+<p>重要的是实践下去，并且成为一种习惯，不加思虑便可以去做的事。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%B7%A5%E5%85%B7/Anki/" class="category-chain-item">Anki</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/" class="print-no-link">#工具</a>
+      
+        <a href="/tags/Anki/" class="print-no-link">#Anki</a>
+      
+        <a href="/tags/%E8%AE%B0%E5%BF%86%E5%8A%9B/" class="print-no-link">#记忆力</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Anki学习</div>
+      <div>https://saintfore.github.io/2024/07/25/Anki学习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Soleil</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月25日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年9月28日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/26/%E7%A3%81%E7%9B%98%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title=" 磁盘占用问题的一些解决方法 ">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"> 磁盘占用问题的一些解决方法 </span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/25/no%20main%20mainifest%20attribute%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title=" no main mainifest attribute的解决方法 ">
+                        <span class="hidden-mobile"> no main mainifest attribute的解决方法 </span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

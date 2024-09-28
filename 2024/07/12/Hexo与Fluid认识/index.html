@@ -1,0 +1,877 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Cn" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/sun_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Soleil">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="简单介绍一下Hexo和Fluid的用法，其实主要看官方文档就行，我这里挑重要的，容易被忽视的内容说一说。">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" Hexo与Fluid认识 ">
+<meta property="og:url" content="https://saintfore.github.io/2024/07/12/Hexo%E4%B8%8EFluid%E8%AE%A4%E8%AF%86/index.html">
+<meta property="og:site_name" content="Forest">
+<meta property="og:description" content="简单介绍一下Hexo和Fluid的用法，其实主要看官方文档就行，我这里挑重要的，容易被忽视的内容说一说。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122300582.webp">
+<meta property="article:published_time" content="2024-07-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-14T04:47:18.090Z">
+<meta property="article:author" content="Soleil">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122300582.webp">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title> Hexo与Fluid认识  - Forest</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"saintfore.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>双木非林</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122301986.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=" Hexo与Fluid认识 "></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Soleil
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-12 00:00" pubdate>
+          2024年7月12日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"> Hexo与Fluid认识 </h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年7月14日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="font-matter-介绍">font-matter 介绍</h1>
+<p>我使用的是 obsidian，这个 font-matter
+也就是文档属性一栏，我这里列出来的都是一些我认为常用的，至于说更详细的请看
+<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter |
+Hexo</a>，当然这也只是一部分，因为 hexo
+还有不同的主题，主题可能会扩展一些
+font-matter，这就还要看主题的具体文档了。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122304348.webp" srcset="/img/loading.gif" lazyload alt="这篇博客的font-matter">
+<figcaption aria-hidden="true">这篇博客的font-matter</figcaption>
+</figure>
+<p>这里img的两个都写错了，时候才发现，后面多加了个括号，真是眼拙。</p>
+<h2 id="hexo-的-font-matter">Hexo 的 font-matter</h2>
+<ul>
+<li>title：就是文章的标题，在 obsidian 中可以用模板，然后 title
+中的值设置为  Hexo与Fluid认识  来根据你的文件名字自动命名。</li>
+<li>date：显示建立的日期，也是用模板，date 值设为 1720713600000
+，当使用模板的时候就能自动生成。</li>
+<li>excerpt：摘要部分。如果不写的话，fluid
+这个主题有个能够自动摘要的功能，打开后就能自动摘要。</li>
+<li>tags：标签，之后能根据标签来看你写了哪些博客。</li>
+<li>categories：分类，根据这个来分类，并且是有先后顺序的，要注意。</li>
+</ul>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122301088.webp" srcset="/img/loading.gif" lazyload alt="这里工具就是Hexo的父类">
+<figcaption aria-hidden="true">这里工具就是Hexo的父类</figcaption>
+</figure>
+<p>至于其他的就不再说了，我觉得没什么用处，对我而言。</p>
+<h2 id="fluid-的-font-matter">Fluid 的 font-matter</h2>
+<p>这里的一些属性需要先修改 themes-&gt;fluid-&gt;
+<code>_config.yml</code> 中的内容才可以打开。可以看<a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E6%96%87%E7%AB%A0%E6%8E%92%E5%BA%8F">配置指南
+| Hexo Fluid 用户手册</a>或者是看
+<code>_config.yml</code>，里面的注释非常之详细，相当崇拜了，因为我平时不怎么写注释。所以这里就不加赘述了。</p>
+<ul>
+<li>toc：目录，必开，在右边显示一个目录，非常好用，动画做的也很流畅。当然显示的位置也是可以更改的。</li>
+<li>math：可以在网页中渲染 latex
+语句，我认为是非常有必要的，如果不能插入 latex
+就只能插入图片，不是那么好看，不过博客也不能追求好看，实用就行，但我是比较完美主义，所以还是想把博客尽量做的好看一些。</li>
+<li>index_img：是网站文章旁边的图片，引人注意用的。这里注意这两个都是单纯的网络链接，不是平成md引用的那种。</li>
+<li>banner_img：就是背景图片。</li>
+</ul>
+<p>别的也没什么好说的了。还有其他的就是看看官方文档，里面基本上都囊括了。</p>
+<h3 id="math-的设置">math 的设置</h3>
+<p>想要使用 latex
+语法，需要走上几步，我最开始弄的时候做的有些问题，费了点功夫才弄好，这里写下怎么弄的，帮帮别人，也帮帮未来健忘的自己。</p>
+<h4 id="安装相应的环境">安装相应的环境</h4>
+<p>首先进入 hexo 的目录，路径栏点击，输入 cmd，然后就进入控制栏。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122318377.webp" srcset="/img/loading.gif" lazyload alt="步骤1">
+<figcaption aria-hidden="true">步骤1</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122318576.webp" srcset="/img/loading.gif" lazyload alt="步骤2">
+<figcaption aria-hidden="true">步骤2</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122319580.webp" srcset="/img/loading.gif" lazyload alt="步骤3">
+<figcaption aria-hidden="true">步骤3</figcaption>
+</figure>
+<p>输入下面代码： <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm uninstall hexo-renderer-marked --save<br>npm install hexo-renderer-pandoc --save<br></code></pre></td></tr></table></figure></p>
+<h4 id="安装-pandoc">安装 pandoc</h4>
+<p>这是一个文档格式转换工具。</p>
+<p>进入该链接 <a target="_blank" rel="noopener" href="https://github.com/jgm/pandoc/blob/master/INSTALL.md">pandoc/INSTALL.md
+at master · jgm/pandoc (github.com)</a> 点击 download installer，在
+Assets 中选择适合的进行下载，我选择的是. msi ，msi
+后缀是安装器的意思。</p>
+<h4 id="注意语法问题">注意语法问题</h4>
+<p>obsidian 中支持一行 latex 的书写就是只用一个美刀的标志包裹，但是 hexo
+的渲染只支持块 latex
+的书写，这个使用两个美刀包裹，一上一下，跟代码块差不多，应该就叫 latex
+块。</p>
+<h4 id="大功告成">大功告成</h4>
+<p>来个智能方程演示下 <span class="math display">\[
+E = mc^2
+\]</span> 再来个式子 <span class="math display">\[
+主 = 6
+\]</span></p>
+<h1 id="关于-about-的问题">关于 about 的问题</h1>
+<p>这个 about 就是 source
+文件夹中的<em>about</em>，我最开始以为没什么用处，所以删掉了，结果关于那一页直接报错，没法
+get 到。真的是容易忽视到。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407122330023.webp" srcset="/img/loading.gif" lazyload alt="source目录">
+<figcaption aria-hidden="true">source目录</figcaption>
+</figure>
+<p>还有就是_post 文件夹下面至少得有一篇 md 文件，不然也会报错。</p>
+<h1 id="照片名称渲染">照片名称渲染</h1>
+<p>还是在fluid的配置文件中有关于名称的渲染，可以选择关闭，我这里打开了，感觉更好看一些，但是无疑写博客的速度会变慢，毕竟之前不用写照片的名字，但现在要了。</p>
+<h1 id="其他的渲染问题">其他的渲染问题</h1>
+<p>首先是标题，就是一段文字后必须要空一行再写标题，不然标题不会被 hexo
+渲染出来。</p>
+<p>同理，如果要分段，那么 md
+写的时候也是要空一行，不然就会写在同一行里面，例如下面的</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132317062.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="md中写的样子">
+<figcaption aria-hidden="true">md中写的样子</figcaption>
+</figure>
+<p><img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132317815.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="渲染出来的样子">
+原因就是因为我直接打了个回车，其实要打两次回车，也就是两段文字之间要空一行。这个其实是因为obsidian的问题，<strong>它的一个回车跟typora的回车不一样</strong>，所以跟hexo渲染的也不一样。</p>
+<p><em>本质原因是 md 的问题，md
+语法会自动忽略一个换行符，两个连续的换行符才能实现预览界面的换行。</em></p>
+<p>还有就是照片的名字渲染，有时候没法渲染出来，原因也是因为照片上面直接就有一段文字，而非空一行。</p>
+<h2 id="obsidian解决方法">Obsidian解决方法</h2>
+<p>安装 easy typing 插件。</p>
+<p>最下面的严格换行设置好像有些问题，没法启效果。</p>
+<p>使用上面的格式转化。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407132352621.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="第二行那个">
+<figcaption aria-hidden="true">第二行那个</figcaption>
+</figure>
+<p>解决问题，应该吧。</p>
+<h1 id="笔者的话">笔者的话</h1>
+<p>暂时没有了，今天又开始继续写博客了，之前在 wordpress
+上写，发现不够快捷，真是不如 hexo，所以又转回来了。</p>
+<p>加油，看看能否一天一篇博客。</p>
+<p>写博客还确实是真的费时间啊，一个小时做事，可能得写两个小时博客，不过也是一种复习了。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%B7%A5%E5%85%B7/Hexo/" class="category-chain-item">Hexo</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div> Hexo与Fluid认识 </div>
+      <div>https://saintfore.github.io/2024/07/12/Hexo与Fluid认识/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Soleil</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月12日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年7月14日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/13/HTML%E7%AE%80%E4%BB%8B/" title=" HTML简介">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"> HTML简介</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

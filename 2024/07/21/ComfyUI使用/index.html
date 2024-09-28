@@ -1,0 +1,961 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Cn" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/sun_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Soleil">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="简单介绍一下怎么安装comfyUI以及如何使用节点进行文生图与视频制作">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" ComfyUI使用 ">
+<meta property="og:url" content="https://saintfore.github.io/2024/07/21/ComfyUI%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Forest">
+<meta property="og:description" content="简单介绍一下怎么安装comfyUI以及如何使用节点进行文生图与视频制作">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212339086.webp">
+<meta property="article:published_time" content="2024-07-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-21T15:41:22.052Z">
+<meta property="article:author" content="Soleil">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="ComfyUI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212339086.webp">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title> ComfyUI使用  - Forest</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"saintfore.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>双木非林</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407130708376.webp?imageSlim') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=" ComfyUI使用 "></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Soleil
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-21 00:00" pubdate>
+          2024年7月21日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"> ComfyUI使用 </h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年7月21日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="前言">前言</h1>
+<p>今天花时间试了试怎么用
+ComfyUI，今天晚上就来介绍一下，怎么简单使用。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407211101974.webp" srcset="/img/loading.gif" lazyload alt="ComfyUI_00011_.webp">
+<figcaption aria-hidden="true">ComfyUI_00011_.webp</figcaption>
+</figure>
+<p>上面是用 comfyUI 生成的视频。</p>
+<h1 id="安装">安装</h1>
+<p>首先进行安装。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212055224.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_20-41-47.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_20-41-47.png</figcaption>
+</figure>
+<p>在 github 上搜索 comfyUI，第一个就是，点进去然后点击左侧 Releases
+的内容。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212056129.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_20-42-02.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_20-42-02.png</figcaption>
+</figure>
+<p>选择第一个，下载下来，然后解压。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212056021.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_20-42-30.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_20-42-30.png</figcaption>
+</figure>
+<p>OK，这就结束了，你已经安装完了。</p>
+<p>接下来点击. bat 文件，你就可以使用 comfyUI 了。</p>
+<p>有英伟达显卡的点击 run_nvidia_gpu，没有的就用上面 run_cpu。</p>
+<h1 id="找个模型">找个模型</h1>
+<p>在 <a target="_blank" rel="noopener" href="https://civitai.com/">Civita</a>
+上找个模型，注意左上角得显示 checkpoint，下载好后，放入
+<code>ComfyUI_windows_portable\ComfyUI\models\checkpoints</code>
+这个路径里面。</p>
+<h1 id="启动">启动</h1>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212103891.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-02-38.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-02-38.png</figcaption>
+</figure>
+<p>点击 <code>.bat</code>
+文件后出现控制台，然后就是等待，有时候很快，有时候很慢，我不清楚是什么原因。这次等了有个七分钟，有时候
+1
+秒就进了，我没排查出什么问题。可能是我的电脑不太行了。（快写完博客的时候发现了，是我磁盘读写速度太慢了）不过也可以看出
+comfyUI 如果使用不是特别的吃配置。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212258116.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_22-58-35.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_22-58-35.png</figcaption>
+</figure>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212108602.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-07-12.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-07-12.png</figcaption>
+</figure>
+<p>进入浏览器，在 checkpoint
+加载器中选择你下载的那个（如果没有模型是没法用的），然后点击右上角的
+queue，等一会就能生成一张图片，我这台渣机也只需要十秒左右的时间。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212118218.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-18-08.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-18-08.png</figcaption>
+</figure>
+<h1 id="加上插件">加上插件</h1>
+<p>我这里是已经加上汉化插件了，原本的是全英语的，所以我接下来介绍怎么安装插件。</p>
+<h2 id="confyui-manager">ConfyUI-Manager</h2>
+<p>前提是要安装 git，安装过程这里不多赘述。</p>
+<p>我们先来安装插件管理器，方便之后插件的安装。</p>
+<p><code>ComfyUI_windows_portable\ComfyUI\custom_nodes</code>
+在这个路径，选中路径框。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212121905.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-20-45.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-20-45.png</figcaption>
+</figure>
+<p>输入 cmd，进入控制台。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212121186.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-21-29.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-21-29.png</figcaption>
+</figure>
+<p>输入下面的指令:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">git clone https://github.com/ltdrdata/ComfyUI-Manager.git<br></code></pre></td></tr></table></figure>
+<p>然后重启 comfyUI，就能够通过管理器来安装插件，不用手动 git clone
+了。</p>
+<h2 id="使用-manager-安装汉化插件">使用 manager 安装汉化插件</h2>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212125711.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-24-52.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-24-52.png</figcaption>
+</figure>
+<p>重启后再进入，发现右下角多了 manager，点击进入插件管理。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212126746.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-26-04.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-26-04.png</figcaption>
+</figure>
+<p>我画了四个红框，这是我觉得会比较常用到的，从上到下，第一个是插件的管理，第二个是模型的管理，第三个第四个是更新
+comfyUI 本体与插件的。</p>
+<p>点击第一个，搜索 AIGODLIKE，点击 INSTALL，进行汉化。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212129698.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-28-50.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-28-50.png</figcaption>
+</figure>
+<p>还要重启一下 comfyUI。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212130288.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-30-07.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-30-07.png</figcaption>
+</figure>
+<p>这里就汉化成功了。</p>
+<p>至于其他的插件，我就不多介绍了。大家可以看看。github 上看看 readme
+就能大致清楚怎么用了。</p>
+<h1 id="工作流-work-flow">工作流 work flow</h1>
+<p>comfyUI 玩的就是工作流，这里可以看看作者的一些例子 <a target="_blank" rel="noopener" href="https://github.com/comfyanonymous/ComfyUI_examples">comfyanonymous/ComfyUI_examples:
+Examples of ComfyUI workflows (github.com)</a> 作为学习与参考。</p>
+<h1 id="简单的文生图工作流">简单的文生图工作流</h1>
+<h2 id="建立节点">建立节点</h2>
+<p>右键就可以新建节点。</p>
+<p>先整个 checkpoint加载器，这是一切的原点。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212136349.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-35-44.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-35-44.png</figcaption>
+</figure>
+<p>然后在条件一栏选择 clip 文本编码器，在这里我们可以填写正面或者负面的
+promot，</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212138624.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-38-45.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-38-45.png</figcaption>
+</figure>
+<p>点击节点，可以对标题进行修改，同时也能改变颜色，让节点更加清晰。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212140817.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-39-43.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-39-43.png</figcaption>
+</figure>
+<p>效果如下：</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212142589.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-42-05.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-42-05.png</figcaption>
+</figure>
+<p>然后加入采样器，在采样里面。选择那个 K 采样器就行。</p>
+<p>接着是空的 latent，用来控制图片的大小。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212144775.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-41-13.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-41-13.png</figcaption>
+</figure>
+<p>最后是 vae 的解码器和图片下载，vae 解码器也在 latent
+里面，注意别跟编码器弄混了，图片下载在图片里面。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212146894.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-46-17.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-46-17.png</figcaption>
+</figure>
+<p>就这几个节点，然后连线。相同颜色的能连到一起。左边的点代表输入，右边的点代表输出，把相对应的连起来，一个简单的文生图工作流就完成了。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212150081.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-49-07.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-49-07.png</figcaption>
+</figure>
+<p>输入提示词。我这里用了自动的负面提示词，这是 one button
+插件的自定义节点。最后点击<em>添加提示词队列</em>，进行测试。</p>
+<p>稍等片刻，第一次使用一个模型会很慢，之后就非常快了。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212156809.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_21-55-58.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_21-55-58.png</figcaption>
+</figure>
+<p>这里就得到了一张 ai 生成的图片。</p>
+<h2 id="进行分组">进行分组</h2>
+<p>右键也可以进行分组。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212226656.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_22-03-37.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_22-03-37.png</figcaption>
+</figure>
+<p>对着分组再右键，缩放组到节点就是能全部包裹住已经包裹的节点，让节点不那么乱。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212227828.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_22-04-00.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_22-04-00.png</figcaption>
+</figure>
+<p>编辑组可以设置颜色与标题，使组更明显，让工作流更加井井有条。</p>
+<h1 id="视频工作流">视频工作流</h1>
+<p>大家可以看看作者给的例子中的 video 部分，注意一定要使用 svd
+模型，下载是在之前的 manager 中点击 model manager 搜索 svd
+下载即可。然后在工作流中选择这个。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212251579.webp" srcset="/img/loading.gif" lazyload alt="Snipaste_2024-07-21_22-51-16.png">
+<figcaption aria-hidden="true">Snipaste_2024-07-21_22-51-16.png</figcaption>
+</figure>
+<p>使用下面的图片进行视频制作。这张图也是用 comfyUI 简单生成的。</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212251305.webp" srcset="/img/loading.gif" lazyload alt="ComfyUI_00080_.png">
+<figcaption aria-hidden="true">ComfyUI_00080_.png</figcaption>
+</figure>
+<p>等了一会，视频如下：</p>
+<figure>
+<img src="https://tree-1327913400.cos.ap-nanjing.myqcloud.com/imgs/202407212313029.webp" srcset="/img/loading.gif" lazyload alt="ComfyUI_00081_.webp">
+<figcaption aria-hidden="true">ComfyUI_00081_.webp</figcaption>
+</figure>
+<h1 id="笔者的话">笔者的话</h1>
+<p>comfyUI
+上手十分简单，可以说是解压即用了，至于进阶的内容就是看看大神们的工作流是怎么设计的。自己也比葫芦画瓢尝试尝试。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI/" class="category-chain-item">AI</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/AI/ComfyUI/" class="category-chain-item">ComfyUI</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/" class="print-no-link">#工具</a>
+      
+        <a href="/tags/AI/" class="print-no-link">#AI</a>
+      
+        <a href="/tags/ComfyUI/" class="print-no-link">#ComfyUI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div> ComfyUI使用 </div>
+      <div>https://saintfore.github.io/2024/07/21/ComfyUI使用/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Soleil</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月21日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年7月21日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/22/Obsidian%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/" title=" Obsidian本地存储图片的一些技巧 ">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"> Obsidian本地存储图片的一些技巧 </span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/20/FileZilla%20Cilent%E8%BF%9B%E8%A1%8CFTP%E4%BC%A0%E8%BE%93/" title=" FileZilla Cilent进行FTP传输 ">
+                        <span class="hidden-mobile"> FileZilla Cilent进行FTP传输 </span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
